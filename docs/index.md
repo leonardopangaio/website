@@ -8,7 +8,7 @@ hide:
 ---
 # 
 
-<div class="grid" markdown style="text-align:center;">
+<div class="grid" markdown>
 
 <div>
 <h1>bem vindo</h1>
