@@ -29,7 +29,7 @@ jobs:
       - run: pip install -r requirements.txt
 
       - name: Force Custom Domain
-      - run: echo 'pangaio.com.br' > ./CNAME"
+        run: echo 'pangaio.com.br' > ./CNAME"
 
       - name: Build MKDocs site
         env:
