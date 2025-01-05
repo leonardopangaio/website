@@ -7,6 +7,7 @@ categories:
   - Documentação
   - Estudos
 comments: true
+slug: como-estudo-em-2024
 ---
 
 # Como estudo em 2024

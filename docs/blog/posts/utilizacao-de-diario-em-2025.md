@@ -7,6 +7,7 @@ categories:
   - Documentação
   - Dia-a-Dia
 comments: true
+slug: utilizacao-de-diario-em-2025
 ---
 
 # Utilização de Diário em 2025
