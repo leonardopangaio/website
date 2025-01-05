@@ -1,0 +1,157 @@
+site_name: O Site do Pangaio
+site_url: https://pangaio.com.br
+site_author: Leonardo Pangaio
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: pt
+  favicon: images/favicon.ico
+  logo: images/favicon.ico
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - search.share
+    - navigation.footer
+    - content.tooltips
+    - toc.follow
+
+  palette: 
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: cyan
+      # accent: light green
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+      primary: indigo
+      # accent: green
+
+extra: 
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/leonardopangaio
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/leonardo-pangaio
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >- 
+            Thanks for your feedback!
+  
+  consent:
+    title: Cookie consent
+    description: >- 
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
+    actions:
+      - accept
+
+copyright: Copyright &copy; 2024 - 2025 Leonardo Pangaio
+
+plugins: 
+  - search
+  - glightbox
+  
+  - git-authors:
+      show_email_address: false
+      exclude:
+            - index.md
+
+  - blog:
+      archive_date_format: yyyy
+      archive_url_date_format: yyyy
+      post_url_format: "{slug}"
+      blog_toc: true
+      archive_toc: true
+      categories_toc: true
+      pagination: true
+      pagination_per_page: 5
+  
+  - tags
+  
+  - rss:
+      match_path: blog/posts/.* 
+      pretty_print: true
+      date_from_meta:
+        as_creation: date.created
+        as_update: date.updated
+      categories:
+        - categories
+        - tags
+  
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: false
+      enable_creation_date: true
+      enabled: true
+      exclude:
+          - index.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - footnotes
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.blocks.caption
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.betterem
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - abbr
+  - toc:
+      permalink: true

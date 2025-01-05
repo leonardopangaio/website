@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    
+    <title>O Site do Pangaio</title>
+    
+    <link>https://pangaio.com.br/</link>
+    <atom:link href="https://pangaio.com.br/feed_rss_created.xml" rel="self" type="application/rss+xml" />
+
+    
+    <managingEditor>Leonardo Pangaio</managingEditor>
+    
+    <language>pt</language>
+
+    
+    <pubDate>Sun, 05 Jan 2025 04:11:13 -0000</pubDate>
+    <lastBuildDate>Sun, 05 Jan 2025 04:11:13 -0000</lastBuildDate>
+    <ttl>1440</ttl>
+
+    
+    <generator>MkDocs RSS plugin - v1.17.1</generator>
+
+    
+    
+    <image>
+      <url>None</url>
+      <title>O Site do Pangaio</title>
+      <link>https://pangaio.com.br/</link>
+    </image>
+    
+
+    
+    
+    <item>
+      <title>Utilização de Diário em 2025</title>
+      
+      
+        
+      <author>Leonardo Pangaio</author>
+        
+      
+      
+      
+        
+      <category>Dia-a-Dia</category>
+        
+      <category>Documentação</category>
+        
+      
+      <description>&lt;h1&gt;Utilização de Diário em 2025&lt;/h1&gt;
+&lt;p&gt;Continuando com o assunto estudos, organização, anotações e etc... Resolvi escrever sobre como tenho organizado a minha vida, meu dia a dia, tanto pessoal quanto profissional.&lt;/p&gt;
+&lt;p&gt;Em um super resumo, eu diria que a adoção de um diário e utilização de uma agenda (seja ela qual for) é o que tem me salvado bastante.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/utiliza%C3%A7%C3%A3o-de-di%C3%A1rio-em-2025/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/utiliza%C3%A7%C3%A3o-de-di%C3%A1rio-em-2025/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Como estudo em 2024</title>
+      
+      
+        
+      <author>Leonardo Pangaio</author>
+        
+      
+      
+      
+        
+      <category>Documentação</category>
+        
+      <category>Estudos</category>
+        
+      
+      <description>&lt;h1&gt;Como estudo em 2024&lt;/h1&gt;
+&lt;p&gt;Em resumo, tenho escrito todas as minhas anotações em &lt;a href=&#34;https://www.markdownguide.org/&#34;&gt;Markdown&lt;/a&gt;. Faço isso pois além da escrita ser simples, não me preocupo muito pouco com a formatação do documento, e mais com o conteúdo. O Markdown é versátil, então se for necessário converter para HTML é simples, se eu for publicar usando o Github Pages também será fácil. E no documento eu consigo inserir imagens, links externos, diagramas, &#34;mermaid&#34;, referências a outros documentos do mesmo repositório e etc...&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/como-estudo-em-2024/</link>
+      <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/como-estudo-em-2024/</guid>
+      
+    </item>
+    
+  </channel>
+</rss>
