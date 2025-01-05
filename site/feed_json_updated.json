@@ -13,29 +13,12 @@
     "language": "pt",
     "items": [
         {
-            "id": "https://pangaio.com.br/blog/utiliza%C3%A7%C3%A3o-de-di%C3%A1rio-em-2025/",
-            "url": "https://pangaio.com.br/blog/utiliza%C3%A7%C3%A3o-de-di%C3%A1rio-em-2025/",
-            "title": "Utiliza\u00e7\u00e3o de Di\u00e1rio em 2025",
-            "content_html": "<h1>Utiliza\u00e7\u00e3o de Di\u00e1rio em 2025</h1>\n<p>Continuando com o assunto estudos, organiza\u00e7\u00e3o, anota\u00e7\u00f5es e etc... Resolvi escrever sobre como tenho organizado a minha vida, meu dia a dia, tanto pessoal quanto profissional.</p>\n<p>Em um super resumo, eu diria que a ado\u00e7\u00e3o de um di\u00e1rio e utiliza\u00e7\u00e3o de uma agenda (seja ela qual for) \u00e9 o que tem me salvado bastante.</p>",
-            "image": null,
-            "date_modified": "2025-01-05T04:11:15.798053+00:00",
-            "authors": [
-                {
-                    "name": "Leonardo Pangaio"
-                }
-            ],
-            "tags": [
-                "Dia-a-Dia",
-                "Documenta\u00e7\u00e3o"
-            ]
-        },
-        {
             "id": "https://pangaio.com.br/blog/como-estudo-em-2024/",
             "url": "https://pangaio.com.br/blog/como-estudo-em-2024/",
             "title": "Como estudo em 2024",
             "content_html": "<h1>Como estudo em 2024</h1>\n<p>Em resumo, tenho escrito todas as minhas anota\u00e7\u00f5es em <a href=\"https://www.markdownguide.org/\">Markdown</a>. Fa\u00e7o isso pois al\u00e9m da escrita ser simples, n\u00e3o me preocupo muito pouco com a formata\u00e7\u00e3o do documento, e mais com o conte\u00fado. O Markdown \u00e9 vers\u00e1til, ent\u00e3o se for necess\u00e1rio converter para HTML \u00e9 simples, se eu for publicar usando o Github Pages tamb\u00e9m ser\u00e1 f\u00e1cil. E no documento eu consigo inserir imagens, links externos, diagramas, \"mermaid\", refer\u00eancias a outros documentos do mesmo reposit\u00f3rio e etc...</p>",
             "image": null,
-            "date_modified": "2025-01-05T04:11:15.775826+00:00",
+            "date_modified": "2025-01-05T01:11:21+00:00",
             "authors": [
                 {
                     "name": "Leonardo Pangaio"
@@ -44,6 +27,23 @@
             "tags": [
                 "Documenta\u00e7\u00e3o",
                 "Estudos"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/utiliza%C3%A7%C3%A3o-de-di%C3%A1rio-em-2025/",
+            "url": "https://pangaio.com.br/blog/utiliza%C3%A7%C3%A3o-de-di%C3%A1rio-em-2025/",
+            "title": "Utiliza\u00e7\u00e3o de Di\u00e1rio em 2025",
+            "content_html": "<h1>Utiliza\u00e7\u00e3o de Di\u00e1rio em 2025</h1>\n<p>Continuando com o assunto estudos, organiza\u00e7\u00e3o, anota\u00e7\u00f5es e etc... Resolvi escrever sobre como tenho organizado a minha vida, meu dia a dia, tanto pessoal quanto profissional.</p>\n<p>Em um super resumo, eu diria que a ado\u00e7\u00e3o de um di\u00e1rio e utiliza\u00e7\u00e3o de uma agenda (seja ela qual for) \u00e9 o que tem me salvado bastante.</p>",
+            "image": null,
+            "date_modified": "2025-01-05T01:11:21+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Pangaio"
+                }
+            ],
+            "tags": [
+                "Dia-a-Dia",
+                "Documenta\u00e7\u00e3o"
             ]
         }
     ]

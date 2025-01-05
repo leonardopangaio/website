@@ -1,11 +1,10 @@
 ---
-title: home
+title: Home
 hide:
   - navigation
   - toc
   - feedback
   - footer
-comments: false
 ---
 # 
 

@@ -6,6 +6,7 @@ authors:
 categories:
   - Documentação
   - Estudos
+comments: true
 ---
 
 # Como estudo em 2024

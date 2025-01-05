@@ -6,6 +6,7 @@ authors:
 categories:
   - Documentação
   - Dia-a-Dia
+comments: true
 ---
 
 # Utilização de Diário em 2025
