@@ -49,6 +49,8 @@ extra:
       link: https://github.com/leonardopangaio
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/leonardo-pangaio
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:leonardo.pangaio@gmail.com
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
