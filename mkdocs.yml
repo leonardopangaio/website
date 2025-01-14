@@ -49,7 +49,7 @@ extra:
       link: https://github.com/leonardopangaio
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/leonardo-pangaio
-    - icon: fontawesome/solid/paper-plane
+    - icon: fontawesome/solid/envelope
       link: mailto:leonardo.pangaio@gmail.com
   analytics:
     provider: google
