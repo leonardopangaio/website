@@ -13,8 +13,8 @@
     <language>pt</language>
 
     
-    <pubDate>Tue, 14 Jan 2025 03:49:23 -0000</pubDate>
-    <lastBuildDate>Tue, 14 Jan 2025 03:49:23 -0000</lastBuildDate>
+    <pubDate>Fri, 17 Jan 2025 16:05:48 -0000</pubDate>
+    <lastBuildDate>Fri, 17 Jan 2025 16:05:48 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -30,6 +30,165 @@
     
 
     
+    
+    <item>
+      <title>O que é uma função lambda? 🤔</title>
+      
+      
+        
+      <author>Luciana Sampaio</author>
+        
+      
+      
+      
+        
+      <category>Functions</category>
+        
+      <category>Python</category>
+        
+      <category>Tech</category>
+        
+      
+      <description>&lt;h1&gt;O que é uma função lambda? 🤔&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;../../../images/blog/luciana/lamb.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ah, funções lambda... O que seriam elas? Nada mais, nada menos que &lt;strong&gt;funções sem nome&lt;/strong&gt;! Isso mesmo, é tipo aquele colega que você conhece de vista, mas nunca sabe o nome. 🤷‍♀️&lt;/p&gt;
+&lt;p&gt;A ideia aqui é simples: elas são feitas para serem pequenas, rápidas e diretas ao ponto. Ou seja, são as &#34;funções ninja&#34; do Python. 🥷🐍&lt;/p&gt;
+&lt;p&gt;Enquanto em uma função regular você precisa de toda uma cerimônia — &lt;em&gt;&#34;declara, define, passa parâmetros, dá nome, e blá-blá-blá&#34;&lt;/em&gt; — a lambda chega, resolve o que precisa e sai sem nem pedir crédito. &lt;strong&gt;Elegância pura.&lt;/strong&gt;&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/lambda-function/</link>
+      <pubDate>Fri, 17 Jan 2025 16:05:54 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/lambda-function/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Ah, relacionamentos no SQL?</title>
+      
+      
+        
+      <author>Luciana Sampaio</author>
+        
+      
+      
+      
+        
+      <category>Data Science</category>
+        
+      <category>PySpark</category>
+        
+      <category>Tech</category>
+        
+      
+      <description>&lt;h1&gt;Ah, relacionamentos no SQL?&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;../../../images/blog/luciana/divertidamente.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pense nisso como dramas de relacionamento, mas entre tabelas de dados! 😂 Vamos lá:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Relacionamento de “Um pra Um” (1:1)
+Esse é aquele namoro exclusivo, onde cada item em uma tabela só pode estar com um único item em outra tabela. Nada de triangulo amoroso aqui!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Exemplo: Uma tabela de pessoas e uma tabela de carteira de identidade. Cada pessoa tem uma carteira, e cada carteira pertence a uma única pessoa. Bem monogâmico.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/pyspark-context/</link>
+      <pubDate>Fri, 17 Jan 2025 16:05:54 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/pyspark-context/</guid>
+      
+    </item>
+    
+    <item>
+      <title>O que é pyspark.sql.context? 🎩✨</title>
+      
+      
+        
+      <author>Luciana Sampaio</author>
+        
+      
+      
+      
+        
+      <category>Data Science</category>
+        
+      <category>PySpark</category>
+        
+      <category>Tech</category>
+        
+      
+      <description>&lt;h1&gt;O que é &lt;code&gt;pyspark.sql.context&lt;/code&gt;? 🎩✨&lt;/h1&gt;
+&lt;p&gt;Quando comecei a trabalhar com &lt;strong&gt;Databricks&lt;/strong&gt;, confesso que me senti como um terráqueo vendo um disco voador pela primeira vez. Era outro mundo, meu povo! 🌌&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/pyspark-context/</link>
+      <pubDate>Fri, 17 Jan 2025 16:05:54 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/pyspark-context/</guid>
+      
+    </item>
+    
+    <item>
+      <title>FuncoesPySpark</title>
+      
+      
+        
+      <author>Luciana Sampaio</author>
+        
+      
+      
+      
+        
+      <category>Data Science</category>
+        
+      <category>PySpark</category>
+        
+      <category>Tech</category>
+        
+      
+      <description>&lt;h2&gt;PySpark&lt;/h2&gt;
+&lt;h3&gt;Afinal o que são funções?&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;../../../images/blog/luciana/func_1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Afinal, o que são funções? 🤔
+Se a gente fizer um paralelo com a etimologia da palavra &#34;função&#34;, dá pra pensar em algo que expressa ou controla um comportamento – só que, no mundo da programação, isso rola por meio de código. Legal, né? Ou talvez até meio nerd, rs.&lt;/p&gt;
+&lt;p&gt;Eu gosto de pensar que funções são as ferramentas mágicas do desenvolvedor. Tipo aquela “caixa de ferramentas” onde você encontra tudo que precisa pra fazer magia com os dados. Quer somar colunas? Beleza. Transformar texto pra minúsculas? Fácil. Ordenar, calcular média, e até umas coisas mais avançadas? Tá tudo lá, prontinho pra usar. 🚀&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/pyspark/</link>
+      <pubDate>Fri, 17 Jan 2025 16:05:54 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/pyspark/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Como os Aplicativos PySpark podem ser redimensionados.</title>
+      
+      
+        
+      <author>Luciana Sampaio</author>
+        
+      
+      
+      
+        
+      <category>Data Science</category>
+        
+      <category>PySpark</category>
+        
+      <category>Tech</category>
+        
+      
+      <description>&lt;h1&gt;Como os Aplicativos PySpark podem ser redimensionados.&lt;/h1&gt;
+&lt;h3&gt;Como Dimensionar Aplicativos PySpark de Forma Eficiente?&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;../../../images/blog/luciana/redimens_1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Lidar com o dimensionamento de aplicativos PySpark nem sempre é uma tarefa fácil, especialmente quando estamos falando de &lt;strong&gt;processamentos em larga escala&lt;/strong&gt;.  &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;strong&gt;Como fazer isso de modo mais eficiente?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Antes de tudo, é fundamental entender que o &lt;strong&gt;número de nós (executores)&lt;/strong&gt; tem um impacto significativo na escalabilidade do seu projeto.  &lt;/p&gt;
+&lt;p&gt;No entanto, a escolha do tamanho ideal do cluster não depende apenas do tamanho dos dados. Outros fatores também precisam ser considerados, como o poder de processamento (CPU) e a memória disponível.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/aplicativos-pyspark-redimensionados/</link>
+      <pubDate>Fri, 17 Jan 2025 16:05:54 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/aplicativos-pyspark-redimensionados/</guid>
+      
+    </item>
     
     <item>
       <title>Como criei meu site</title>
