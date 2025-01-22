@@ -10,31 +10,29 @@
         <meta name="author" content="Leonardo Pangaio">
       
       
-        <link rel="canonical" href="https://pangaio.com.br/blog/page/2/">
+        <link rel="canonical" href="https://pangaio.com.br/blog/unpsersist-pyspark/">
       
       
-        <link rel="prev" href="../../..">
+        <link rel="prev" href="../como-criei-meu-site/">
       
       
-        <link rel="next" href="../../category/data-science/">
       
+        <link rel="alternate" type="application/rss+xml" title="canal RSS" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="canal RSS com conteúdo atualizado" href="../../feed_rss_updated.xml">
       
-        <link rel="alternate" type="application/rss+xml" title="canal RSS" href="../../../feed_rss_created.xml">
-        <link rel="alternate" type="application/rss+xml" title="canal RSS com conteúdo atualizado" href="../../../feed_rss_updated.xml">
-      
-      <link rel="icon" href="../../../images/favicon.ico">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
     
     
       
-        <title>Blog - O Site do Pangaio</title>
+        <title>O que é unpersist() em PySpark? - O Site do Pangaio</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -53,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -70,7 +68,7 @@
     
     
     
-   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -79,7 +77,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -98,7 +96,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#blog" class="md-skip">
+        <a href="#o-que-e-unpersist-em-pyspark" class="md-skip">
           Ir para o conteúdo
         </a>
       
@@ -114,9 +112,9 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
-    <a href="../../.." title="O Site do Pangaio" class="md-header__button md-logo" aria-label="O Site do Pangaio" data-md-component="logo">
+    <a href="../.." title="O Site do Pangaio" class="md-header__button md-logo" aria-label="O Site do Pangaio" data-md-component="logo">
       
-  <img src="../../../images/favicon.ico" alt="logo">
+  <img src="../../images/favicon.ico" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -133,7 +131,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Blog
+              O que é unpersist() em PySpark?
             
           </span>
         </div>
@@ -229,7 +227,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -250,7 +248,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../" class="md-tabs__link">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -270,7 +268,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../gloss%C3%A1rio/acid/" class="md-tabs__link">
+        <a href="../../gloss%C3%A1rio/acid/" class="md-tabs__link">
           
   
     
@@ -300,7 +298,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -311,9 +311,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="O Site do Pangaio" class="md-nav__button md-logo" aria-label="O Site do Pangaio" data-md-component="logo">
+    <a href="../.." title="O Site do Pangaio" class="md-nav__button md-logo" aria-label="O Site do Pangaio" data-md-component="logo">
       
-  <img src="../../../images/favicon.ico" alt="logo">
+  <img src="../../images/favicon.ico" alt="logo">
 
     </a>
     O Site do Pangaio
@@ -328,7 +328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -380,7 +380,7 @@
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../../" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -466,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../archive/2025/" class="md-nav__link">
+      <a href="../archive/2025/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -489,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../archive/2024/" class="md-nav__link">
+      <a href="../archive/2024/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -587,7 +587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/data-science/" class="md-nav__link">
+      <a href="../category/data-science/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -610,7 +610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/desafios/" class="md-nav__link">
+      <a href="../category/desafios/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -633,7 +633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/dia-a-dia/" class="md-nav__link">
+      <a href="../category/dia-a-dia/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -656,7 +656,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/documenta%C3%A7%C3%A3o/" class="md-nav__link">
+      <a href="../category/documenta%C3%A7%C3%A3o/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -679,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/estudos/" class="md-nav__link">
+      <a href="../category/estudos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -702,7 +702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/functions/" class="md-nav__link">
+      <a href="../category/functions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -725,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/pyspark/" class="md-nav__link">
+      <a href="../category/pyspark/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -748,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/python/" class="md-nav__link">
+      <a href="../category/python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -771,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/site/" class="md-nav__link">
+      <a href="../category/site/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -794,7 +794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../category/tech/" class="md-nav__link">
+      <a href="../category/tech/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1180,7 +1180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/acid/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/acid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1201,7 +1201,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/airflow/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/airflow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1222,7 +1222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/ansible/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/ansible/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1243,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/argocd/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/argocd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1264,7 +1264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/arp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/arp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1285,7 +1285,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/base/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/base/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1306,7 +1306,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/bgp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/bgp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1327,7 +1327,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/build/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/build/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1348,7 +1348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/caas/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/caas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1369,7 +1369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/cad/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/cad/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1390,7 +1390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/cd-continuous-delivery/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/cd-continuous-delivery/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1411,7 +1411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/cd-continuous-deployment/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/cd-continuous-deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1432,7 +1432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/ci-cd/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/ci-cd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1453,7 +1453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/ci/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/ci/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1474,7 +1474,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/cifs/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/cifs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1495,7 +1495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/container/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/container/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1516,7 +1516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/css/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/css/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1537,7 +1537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/csv/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/csv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1558,7 +1558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/dast/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/dast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1579,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/data_migration/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/data_migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1600,7 +1600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/database_migration/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/database_migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/dba/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/dba/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1642,7 +1642,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/dbaops/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/dbaops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1663,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/dcl/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/dcl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1684,7 +1684,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/ddl/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/ddl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1705,7 +1705,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/deploy/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/deploy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1726,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/devops/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/devops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1747,7 +1747,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/devsecops/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/devsecops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1768,7 +1768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/dhcp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/dhcp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1789,7 +1789,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/dll/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/dll/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1810,7 +1810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/dlq/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/dlq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1831,7 +1831,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/dml/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/dml/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1852,7 +1852,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/dmz/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/dmz/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1873,7 +1873,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/dns/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/dns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1894,7 +1894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/docker-registry/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/docker-registry/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1915,7 +1915,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/docker/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1936,7 +1936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/dql/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/dql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1957,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/dtl/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/dtl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1978,7 +1978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/erp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/erp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1999,7 +1999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/esb/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/esb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2020,7 +2020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/ethernet/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/ethernet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2041,7 +2041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/etl/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/etl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2062,7 +2062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/fhir/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/fhir/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2083,7 +2083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/file-docker-compose/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/file-docker-compose/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2104,7 +2104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/file-dockerfile/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/file-dockerfile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2125,7 +2125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/file-dockerignore/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/file-dockerignore/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2146,7 +2146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/file-env/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/file-env/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2167,7 +2167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/file-gitignore/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/file-gitignore/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2188,7 +2188,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/file-makefile/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/file-makefile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2209,7 +2209,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/ftp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/ftp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2230,7 +2230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/gcp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/gcp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2251,7 +2251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/ged/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/ged/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2272,7 +2272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/gis/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/gis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2293,7 +2293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/git/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/git/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2314,7 +2314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/github/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/github/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2335,7 +2335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/gitlab/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/gitlab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2356,7 +2356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/gitops/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/gitops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2377,7 +2377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/glbp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/glbp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2398,7 +2398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/hci/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/hci/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2419,7 +2419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/his/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/his/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2440,7 +2440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/hl7/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/hl7/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2461,7 +2461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/html/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/html/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2482,7 +2482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/http/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/http/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2503,7 +2503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/https/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/https/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2524,7 +2524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/iaas/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/iaas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2545,7 +2545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/iac/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/iac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2566,7 +2566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/icmp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/icmp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2587,7 +2587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/ide/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/ide/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2608,7 +2608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/iis/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/iis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2629,7 +2629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/imap/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/imap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2650,7 +2650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/interoperabilidade/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/interoperabilidade/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2671,7 +2671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/iot/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/iot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2692,7 +2692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/ip/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/ip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2713,7 +2713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/jdbc/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/jdbc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2734,7 +2734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/jenkins/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/jenkins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2755,7 +2755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/json/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/json/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2776,7 +2776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/jumbo_frame/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/jumbo_frame/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2797,7 +2797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/jwt/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/jwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2818,7 +2818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/kafka/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/kafka/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2839,7 +2839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/kpi/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/kpi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2860,7 +2860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/kubernetes/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2881,7 +2881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/kvm/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/kvm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2902,7 +2902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/lan/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/lan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2923,7 +2923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/ldap/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/ldap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2944,7 +2944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/lgpd/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/lgpd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2965,7 +2965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/lis/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/lis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2986,7 +2986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/lvm/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/lvm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3007,7 +3007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/mdm/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/mdm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3028,7 +3028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/mea/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/mea/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3049,7 +3049,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/mfa/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/mfa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3070,7 +3070,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/mirth/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/mirth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3091,7 +3091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/modelo_osi/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/modelo_osi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3112,7 +3112,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/mpls/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/mpls/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3133,7 +3133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/mqtt/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/mqtt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3154,7 +3154,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/mssql_cdc/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/mssql_cdc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3175,7 +3175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/mtr/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/mtr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3196,7 +3196,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/mtu/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/mtu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3217,7 +3217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/mvp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/mvp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3238,7 +3238,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/nda/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/nda/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3259,7 +3259,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/nexus/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/nexus/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3280,7 +3280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/nfs/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/nfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3301,7 +3301,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/nmap/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/nmap/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3322,7 +3322,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/nosql/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/nosql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3343,7 +3343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/okr/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/okr/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3364,7 +3364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/openshift/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/openshift/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3385,7 +3385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/orm/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/orm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3406,7 +3406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/paas/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/paas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3427,7 +3427,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/pep/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/pep/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3448,7 +3448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/pipeline/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/pipeline/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3469,7 +3469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/pop/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/pop/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3490,7 +3490,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/proxmox/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/proxmox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3511,7 +3511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/rabbitmq/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/rabbitmq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3532,7 +3532,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/rdp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/rdp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3553,7 +3553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/repositorio/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/repositorio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3574,7 +3574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/rfp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/rfp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3595,7 +3595,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/ris/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/ris/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3616,7 +3616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/rsa/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/rsa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3637,7 +3637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/rundec/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/rundec/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3658,7 +3658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/saas/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/saas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3679,7 +3679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/samba/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/samba/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3700,7 +3700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/sast/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/sast/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3721,7 +3721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/scp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/scp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3742,7 +3742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/sdk/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/sdk/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3763,7 +3763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/secops/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/secops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3784,7 +3784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/sftp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/sftp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3805,7 +3805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/sgdb/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/sgdb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3826,7 +3826,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/smb/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/smb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3847,7 +3847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/smtp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/smtp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3868,7 +3868,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/snmp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/snmp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3889,7 +3889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/sql/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/sql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3910,7 +3910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/sre/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/sre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3931,7 +3931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/ssh/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/ssh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3952,7 +3952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/ssl/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/ssl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3973,7 +3973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/stomp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/stomp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3994,7 +3994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/switch_tor/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/switch_tor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4015,7 +4015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/tcp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/tcp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4036,7 +4036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/terraform/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/terraform/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4057,7 +4057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/tls/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/tls/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4078,7 +4078,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/toml/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/toml/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4099,7 +4099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/ttl/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/ttl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4120,7 +4120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/udp/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/udp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4141,7 +4141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/uml/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/uml/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4162,7 +4162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/uri/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/uri/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4183,7 +4183,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/url/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/url/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4204,7 +4204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/vba/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/vba/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4225,7 +4225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/vbscript/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/vbscript/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4246,7 +4246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/vlan/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/vlan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4267,7 +4267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/vna/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/vna/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4288,7 +4288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/vnc/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/vnc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4309,7 +4309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/vpn/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/vpn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4330,7 +4330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/wan/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/wan/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4351,7 +4351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/xml/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/xml/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4372,7 +4372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../gloss%C3%A1rio/yaml/" class="md-nav__link">
+      <a href="../../gloss%C3%A1rio/yaml/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4401,6 +4401,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -4420,36 +4422,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#como-estudo-em-2024" class="md-nav__link">
+  <a href="#consumo-da-cpu-em-tempo-e-de-112-milisegundos" class="md-nav__link">
     <span class="md-ellipsis">
-      Como estudo em 2024
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#funcoespyspark" class="md-nav__link">
-    <span class="md-ellipsis">
-      FuncoesPySpark
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#como-os-aplicativos-pyspark-podem-ser-redimensionados" class="md-nav__link">
-    <span class="md-ellipsis">
-      Como os Aplicativos PySpark podem ser redimensionados.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#o-que-e-uma-funcao-lambda" class="md-nav__link">
-    <span class="md-ellipsis">
-      O que é uma função lambda? 🤔
+      Consumo da cpu em tempo é de 11.2 milisegundos.
     </span>
   </a>
   
@@ -4464,233 +4439,312 @@
             
           
           
-  <div class="md-content" data-md-component="content">
-    <div class="md-content__inner">
-      <header class="md-typeset">
-        <h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
-      </header>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://github.com/leonardopangaio.png" alt="Leonardo Pangaio">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-11-17 00:00:00+00:00">17 de novembro de 2024</time></li>
-        
-          <li class="md-meta__item">
-            em
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Voltar ao índice
+                  </span>
+                </a>
+              </div>
+            </div>
             
-              <a href="../../category/documenta%C3%A7%C3%A3o/" class="md-meta__link">Documentação</a>, 
-              <a href="../../category/estudos/" class="md-meta__link">Estudos</a></li>
-        
-        
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://github.com/luasampaio.png" alt="Luciana Sampaio">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Luciana Sampaio
+                        
+                      </strong>
+                      <br>
+                      Engenheira de Dados
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadados
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-01-14 00:00:00+00:00" class="md-ellipsis">14 de janeiro de 2025</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            em
+                            
+                              <a href="../category/pyspark/">PySpark</a>, 
+                              <a href="../category/data-science/">Data Science</a>, 
+                              <a href="../category/tech/">Tech</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              3 min de leitura
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
           
-          <li class="md-meta__item">
-            
-              4 min de leitura
-            
-          </li>
-        
-      </ul>
-      
+        </div>
+      </div>
     </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="como-estudo-em-2024"><a class="toclink" href="../../como-estudo-em-2024/">Como estudo em 2024</a></h2>
-<p>Em resumo, tenho escrito todas as minhas anotações em <a href="https://www.markdownguide.org/">Markdown</a>. Faço isso pois além da escrita ser simples, não me preocupo muito pouco com a formatação do documento, e mais com o conteúdo. O Markdown é versátil, então se for necessário converter para HTML é simples, se eu for publicar usando o Github Pages também será fácil. E no documento eu consigo inserir imagens, links externos, diagramas, "mermaid", referências a outros documentos do mesmo repositório e etc...</p>
+    <article class="md-content__inner md-typeset">
+      
+        
 
-    
-      <nav class="md-post__action">
-        <a href="../../como-estudo-em-2024/">
-          Continuar leitura
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://github.com/luasampaio.png" alt="Luciana Sampaio">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-11-15 00:00:00+00:00">15 de novembro de 2024</time></li>
-        
-          <li class="md-meta__item">
-            em
-            
-              <a href="../../category/pyspark/" class="md-meta__link">PySpark</a>, 
-              <a href="../../category/tech/" class="md-meta__link">Tech</a>, 
-              <a href="../../category/data-science/" class="md-meta__link">Data Science</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              4 min de leitura
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="funcoespyspark"><a class="toclink" href="../../pyspark/">FuncoesPySpark</a></h2>
-<h3 id="pyspark"><a class="toclink" href="../../pyspark/#pyspark">PySpark</a></h3>
-<h4 id="afinal-o-que-sao-funcoes"><a class="toclink" href="../../pyspark/#afinal-o-que-sao-funcoes">Afinal o que são funções?</a></h4>
-<p><img alt="alt text" src="../../../images/blog/luciana/func_1.png" /></p>
-<p>Afinal, o que são funções? 🤔
-Se a gente fizer um paralelo com a etimologia da palavra "função", dá pra pensar em algo que expressa ou controla um comportamento – só que, no mundo da programação, isso rola por meio de código. Legal, né? Ou talvez até meio nerd, rs.</p>
-<p>Eu gosto de pensar que funções são as ferramentas mágicas do desenvolvedor. Tipo aquela “caixa de ferramentas” onde você encontra tudo que precisa pra fazer magia com os dados. Quer somar colunas? Beleza. Transformar texto pra minúsculas? Fácil. Ordenar, calcular média, e até umas coisas mais avançadas? Tá tudo lá, prontinho pra usar. 🚀</p>
 
-    
-      <nav class="md-post__action">
-        <a href="../../pyspark/">
-          Continuar leitura
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
-    
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://github.com/luasampaio.png" alt="Luciana Sampaio">
-          </span>
-        
-      </nav>
-    
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-07-02 00:00:00+00:00">2 de julho de 2024</time></li>
-        
-          <li class="md-meta__item">
-            em
-            
-              <a href="../../category/pyspark/" class="md-meta__link">PySpark</a>, 
-              <a href="../../category/tech/" class="md-meta__link">Tech</a>, 
-              <a href="../../category/data-science/" class="md-meta__link">Data Science</a></li>
-        
-        
-          
-          <li class="md-meta__item">
-            
-              3 min de leitura
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="como-os-aplicativos-pyspark-podem-ser-redimensionados"><a class="toclink" href="../../aplicativos-pyspark-redimensionados/">Como os Aplicativos PySpark podem ser redimensionados.</a></h2>
-<h4 id="como-dimensionar-aplicativos-pyspark-de-forma-eficiente"><a class="toclink" href="../../aplicativos-pyspark-redimensionados/#como-dimensionar-aplicativos-pyspark-de-forma-eficiente">Como Dimensionar Aplicativos PySpark de Forma Eficiente?</a></h4>
-<p><img alt="alt text" src="../../../images/blog/luciana/redimens_1.png" /></p>
-<p>Lidar com o dimensionamento de aplicativos PySpark nem sempre é uma tarefa fácil, especialmente quando estamos falando de <strong>processamentos em larga escala</strong>.  </p>
+<h1 id="o-que-e-unpersist-em-pyspark">O que é unpersist() em PySpark?<a class="headerlink" href="#o-que-e-unpersist-em-pyspark" title="Permanent link">&para;</a></h1>
+<p>O método <code>unpersist()</code> é eficaz para liberar recursos em processos de batch, onde você pode controlar quando o cache não é mais necessário. Em streaming, no entanto, o uso de <code>unpersist()</code> não é recomendado, pois os dados são processados continuamente e o checkpoint já cuida da consistência e do armazenamento de estado. A utilização do checkpoint garante que o processo de streaming seja resiliente e possa ser retomado a partir de um ponto de falha, tornando a liberação de memória mais controlada e menos disruptiva.</p>
+<p>Bora para exemplo?</p>
+<p><a class="glightbox" href="../../images/blog/luciana/unpersit1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../images/blog/luciana/unpersit1.png" /></a></p>
+<p>Carregado dados Spark</p>
+<p><a class="glightbox" href="../../images/blog/luciana/unpersit2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../images/blog/luciana/unpersit2.png" /></a></p>
+<p>A função %time no IPython (ou Jupyter Notebook) é uma maneira prática de medir o tempo de execução de uma única linha de código. Ela retorna o tempo total necessário para a execução do comando, ajudando você a ter uma ideia do desempenho de diferentes trechos de código.</p>
+<p><a class="glightbox" href="../../images/blog/luciana/unpersit3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../images/blog/luciana/unpersit3.png" /></a></p>
+<p>Vou conferir a volumetria do meu DataFrame para entender a quantidade de dados que ele possui. 📈</p>
+<p><a class="glightbox" href="../../images/blog/luciana/unpersit4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../images/blog/luciana/unpersit4.png" /></a></p>
+<p>Vou verificar quantas partições meu DataFrame possui atualmente. 🧐📊</p>
+<p><a class="glightbox" href="../../images/blog/luciana/unpersit5.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../images/blog/luciana/unpersit5.png" /></a></p>
+<p>Vou dividir meu DataFrame em 10 partições para aproveitar melhor a magia da computação distribuída. 🚀✨</p>
+<p><a class="glightbox" href="../../images/blog/luciana/unpersit6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../images/blog/luciana/unpersit6.png" /></a></p>
+<p>Veja só, agora temos 10 partições! Um verdadeiro milagre da computação distribuída em ação. 🚀</p>
+<p><a class="glightbox" href="../../images/blog/luciana/unpersit7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../images/blog/luciana/unpersit7.png" /></a></p>
+<p>Ao visualizar os dados, percebemos que eles foram reparticionados. O Spark distribuiu a carga utilizando múltiplas tarefas para executar o processamento.</p>
+<p><a class="glightbox" href="../../images/blog/luciana/unpersit8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../images/blog/luciana/unpersit8.png" /></a></p>
+<p>Foi realizada uma consulta com um filtro básico.</p>
+<p><a class="glightbox" href="../../images/blog/luciana/unpersit9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../images/blog/luciana/unpersit9.png" /></a></p>
+<h3 id="consumo-da-cpu-em-tempo-e-de-112-milisegundos">Consumo da cpu em tempo é de 11.2 milisegundos.<a class="headerlink" href="#consumo-da-cpu-em-tempo-e-de-112-milisegundos" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A ideia agora é eliminar o cache utilizando o método <code>unpersist()</code>.</li>
+</ul>
+<p><a class="glightbox" href="../../images/blog/luciana/unpersit10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../images/blog/luciana/unpersit10.png" /></a></p>
+<ul>
+<li>Nesse passo de limpar o cache, tivemos um pequeno aumento no consumo.</li>
+</ul>
 <hr />
-<h4 id="como-fazer-isso-de-modo-mais-eficiente"><a class="toclink" href="../../aplicativos-pyspark-redimensionados/#como-fazer-isso-de-modo-mais-eficiente"><strong>Como fazer isso de modo mais eficiente?</strong></a></h4>
-<p>Antes de tudo, é fundamental entender que o <strong>número de nós (executores)</strong> tem um impacto significativo na escalabilidade do seu projeto.  </p>
-<p>No entanto, a escolha do tamanho ideal do cluster não depende apenas do tamanho dos dados. Outros fatores também precisam ser considerados, como o poder de processamento (CPU) e a memória disponível.</p>
+<p>Agora…aplicado o método .. 8.82 milisegundos.</p>
+<p><a class="glightbox" href="../../images/blog/luciana/unpersit11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../../images/blog/luciana/unpersit11.png" /></a></p>
+<p>Com certeza, como PoC, é uma ótima maneira de validar o conceito com um volume menor de dados! Espero que tenha ajudado!</p>
+<h1 id="meus-contatos">Meus Contatos! 🌟<a class="headerlink" href="#meus-contatos" title="Permanent link">&para;</a></h1>
+<p>Quer bater um papo, trocar ideias, ou só dar aquela stalkeada básica? Não seja tímido! Aqui estão meus canais de comunicação preferidos:</p>
+<ul>
+<li>
+<p>🌐 <a href="https://www.linkedin.com/in/luciana-sampaio/">LinkedIn</a><br />
+<strong>O lugar onde pareço super profissional e séria. 😉</strong></p>
+</li>
+<li>
+<p>🐙 <a href="https://github.com/luasampaio">GitHub</a><br />
+<strong>Aqui é o cantinho dos meus códigos! Dá uma espiada, mas cuidado com os bugs. 😂</strong></p>
+</li>
+<li>
+<p>📸 <a href="https://www.instagram.com/luasampaio/">Instagram</a><br />
+<strong>Spoiler: mais fotos e menos linhas de código! 📷✨</strong></p>
+</li>
+<li>
+<p>✍️ <a href="https://medium.com/@luciana.sampaio84">Medium</a><br />
+<strong>Onde compartilho insights, histórias e dicas sobre dados e tecnologia. Dá uma conferida!</strong></p>
+</li>
+</ul>
+<p>Vai lá, segue, curte, comenta ou manda mensagem. Prometo que não mordo (muito)! 😜</p>
+<p><em>_texto original publicado em <a href="https://medium.com/@luciana.sampaio84/o-que-%C3%A9-unpersist-em-pyspark-b1617acef35b">medium.com</a></em></p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Última atualização">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">22 de janeiro de 2025</span>
+  </span>
 
     
-      <nav class="md-post__action">
-        <a href="../../aplicativos-pyspark-redimensionados/">
-          Continuar leitura
-        </a>
-      </nav>
     
-  </div>
-</article>
       
-        <article class="md-post md-post--excerpt">
-  <header class="md-post__header">
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Criada">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">22 de janeiro de 2025</span>
+  </span>
+
     
-      <nav class="md-post__authors md-typeset">
-        
-          <span class="md-author">
-            <img src="https://github.com/luasampaio.png" alt="Luciana Sampaio">
-          </span>
-        
-      </nav>
     
-    <div class="md-post__meta md-meta">
-      <ul class="md-meta__list">
-        <li class="md-meta__item">
-          <time datetime="2024-01-03 00:00:00+00:00">3 de janeiro de 2024</time></li>
-        
-          <li class="md-meta__item">
-            em
-            
-              <a href="../../category/python/" class="md-meta__link">Python</a>, 
-              <a href="../../category/functions/" class="md-meta__link">Functions</a>, 
-              <a href="../../category/tech/" class="md-meta__link">Tech</a></li>
-        
-        
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Colaboradores">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
+      
+    </span>
+    <nav>
+      
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+  
+
+
+  
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
           
-          <li class="md-meta__item">
-            
-              2 min de leitura
-            
-          </li>
-        
-      </ul>
-      
-    </div>
-  </header>
-  <div class="md-post__content md-typeset">
-    <h2 id="o-que-e-uma-funcao-lambda"><a class="toclink" href="../../lambda-function/">O que é uma função lambda? 🤔</a></h2>
-<p><img alt="alt text" src="../../../images/blog/luciana/lamb.png" /></p>
-<p>Ah, funções lambda... O que seriam elas? Nada mais, nada menos que <strong>funções sem nome</strong>! Isso mesmo, é tipo aquele colega que você conhece de vista, mas nunca sabe o nome. 🤷‍♀️</p>
-<p>A ideia aqui é simples: elas são feitas para serem pequenas, rápidas e diretas ao ponto. Ou seja, são as "funções ninja" do Python. 🥷🐍</p>
-<p>Enquanto em uma função regular você precisa de toda uma cerimônia — <em>"declara, define, passa parâmetros, dá nome, e blá-blá-blá"</em> — a lambda chega, resolve o que precisa e sai sem nem pedir crédito. <strong>Elegância pura.</strong></p>
-
-    
-      <nav class="md-post__action">
-        <a href="../../lambda-function/">
-          Continuar leitura
-        </a>
-      </nav>
-    
-  </div>
-</article>
-      
-      
-        
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
           
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
 
 
+  <h2 id="__comments">Comentários</h2>
+  <!-- Insert generated snippet here -->
 
-<nav class="md-pagination">
-  <a class="md-pagination__link" href="../../">1</a> <span class="md-pagination__current">2</span>
-</nav>
-        
+  <script src="https://giscus.app/client.js"
+  data-repo="leonardopangaio/website"
+  data-repo-id="R_kgDONjH4HA"
+  data-category="Announcements"
+  data-category-id="DIC_kwDONjH4HM4ClmmA"
+  data-mapping="title"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="1"
+  data-input-position="top"
+  data-theme="preferred_color_scheme"
+  data-lang="pt"
+  crossorigin="anonymous"
+  async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+
+
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
       
-    </div>
+    </article>
   </div>
 
           
@@ -4709,10 +4763,12 @@ Se a gente fizer um paralelo com a etimologia da palavra "função", dá pra pen
   
     
       
+        
+      
       <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
         
           
-          <a href="../../.." class="md-footer__link md-footer__link--prev" aria-label="Anterior: Home">
+          <a href="../como-criei-meu-site/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Como criei meu site">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4722,27 +4778,11 @@ Se a gente fizer um paralelo com a etimologia da palavra "função", dá pra pen
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Home
+                Como criei meu site
               </div>
             </div>
           </a>
         
-        
-          
-          <a href="../../category/data-science/" class="md-footer__link md-footer__link--next" aria-label="Próximo: Data Science">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Próximo
-              </span>
-              <div class="md-ellipsis">
-                Data Science
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
         
       </nav>
     
@@ -4860,10 +4900,10 @@ Se a gente fizer um paralelo com a etimologia da palavra "função", dá pra pen
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.tracking", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "navigation.footer", "content.tooltips", "toc.follow"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.tracking", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "navigation.footer", "content.tooltips", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
       
     
   <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});

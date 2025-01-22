@@ -13,66 +13,12 @@
     "language": "pt",
     "items": [
         {
-            "id": "https://pangaio.com.br/blog/lambda-function/",
-            "url": "https://pangaio.com.br/blog/lambda-function/",
-            "title": "O que \u00e9 uma fun\u00e7\u00e3o lambda? \ud83e\udd14",
-            "content_html": "<h1>O que \u00e9 uma fun\u00e7\u00e3o lambda? \ud83e\udd14</h1>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/lamb.png\"></p>\n<p>Ah, fun\u00e7\u00f5es lambda... O que seriam elas? Nada mais, nada menos que <strong>fun\u00e7\u00f5es sem nome</strong>! Isso mesmo, \u00e9 tipo aquele colega que voc\u00ea conhece de vista, mas nunca sabe o nome. \ud83e\udd37\u200d\u2640\ufe0f</p>\n<p>A ideia aqui \u00e9 simples: elas s\u00e3o feitas para serem pequenas, r\u00e1pidas e diretas ao ponto. Ou seja, s\u00e3o as \"fun\u00e7\u00f5es ninja\" do Python. \ud83e\udd77\ud83d\udc0d</p>\n<p>Enquanto em uma fun\u00e7\u00e3o regular voc\u00ea precisa de toda uma cerim\u00f4nia \u2014 <em>\"declara, define, passa par\u00e2metros, d\u00e1 nome, e bl\u00e1-bl\u00e1-bl\u00e1\"</em> \u2014 a lambda chega, resolve o que precisa e sai sem nem pedir cr\u00e9dito. <strong>Eleg\u00e2ncia pura.</strong></p>",
+            "id": "https://pangaio.com.br/blog/unpsersist-pyspark/",
+            "url": "https://pangaio.com.br/blog/unpsersist-pyspark/",
+            "title": "O que \u00e9 unpersist() em PySpark?",
+            "content_html": "<h1>O que \u00e9 unpersist() em PySpark?</h1>\n<p>O m\u00e9todo <code>unpersist()</code> \u00e9 eficaz para liberar recursos em processos de batch, onde voc\u00ea pode controlar quando o cache n\u00e3o \u00e9...</p>",
             "image": null,
-            "date_modified": "2025-01-17T16:05:54.710680+00:00",
-            "authors": [
-                {
-                    "name": "Luciana Sampaio"
-                }
-            ],
-            "tags": [
-                "Functions",
-                "Python",
-                "Tech"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/pyspark-context/",
-            "url": "https://pangaio.com.br/blog/pyspark-context/",
-            "title": "Ah, relacionamentos no SQL?",
-            "content_html": "<h1>Ah, relacionamentos no SQL?</h1>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/divertidamente.png\"></p>\n<p>Pense nisso como dramas de relacionamento, mas entre tabelas de dados! \ud83d\ude02 Vamos l\u00e1:</p>\n<ol>\n<li>Relacionamento de \u201cUm pra Um\u201d (1:1)\nEsse \u00e9 aquele namoro exclusivo, onde cada item em uma tabela s\u00f3 pode estar com um \u00fanico item em outra tabela. Nada de triangulo amoroso aqui!</li>\n</ol>\n<p>Exemplo: Uma tabela de pessoas e uma tabela de carteira de identidade. Cada pessoa tem uma carteira, e cada carteira pertence a uma \u00fanica pessoa. Bem monog\u00e2mico.</p>",
-            "image": null,
-            "date_modified": "2025-01-17T16:05:54.684048+00:00",
-            "authors": [
-                {
-                    "name": "Luciana Sampaio"
-                }
-            ],
-            "tags": [
-                "Data Science",
-                "PySpark",
-                "Tech"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/pyspark-context/",
-            "url": "https://pangaio.com.br/blog/pyspark-context/",
-            "title": "O que \u00e9 pyspark.sql.context? \ud83c\udfa9\u2728",
-            "content_html": "<h1>O que \u00e9 <code>pyspark.sql.context</code>? \ud83c\udfa9\u2728</h1>\n<p>Quando comecei a trabalhar com <strong>Databricks</strong>, confesso que me senti como um terr\u00e1queo vendo um disco voador pela primeira vez. Era outro mundo, meu povo! \ud83c\udf0c</p>",
-            "image": null,
-            "date_modified": "2025-01-17T16:05:54.624703+00:00",
-            "authors": [
-                {
-                    "name": "Luciana Sampaio"
-                }
-            ],
-            "tags": [
-                "Data Science",
-                "PySpark",
-                "Tech"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/pyspark/",
-            "url": "https://pangaio.com.br/blog/pyspark/",
-            "title": "FuncoesPySpark",
-            "content_html": "<h2>PySpark</h2>\n<h3>Afinal o que s\u00e3o fun\u00e7\u00f5es?</h3>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/func_1.png\"></p>\n<p>Afinal, o que s\u00e3o fun\u00e7\u00f5es? \ud83e\udd14\nSe a gente fizer um paralelo com a etimologia da palavra \"fun\u00e7\u00e3o\", d\u00e1 pra pensar em algo que expressa ou controla um comportamento \u2013 s\u00f3 que, no mundo da programa\u00e7\u00e3o, isso rola por meio de c\u00f3digo. Legal, n\u00e9? Ou talvez at\u00e9 meio nerd, rs.</p>\n<p>Eu gosto de pensar que fun\u00e7\u00f5es s\u00e3o as ferramentas m\u00e1gicas do desenvolvedor. Tipo aquela \u201ccaixa de ferramentas\u201d onde voc\u00ea encontra tudo que precisa pra fazer magia com os dados. Quer somar colunas? Beleza. Transformar texto pra min\u00fasculas? F\u00e1cil. Ordenar, calcular m\u00e9dia, e at\u00e9 umas coisas mais avan\u00e7adas? T\u00e1 tudo l\u00e1, prontinho pra usar. \ud83d\ude80</p>",
-            "image": null,
-            "date_modified": "2025-01-17T16:05:54.542945+00:00",
+            "date_modified": "2025-01-22T16:08:04.538833+00:00",
             "authors": [
                 {
                     "name": "Luciana Sampaio"
@@ -90,7 +36,7 @@
             "title": "Como os Aplicativos PySpark podem ser redimensionados.",
             "content_html": "<h1>Como os Aplicativos PySpark podem ser redimensionados.</h1>\n<h3>Como Dimensionar Aplicativos PySpark de Forma Eficiente?</h3>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/redimens_1.png\"></p>\n<p>Lidar com o dimensionamento de aplicativos PySpark nem sempre \u00e9 uma tarefa f\u00e1cil, especialmente quando estamos falando de <strong>processamentos em larga escala</strong>.  </p>\n<hr>\n<h3><strong>Como fazer isso de modo mais eficiente?</strong></h3>\n<p>Antes de tudo, \u00e9 fundamental entender que o <strong>n\u00famero de n\u00f3s (executores)</strong> tem um impacto significativo na escalabilidade do seu projeto.  </p>\n<p>No entanto, a escolha do tamanho ideal do cluster n\u00e3o depende apenas do tamanho dos dados. Outros fatores tamb\u00e9m precisam ser considerados, como o poder de processamento (CPU) e a mem\u00f3ria dispon\u00edvel.</p>",
             "image": null,
-            "date_modified": "2025-01-17T16:05:54.506839+00:00",
+            "date_modified": "2025-01-17T13:06:08+00:00",
             "authors": [
                 {
                     "name": "Luciana Sampaio"
@@ -99,6 +45,78 @@
             "tags": [
                 "Data Science",
                 "PySpark",
+                "Tech"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/pyspark/",
+            "url": "https://pangaio.com.br/blog/pyspark/",
+            "title": "FuncoesPySpark",
+            "content_html": "<h2>PySpark</h2>\n<h3>Afinal o que s\u00e3o fun\u00e7\u00f5es?</h3>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/func_1.png\"></p>\n<p>Afinal, o que s\u00e3o fun\u00e7\u00f5es? \ud83e\udd14\nSe a gente fizer um paralelo com a etimologia da palavra \"fun\u00e7\u00e3o\", d\u00e1 pra pensar em algo que expressa ou controla um comportamento \u2013 s\u00f3 que, no mundo da programa\u00e7\u00e3o, isso rola por meio de c\u00f3digo. Legal, n\u00e9? Ou talvez at\u00e9 meio nerd, rs.</p>\n<p>Eu gosto de pensar que fun\u00e7\u00f5es s\u00e3o as ferramentas m\u00e1gicas do desenvolvedor. Tipo aquela \u201ccaixa de ferramentas\u201d onde voc\u00ea encontra tudo que precisa pra fazer magia com os dados. Quer somar colunas? Beleza. Transformar texto pra min\u00fasculas? F\u00e1cil. Ordenar, calcular m\u00e9dia, e at\u00e9 umas coisas mais avan\u00e7adas? T\u00e1 tudo l\u00e1, prontinho pra usar. \ud83d\ude80</p>",
+            "image": null,
+            "date_modified": "2025-01-17T13:06:08+00:00",
+            "authors": [
+                {
+                    "name": "Luciana Sampaio"
+                }
+            ],
+            "tags": [
+                "Data Science",
+                "PySpark",
+                "Tech"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/pyspark-context/",
+            "url": "https://pangaio.com.br/blog/pyspark-context/",
+            "title": "O que \u00e9 pyspark.sql.context? \ud83c\udfa9\u2728",
+            "content_html": "<h1>O que \u00e9 <code>pyspark.sql.context</code>? \ud83c\udfa9\u2728</h1>\n<p>Quando comecei a trabalhar com <strong>Databricks</strong>, confesso que me senti como um terr\u00e1queo vendo um disco voador pela primeira vez. Era outro mundo, meu povo! \ud83c\udf0c</p>",
+            "image": null,
+            "date_modified": "2025-01-17T13:06:08+00:00",
+            "authors": [
+                {
+                    "name": "Luciana Sampaio"
+                }
+            ],
+            "tags": [
+                "Data Science",
+                "PySpark",
+                "Tech"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/pyspark-context/",
+            "url": "https://pangaio.com.br/blog/pyspark-context/",
+            "title": "Ah, relacionamentos no SQL?",
+            "content_html": "<h1>Ah, relacionamentos no SQL?</h1>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/divertidamente.png\"></p>\n<p>Pense nisso como dramas de relacionamento, mas entre tabelas de dados! \ud83d\ude02 Vamos l\u00e1:</p>\n<ol>\n<li>Relacionamento de \u201cUm pra Um\u201d (1:1)\nEsse \u00e9 aquele namoro exclusivo, onde cada item em uma tabela s\u00f3 pode estar com um \u00fanico item em outra tabela. Nada de triangulo amoroso aqui!</li>\n</ol>\n<p>Exemplo: Uma tabela de pessoas e uma tabela de carteira de identidade. Cada pessoa tem uma carteira, e cada carteira pertence a uma \u00fanica pessoa. Bem monog\u00e2mico.</p>",
+            "image": null,
+            "date_modified": "2025-01-17T13:06:08+00:00",
+            "authors": [
+                {
+                    "name": "Luciana Sampaio"
+                }
+            ],
+            "tags": [
+                "Data Science",
+                "PySpark",
+                "Tech"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/lambda-function/",
+            "url": "https://pangaio.com.br/blog/lambda-function/",
+            "title": "O que \u00e9 uma fun\u00e7\u00e3o lambda? \ud83e\udd14",
+            "content_html": "<h1>O que \u00e9 uma fun\u00e7\u00e3o lambda? \ud83e\udd14</h1>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/lamb.png\"></p>\n<p>Ah, fun\u00e7\u00f5es lambda... O que seriam elas? Nada mais, nada menos que <strong>fun\u00e7\u00f5es sem nome</strong>! Isso mesmo, \u00e9 tipo aquele colega que voc\u00ea conhece de vista, mas nunca sabe o nome. \ud83e\udd37\u200d\u2640\ufe0f</p>\n<p>A ideia aqui \u00e9 simples: elas s\u00e3o feitas para serem pequenas, r\u00e1pidas e diretas ao ponto. Ou seja, s\u00e3o as \"fun\u00e7\u00f5es ninja\" do Python. \ud83e\udd77\ud83d\udc0d</p>\n<p>Enquanto em uma fun\u00e7\u00e3o regular voc\u00ea precisa de toda uma cerim\u00f4nia \u2014 <em>\"declara, define, passa par\u00e2metros, d\u00e1 nome, e bl\u00e1-bl\u00e1-bl\u00e1\"</em> \u2014 a lambda chega, resolve o que precisa e sai sem nem pedir cr\u00e9dito. <strong>Eleg\u00e2ncia pura.</strong></p>",
+            "image": null,
+            "date_modified": "2025-01-17T13:06:08+00:00",
+            "authors": [
+                {
+                    "name": "Luciana Sampaio"
+                }
+            ],
+            "tags": [
+                "Functions",
+                "Python",
                 "Tech"
             ]
         },
