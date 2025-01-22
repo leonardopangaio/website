@@ -15,6 +15,8 @@ slug: unpsersist-pyspark
 
 O método `unpersist()` é eficaz para liberar recursos em processos de batch, onde você pode controlar quando o cache não é mais necessário. Em streaming, no entanto, o uso de `unpersist()` não é recomendado, pois os dados são processados continuamente e o checkpoint já cuida da consistência e do armazenamento de estado. A utilização do checkpoint garante que o processo de streaming seja resiliente e possa ser retomado a partir de um ponto de falha, tornando a liberação de memória mais controlada e menos disruptiva.
 
+<!-- more -->
+
 Bora para exemplo?
 
 ![alt text](../../../images/blog/luciana/unpersit1.png)

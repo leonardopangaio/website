@@ -13,8 +13,8 @@
     <language>pt</language>
 
     
-    <pubDate>Wed, 22 Jan 2025 16:07:56 -0000</pubDate>
-    <lastBuildDate>Wed, 22 Jan 2025 16:07:56 -0000</lastBuildDate>
+    <pubDate>Wed, 22 Jan 2025 16:12:17 -0000</pubDate>
+    <lastBuildDate>Wed, 22 Jan 2025 16:12:17 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -50,9 +50,9 @@
         
       
       <description>&lt;h1&gt;O que é unpersist() em PySpark?&lt;/h1&gt;
-&lt;p&gt;O método &lt;code&gt;unpersist()&lt;/code&gt; é eficaz para liberar recursos em processos de batch, onde você pode controlar quando o cache não é...&lt;/p&gt;</description>
+&lt;p&gt;O método &lt;code&gt;unpersist()&lt;/code&gt; é eficaz para liberar recursos em processos de batch, onde você pode controlar quando o cache não é mais necessário. Em streaming, no entanto, o uso de &lt;code&gt;unpersist()&lt;/code&gt; não é recomendado, pois os dados são processados continuamente e o checkpoint já cuida da consistência e do armazenamento de estado. A utilização do checkpoint garante que o processo de streaming seja resiliente e possa ser retomado a partir de um ponto de falha, tornando a liberação de memória mais controlada e menos disruptiva.&lt;/p&gt;</description>
       <link>https://pangaio.com.br/blog/unpsersist-pyspark/</link>
-      <pubDate>Wed, 22 Jan 2025 16:08:04 +0000</pubDate>
+      <pubDate>Wed, 22 Jan 2025 13:08:21 +0000</pubDate>
       <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
       
       <guid isPermaLink="true">https://pangaio.com.br/blog/unpsersist-pyspark/</guid>
