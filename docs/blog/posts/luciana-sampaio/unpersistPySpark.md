@@ -8,7 +8,7 @@ categories:
   - Data Science
   - Tech
 comments: true
-slug: unpsersist-pyspark
+slug: unpersist-pyspark
 ---
 
 # O que é unpersist() em PySpark?

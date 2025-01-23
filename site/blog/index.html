@@ -4464,6 +4464,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#como-estudo-em-2024" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como estudo em 2024
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoespyspark" class="md-nav__link">
+    <span class="md-ellipsis">
+      FuncoesPySpark
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#como-os-aplicativos-pyspark-podem-ser-redimensionados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Como os Aplicativos PySpark podem ser redimensionados.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-uma-funcao-lambda" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que é uma função lambda? 🤔
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4515,12 +4551,12 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="o-que-e-unpersist-em-pyspark"><a class="toclink" href="unpsersist-pyspark/">O que é unpersist() em PySpark?</a></h2>
+    <h2 id="o-que-e-unpersist-em-pyspark"><a class="toclink" href="unpersist-pyspark/">O que é unpersist() em PySpark?</a></h2>
 <p>O método <code>unpersist()</code> é eficaz para liberar recursos em processos de batch, onde você pode controlar quando o cache não é mais necessário. Em streaming, no entanto, o uso de <code>unpersist()</code> não é recomendado, pois os dados são processados continuamente e o checkpoint já cuida da consistência e do armazenamento de estado. A utilização do checkpoint garante que o processo de streaming seja resiliente e possa ser retomado a partir de um ponto de falha, tornando a liberação de memória mais controlada e menos disruptiva.</p>
 
     
       <nav class="md-post__action">
-        <a href="unpsersist-pyspark/">
+        <a href="unpersist-pyspark/">
           Continuar leitura
         </a>
       </nav>
@@ -4731,6 +4767,215 @@ Esse é aquele namoro exclusivo, onde cada item em uma tabela só pode estar com
   </div>
 </article>
       
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/leonardopangaio.png" alt="Leonardo Pangaio">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-11-17 00:00:00+00:00">17 de novembro de 2024</time></li>
+        
+          <li class="md-meta__item">
+            em
+            
+              <a href="category/documenta%C3%A7%C3%A3o/" class="md-meta__link">Documentação</a>, 
+              <a href="category/estudos/" class="md-meta__link">Estudos</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              4 min de leitura
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="como-estudo-em-2024"><a class="toclink" href="como-estudo-em-2024/">Como estudo em 2024</a></h2>
+<p>Em resumo, tenho escrito todas as minhas anotações em <a href="https://www.markdownguide.org/">Markdown</a>. Faço isso pois além da escrita ser simples, não me preocupo muito pouco com a formatação do documento, e mais com o conteúdo. O Markdown é versátil, então se for necessário converter para HTML é simples, se eu for publicar usando o Github Pages também será fácil. E no documento eu consigo inserir imagens, links externos, diagramas, "mermaid", referências a outros documentos do mesmo repositório e etc...</p>
+
+    
+      <nav class="md-post__action">
+        <a href="como-estudo-em-2024/">
+          Continuar leitura
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/luasampaio.png" alt="Luciana Sampaio">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-11-15 00:00:00+00:00">15 de novembro de 2024</time></li>
+        
+          <li class="md-meta__item">
+            em
+            
+              <a href="category/pyspark/" class="md-meta__link">PySpark</a>, 
+              <a href="category/tech/" class="md-meta__link">Tech</a>, 
+              <a href="category/data-science/" class="md-meta__link">Data Science</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              4 min de leitura
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="funcoespyspark"><a class="toclink" href="pyspark/">FuncoesPySpark</a></h2>
+<h3 id="pyspark"><a class="toclink" href="pyspark/#pyspark">PySpark</a></h3>
+<h4 id="afinal-o-que-sao-funcoes"><a class="toclink" href="pyspark/#afinal-o-que-sao-funcoes">Afinal o que são funções?</a></h4>
+<p><img alt="alt text" src="../images/blog/luciana/func_1.png" /></p>
+<p>Afinal, o que são funções? 🤔
+Se a gente fizer um paralelo com a etimologia da palavra "função", dá pra pensar em algo que expressa ou controla um comportamento – só que, no mundo da programação, isso rola por meio de código. Legal, né? Ou talvez até meio nerd, rs.</p>
+<p>Eu gosto de pensar que funções são as ferramentas mágicas do desenvolvedor. Tipo aquela “caixa de ferramentas” onde você encontra tudo que precisa pra fazer magia com os dados. Quer somar colunas? Beleza. Transformar texto pra minúsculas? Fácil. Ordenar, calcular média, e até umas coisas mais avançadas? Tá tudo lá, prontinho pra usar. 🚀</p>
+
+    
+      <nav class="md-post__action">
+        <a href="pyspark/">
+          Continuar leitura
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/luasampaio.png" alt="Luciana Sampaio">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-07-02 00:00:00+00:00">2 de julho de 2024</time></li>
+        
+          <li class="md-meta__item">
+            em
+            
+              <a href="category/pyspark/" class="md-meta__link">PySpark</a>, 
+              <a href="category/tech/" class="md-meta__link">Tech</a>, 
+              <a href="category/data-science/" class="md-meta__link">Data Science</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              3 min de leitura
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="como-os-aplicativos-pyspark-podem-ser-redimensionados"><a class="toclink" href="aplicativos-pyspark-redimensionados/">Como os Aplicativos PySpark podem ser redimensionados.</a></h2>
+<h4 id="como-dimensionar-aplicativos-pyspark-de-forma-eficiente"><a class="toclink" href="aplicativos-pyspark-redimensionados/#como-dimensionar-aplicativos-pyspark-de-forma-eficiente">Como Dimensionar Aplicativos PySpark de Forma Eficiente?</a></h4>
+<p><img alt="alt text" src="../images/blog/luciana/redimens_1.png" /></p>
+<p>Lidar com o dimensionamento de aplicativos PySpark nem sempre é uma tarefa fácil, especialmente quando estamos falando de <strong>processamentos em larga escala</strong>.  </p>
+<hr />
+<h4 id="como-fazer-isso-de-modo-mais-eficiente"><a class="toclink" href="aplicativos-pyspark-redimensionados/#como-fazer-isso-de-modo-mais-eficiente"><strong>Como fazer isso de modo mais eficiente?</strong></a></h4>
+<p>Antes de tudo, é fundamental entender que o <strong>número de nós (executores)</strong> tem um impacto significativo na escalabilidade do seu projeto.  </p>
+<p>No entanto, a escolha do tamanho ideal do cluster não depende apenas do tamanho dos dados. Outros fatores também precisam ser considerados, como o poder de processamento (CPU) e a memória disponível.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="aplicativos-pyspark-redimensionados/">
+          Continuar leitura
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://github.com/luasampaio.png" alt="Luciana Sampaio">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-01-03 00:00:00+00:00">3 de janeiro de 2024</time></li>
+        
+          <li class="md-meta__item">
+            em
+            
+              <a href="category/python/" class="md-meta__link">Python</a>, 
+              <a href="category/functions/" class="md-meta__link">Functions</a>, 
+              <a href="category/tech/" class="md-meta__link">Tech</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              2 min de leitura
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="o-que-e-uma-funcao-lambda"><a class="toclink" href="lambda-function/">O que é uma função lambda? 🤔</a></h2>
+<p><img alt="alt text" src="../images/blog/luciana/lamb.png" /></p>
+<p>Ah, funções lambda... O que seriam elas? Nada mais, nada menos que <strong>funções sem nome</strong>! Isso mesmo, é tipo aquele colega que você conhece de vista, mas nunca sabe o nome. 🤷‍♀️</p>
+<p>A ideia aqui é simples: elas são feitas para serem pequenas, rápidas e diretas ao ponto. Ou seja, são as "funções ninja" do Python. 🥷🐍</p>
+<p>Enquanto em uma função regular você precisa de toda uma cerimônia — <em>"declara, define, passa parâmetros, dá nome, e blá-blá-blá"</em> — a lambda chega, resolve o que precisa e sai sem nem pedir crédito. <strong>Elegância pura.</strong></p>
+
+    
+      <nav class="md-post__action">
+        <a href="lambda-function/">
+          Continuar leitura
+        </a>
+      </nav>
+    
+  </div>
+</article>
+      
       
         
           
@@ -4738,7 +4983,7 @@ Esse é aquele namoro exclusivo, onde cada item em uma tabela só pode estar com
 
 
 <nav class="md-pagination">
-  <span class="md-pagination__current">1</span> <a class="md-pagination__link" href="page/2/">2</a>
+  
 </nav>
         
       
