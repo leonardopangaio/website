@@ -45,7 +45,7 @@ O `make` identifica sempre o arquivo `Makefile` que estiver na pasta corrente, p
 
 A estrutura básica de um `Makefile` segue este formato:
 
-```makefile
+```makefile title="Makefile"
 ALVO: DEPENDÊNCIAS
 	RECEITA
 	...
@@ -62,7 +62,7 @@ Onde:
 
 Por exemplo:
 
-```makefile
+```makefile title="Makefile"
 # Alvo padrão do make.
 all:  mensagem1
 	echo "Olá mundo! Eu sou a receita geral do `makefile` desta pasta"
@@ -86,7 +86,7 @@ Nos comandos, também podemos ter um operador para ocultar que o `make` imprima 
 
 Voltando ao nosso exemplo, ficaria assim:
 
-```makefile
+```makefile title="Makefile"
 all:  mensagem1
 	@echo "Olá mundo! Eu sou a receita geral do makefile desta pasta"
 
@@ -109,7 +109,7 @@ Ainda sobre Alvos, o `make`, por padrão, trata os alvos como arquivos. Portanto
 
 Exemplo:
 
-```makefile
+```makefile title="Makefile"
 saida.txt: entrada.txt
 	echo "Processando entrada.txt..." > saida.txt
 ```
@@ -128,7 +128,7 @@ Caso seja necessário definir alvos que **não são arquivos**, como comandos au
 
 Por exemplo:
 
-```makefile
+```makefile title="Makefile"
 .PHONY help
 
 help:
@@ -143,7 +143,7 @@ O `make` gera um terminal para cada comando executado, isso significa que um ter
 
 Isso afeta como os comandos devem ser escritos, pois caso os comandos não sejam concatenados por `;` ou `&&`, e cada comando seja executado em terminais diferentes, podem não ter o funcionamento desejado. Por exemplo:
 
-```makefile
+```makefile title="Makefile"
 comandosJuntos:
 	VAR="olá mundo" \
 	&& echo $${VAR}
@@ -174,7 +174,7 @@ No caso do alvo `comandosSeparados` como a variável foi declarada em um termina
 
 O `make` também nos permite informar que interpretador desejamos utilizar. Por padrão ele utiliza o `shell`, contudo podemos alterar o interpretador desejado utilizando a variável `SHELL`. Por exemplo:
 
-```makefile
+```makefile title="Makefile"
 SHELL := /bin/bash
 ```
 
@@ -188,7 +188,7 @@ O `makefile` permite a utilização de variáveis em sua estrutura, não somente
 
 Para isto, basta declararmos a variável e atribuir um valor a ela, desta forma:
 
-```makefile
+```makefile title="Makefile"
 VARIAVEL=VALOR
 var1 = VALOR
 
@@ -210,7 +210,7 @@ Também podemos trabalhar com variáveis com a passagem de parâmetros quando ut
 
 Por exemplo, podemos ter um alvo, que sua receita utilize alguma estrutura de condicional, e que deve ter o valor passado durante sua chamada para a tomada de decisão. Para este caso, podemos utilizar a passagem de parâmetros do `make` para definir o valor de uma variável dentro da receita.
 
-```makefile
+```makefile title="Makefile"
 testeParametro:
 	@echo "A variável vparam é igual a '$(vparam)'"
 ```
@@ -277,7 +277,7 @@ Existe também uma função, que veremos algumas mais pra frente, que é para ex
 
 Por exemplo:
 
-```makefile
+```makefile title="Makefile"
 # Todos os arquivos .yml da pasta src
 SRC = $(wildcard ./src/*.yml)
 ```
@@ -318,7 +318,7 @@ Com esta sintaxe podemos realizar 4 tipos de testes:
 
 - Se valor1 igual valor2;
 
-```makefile
+```makefile title="Makefile"
 ifeq (arg1, arg2)
 ifeq 'arg1' 'arg2'
 ifeq "arg1" "arg2"
@@ -331,7 +331,7 @@ Um alerta importante é com relação a comparação de variáveis complexas, po
 
 - Se valor1 diferente valor2;
 
-```makefile
+```makefile title="Makefile"
 ifneq (arg1, arg2)
 ifneq 'arg1' 'arg2'
 ifneq "arg1" "arg2"
@@ -343,7 +343,7 @@ Este teste expande as variáveis e compara elas, caso sejam diferentes, a ação
 
 - Se valor foi definido;
 
-```makefile
+```makefile title="Makefile"
 ifdef variable-name
 ```
 
@@ -353,7 +353,7 @@ Variáveis que nunca foram definidas, tem um valor vazio. Observe que este teste
 
 - Se valor não foi definido;
 
-```makefile
+```makefile title="Makefile"
 ifndef variable-name
 ```
 
@@ -373,7 +373,7 @@ As funções permitem que o texto seja processado pelo `makefile` para computar 
 
 Por exemplo:
 
-```makefile
+```makefile title="Makefile"
 # Todos os arquivos .yml da pasta src
 SRC = $(wildcard ./src/*.yml)
 
@@ -402,7 +402,7 @@ Vou deixar uma pequena lista de funções, que acredito que sejam as mais utiliz
 
 O `make` também nos permite a criação de funções personalizadas. Para explicar um pouco da sintaxe, deixarei um exemplo:
 
-```makefile
+```makefile title="Makefile"
 define FUNCAO
 	@echo "Olá, o parâmetro 1 é $(1) e o parâmetro 2 é $(2)"
 endef
@@ -426,7 +426,7 @@ Olá, o parâmetro 1 é pParam1 e o parâmetro 2 é pParam2
 
 Deixo aqui o `makefile` que utilizo para alguns scripts python que utilizo no dia-a-dia.
 
-```makefile
+```makefile title="Makefile"
 # Versão do Makefile
 VERSION="2.7.6"
 # Versão da aplicação

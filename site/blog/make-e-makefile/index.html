@@ -4708,7 +4708,7 @@
 <p>O <code>Makefile</code> é um arquivo de texto que contém regras organizadas em um formato específico. Essas regras informam ao <code>make</code> quais arquivos precisam ser atualizados e quais comandos devem ser executados.</p>
 <p>O <code>make</code> identifica sempre o arquivo <code>Makefile</code> que estiver na pasta corrente, portanto, podemos ter mais de um arquivo <code>Makefile</code> em nosso projeto, e o arquivo que será interpretado pelo <code>make</code> será o da pasta corrente.</p>
 <p>A estrutura básica de um <code>Makefile</code> segue este formato:</p>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">ALVO</span><span class="o">:</span><span class="w"> </span><span class="n">DEPEND</span>Ê<span class="n">NCIAS</span>
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">ALVO</span><span class="o">:</span><span class="w"> </span><span class="n">DEPEND</span>Ê<span class="n">NCIAS</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>RECEITA
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span>...
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span>...
@@ -4722,7 +4722,7 @@
 <li><strong>Comentários:</strong> São quaisquer textos explicativos ou para desativar um trecho do código. Eles são feitos com o caractere <code>#</code> no início da sentença de comentário.</li>
 </ul>
 <p>Por exemplo:</p>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># Alvo padrão do make.</span>
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># Alvo padrão do make.</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">all</span><span class="o">:</span><span class="w">  </span><span class="n">mensagem</span>1
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Olá mundo! Eu sou a receita geral do `makefile` desta pasta&quot;</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
@@ -4738,7 +4738,7 @@
 </span></code></pre></div>
 <p>Nos comandos, também podemos ter um operador para ocultar que o <code>make</code> imprima o comando e depois sua saída, deixando apenas a saída do comando aparecendo. Este operador é o <code>@</code> antes do comando.</p>
 <p>Voltando ao nosso exemplo, ficaria assim:</p>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">all</span><span class="o">:</span><span class="w">  </span><span class="n">mensagem</span>1
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">all</span><span class="o">:</span><span class="w">  </span><span class="n">mensagem</span>1
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;Olá mundo! Eu sou a receita geral do makefile desta pasta&quot;</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nf">mensagem1</span><span class="o">:</span>
@@ -4755,7 +4755,7 @@
 <li><strong>Se o arquivo do alvo já existir e for mais novo que suas dependências:</strong> O <code>make</code> assume que ele já está atualizado e não executa os comandos. </li>
 </ol>
 <p>Exemplo:</p>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">saida.txt</span><span class="o">:</span><span class="w"> </span><span class="n">entrada</span>.<span class="n">txt</span>
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">saida.txt</span><span class="o">:</span><span class="w"> </span><span class="n">entrada</span>.<span class="n">txt</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Processando entrada.txt...&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>saida.txt
 </span></code></pre></div>
 <p>Se <code>entrada.txt</code> for modificado depois de <code>saida.txt</code>, o <code>make</code> irá rodar o comando para atualizar <code>saida.txt</code>.  </p>
@@ -4765,7 +4765,7 @@
 <p>Ou seja, o <code>make</code> não executa a regra se o arquivo do alvo já estiver atualizado.</p>
 <p>Caso seja necessário definir alvos que <strong>não são arquivos</strong>, como comandos auxiliares (<code>clean</code>, <code>test</code>, <code>deploy</code>, etc.). Podemos usar o <code>.PHONY</code>, que informa ao <code>make</code> que o alvo <strong>não representa um arquivo</strong>, mas sim um comando a ser sempre executado.</p>
 <p>Por exemplo:</p>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="err">.PHONY</span><span class="w"> </span><span class="err">help</span>
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="err">.PHONY</span><span class="w"> </span><span class="err">help</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nf">help</span><span class="o">:</span>
 </span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;Mensagem de ajuda&quot;</span>
@@ -4774,7 +4774,7 @@
 <h2 id="terminais">Terminais<a class="headerlink" href="#terminais" title="Permanent link">&para;</a></h2>
 <p>O <code>make</code> gera um terminal para cada comando executado, isso significa que um terminal vai ser criado, o comando executado e o terminal será encerrado, no próximo comando, um novo terminal será aberto e assim por diante.</p>
 <p>Isso afeta como os comandos devem ser escritos, pois caso os comandos não sejam concatenados por <code>;</code> ou <code>&amp;&amp;</code>, e cada comando seja executado em terminais diferentes, podem não ter o funcionamento desejado. Por exemplo:</p>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nf">comandosJuntos</span><span class="o">:</span>
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nf">comandosJuntos</span><span class="o">:</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="nv">VAR</span><span class="o">=</span><span class="s2">&quot;olá mundo&quot;</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$$</span><span class="o">{</span>VAR<span class="o">}</span>
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
@@ -4794,14 +4794,14 @@
 </span></code></pre></div>
 <p>No caso do alvo <code>comandosSeparados</code> como a variável foi declarada em um terminal e o comando <code>echo</code> foi executado em outro terminal, neste segundo a variável não tinha sido criada.</p>
 <p>O <code>make</code> também nos permite informar que interpretador desejamos utilizar. Por padrão ele utiliza o <code>shell</code>, contudo podemos alterar o interpretador desejado utilizando a variável <code>SHELL</code>. Por exemplo:</p>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nv">SHELL</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>/bin/bash
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nv">SHELL</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>/bin/bash
 </span></code></pre></div>
 <p>Desta forma, o <code>make</code> irá utilizar o <code>bash</code> como interpretador invés de utilizar o <code>shell</code>.</p>
 <p>Um caso prático da necessidade desta mudança é, por exemplo, quando trabalhamos com os ambientes virtuais do python (venv). Se criarmos um alvo para iniciar o <em>virtual environment</em> com o comando <code>source</code>, ele não será interpretado pelo <code>shell</code>, mas sim pelo <code>bash</code>.</p>
 <h2 id="variaveis">Variáveis<a class="headerlink" href="#variaveis" title="Permanent link">&para;</a></h2>
 <p>O <code>makefile</code> permite a utilização de variáveis em sua estrutura, não somente nas receitas, mas também nos alvos e dependências. Vale informar também, que o <code>make</code> considera as variáveis como string, portanto não será necessário inserir as <code>""</code> para declarar string. </p>
 <p>Para isto, basta declararmos a variável e atribuir um valor a ela, desta forma:</p>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nv">VARIAVEL</span><span class="o">=</span>VALOR
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nv">VARIAVEL</span><span class="o">=</span>VALOR
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nv">var1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>VALOR
 </span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
 </span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="nf">testeVariavel</span><span class="o">:</span>
@@ -4815,7 +4815,7 @@
 <p>As variáveis podem ser utilizadas tanto nos alvos, dependências e receitas, e caso sejam usadas como pré-requisitos, a ordem será da esquerda para a direita.</p>
 <p>Também podemos trabalhar com variáveis com a passagem de parâmetros quando utilizamos o <code>make</code>.</p>
 <p>Por exemplo, podemos ter um alvo, que sua receita utilize alguma estrutura de condicional, e que deve ter o valor passado durante sua chamada para a tomada de decisão. Para este caso, podemos utilizar a passagem de parâmetros do <code>make</code> para definir o valor de uma variável dentro da receita.</p>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nf">testeParametro</span><span class="o">:</span>
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nf">testeParametro</span><span class="o">:</span>
 </span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;A variável vparam é igual a &#39;</span><span class="k">$(</span>vparam<span class="k">)</span><span class="s2">&#39;&quot;</span>
 </span></code></pre></div>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>make<span class="w"> </span>testeParametro<span class="w"> </span><span class="nv">vparam</span><span class="o">=</span><span class="s2">&quot;olá&quot;</span>
@@ -4899,7 +4899,7 @@
 </table>
 <p>Existe também uma função, que veremos algumas mais pra frente, que é para explicitamente forçar a utilização de wildcard, por exemplo, em variáveis.</p>
 <p>Por exemplo:</p>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c"># Todos os arquivos .yml da pasta src</span>
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c"># Todos os arquivos .yml da pasta src</span>
 </span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nv">SRC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>wildcard<span class="w"> </span>./src/*.yml<span class="k">)</span>
 </span></code></pre></div>
 <p>Neste exemplo, a variável vai ter uma lista com todos os arquivos <code>.yml</code> que estão contidas na pasta <code>./src</code>.</p>
@@ -4928,7 +4928,7 @@
 <ul>
 <li>Se valor1 igual valor2;</li>
 </ul>
-<p><div class="language-makefile highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="cp">ifeq (arg1, arg2)</span>
+<p><div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="cp">ifeq (arg1, arg2)</span>
 </span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="cp">ifeq &#39;arg1&#39; &#39;arg2&#39;</span>
 </span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="cp">ifeq &quot;arg1&quot; &quot;arg2&quot;</span>
 </span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="cp">ifeq &quot;arg1&quot; &#39;arg2&#39;</span>
@@ -4939,7 +4939,7 @@ Este teste, o <code>make</code> expande as variáveis e compara elas, em caso de
 <ul>
 <li>Se valor1 diferente valor2;</li>
 </ul>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="cp">ifneq (arg1, arg2)</span>
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="cp">ifneq (arg1, arg2)</span>
 </span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="cp">ifneq &#39;arg1&#39; &#39;arg2&#39;</span>
 </span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="cp">ifneq &quot;arg1&quot; &quot;arg2&quot;</span>
 </span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="cp">ifneq &quot;arg1&quot; &#39;arg2&#39;</span>
@@ -4949,14 +4949,14 @@ Este teste, o <code>make</code> expande as variáveis e compara elas, em caso de
 <ul>
 <li>Se valor foi definido;</li>
 </ul>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="cp">ifdef variable-name</span>
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="cp">ifdef variable-name</span>
 </span></code></pre></div>
 <p>O teste <code>ifdef</code> utiliza a variável como argumento, e não como uma referência. Se o valor da variável tiver um valor não vazio, a ação de condição verdadeira será executada, caso não haja valor, a ação de condição falsa será executada, caso haja.</p>
 <p>Variáveis que nunca foram definidas, tem um valor vazio. Observe que este teste verifica apenas se a variável tem um valor, ele não realiza a expansão dela.</p>
 <ul>
 <li>Se valor não foi definido;</li>
 </ul>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="cp">ifndef variable-name</span>
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="cp">ifndef variable-name</span>
 </span></code></pre></div>
 <p>Neste teste, é verificado se a variável tem valor vazio, caso tenha, a ação de condição verdadeira será executada, caso não, a ação de condição falsa será executada, caso haja.</p>
 <p>As regras de expansão deste teste são iguais ao teste <code>ifdef</code>.</p>
@@ -4966,7 +4966,7 @@ Este teste, o <code>make</code> expande as variáveis e compara elas, em caso de
 <p>O <code>make</code> tem internamente algumas funções que são aceitas nos arquivos <code>makefile</code>.</p>
 <p>As funções permitem que o texto seja processado pelo <code>makefile</code> para computar arquivos e operar neles ou utilizar os comandos nas receitas. Podemos usar uma função, onde damos um nome para a função e passamos seus argumentos para que ela funcione. O resultado do processamento da função é substituído, no <code>makefile</code>, no lugar da chamada da função, assim como as variáveis são substituídas.</p>
 <p>Por exemplo:</p>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c"># Todos os arquivos .yml da pasta src</span>
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c"># Todos os arquivos .yml da pasta src</span>
 </span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="nv">SRC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>wildcard<span class="w"> </span>./src/*.yml<span class="k">)</span>
 </span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
 </span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="c"># Trocar a extensão .yml por .json</span>
@@ -5037,7 +5037,7 @@ Este teste, o <code>make</code> expande as variáveis e compara elas, em caso de
 </table>
 <h2 id="funcoes-personalizadas">Funções personalizadas<a class="headerlink" href="#funcoes-personalizadas" title="Permanent link">&para;</a></h2>
 <p>O <code>make</code> também nos permite a criação de funções personalizadas. Para explicar um pouco da sintaxe, deixarei um exemplo:</p>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="cp">define FUNCAO</span>
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="cp">define FUNCAO</span>
 </span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;Olá, o parâmetro 1 é </span><span class="k">$(</span><span class="m">1</span><span class="k">)</span><span class="s2"> e o parâmetro 2 é </span><span class="k">$(</span><span class="m">2</span><span class="k">)</span><span class="s2">&quot;</span>
 </span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="cp">endef</span>
 </span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
@@ -5054,7 +5054,7 @@ Este teste, o <code>make</code> expande as variáveis e compara elas, em caso de
 </div>
 <h2 id="exemplo-de-makefile">Exemplo de makefile<a class="headerlink" href="#exemplo-de-makefile" title="Permanent link">&para;</a></h2>
 <p>Deixo aqui o <code>makefile</code> que utilizo para alguns scripts python que utilizo no dia-a-dia.</p>
-<div class="language-makefile highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c"># Versão do Makefile</span>
+<div class="language-makefile highlight"><span class="filename">Makefile</span><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c"># Versão do Makefile</span>
 </span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="nv">VERSION</span><span class="o">=</span><span class="s2">&quot;2.7.6&quot;</span>
 </span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="c"># Versão da aplicação</span>
 </span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="nv">ver</span><span class="o">=</span><span class="s2">&quot;v1.0.0a&quot;</span>
@@ -5384,7 +5384,7 @@ Este teste, o <code>make</code> expande as variáveis e compara elas, em caso de
       
     </span>
     <nav>
-      
+      Not Committed Yet, leonardopangaio
     </nav>
   </span>
 
@@ -5656,7 +5656,7 @@ Este teste, o <code>make</code> expande as variáveis e compara elas, em caso de
       </div>
       <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.tracking", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "navigation.footer", "content.tooltips", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.tracking", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "navigation.footer", "content.tooltips", "toc.follow", "content.code.copy"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>

@@ -25,6 +25,7 @@ theme:
     - navigation.footer
     - content.tooltips
     - toc.follow
+    - content.code.copy
 
   palette: 
     # Palette toggle for light mode
