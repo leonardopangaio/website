@@ -13,8 +13,8 @@
     <language>pt</language>
 
     
-    <pubDate>Thu, 23 Jan 2025 11:10:26 -0000</pubDate>
-    <lastBuildDate>Thu, 23 Jan 2025 11:10:26 -0000</lastBuildDate>
+    <pubDate>Tue, 18 Feb 2025 05:01:12 -0000</pubDate>
+    <lastBuildDate>Tue, 18 Feb 2025 05:01:12 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -30,6 +30,34 @@
     
 
     
+    
+    <item>
+      <title>Utilização do Make/Makefile para simplificar tarefas repetitivas</title>
+      
+      
+        
+      <author>Leonardo Pangaio</author>
+        
+      
+      
+      
+        
+      <category>Automação</category>
+        
+      <category>Build</category>
+        
+      <category>Documentação</category>
+        
+      
+      <description>&lt;h1&gt;Utilização do Make/Makefile para simplificar tarefas repetitivas&lt;/h1&gt;
+&lt;p&gt;Se você já precisou compilar um programa, docker build, organizar comandos repetitivos ou automatizar tarefas dentro de um projeto, talvez tenha se deparado com o termo Makefile. Mas afinal, o que é isso e como ele pode facilitar a vida de quem trabalha com tecnologia?&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/make-e-makefile/</link>
+      <pubDate>Tue, 18 Feb 2025 05:01:17 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/make-e-makefile/</guid>
+      
+    </item>
     
     <item>
       <title>O que é unpersist() em PySpark?</title>
@@ -52,7 +80,7 @@
       <description>&lt;h1&gt;O que é unpersist() em PySpark?&lt;/h1&gt;
 &lt;p&gt;O método &lt;code&gt;unpersist()&lt;/code&gt; é eficaz para liberar recursos em processos de batch, onde você pode controlar quando o cache não é mais necessário. Em streaming, no entanto, o uso de &lt;code&gt;unpersist()&lt;/code&gt; não é recomendado, pois os dados são processados continuamente e o checkpoint já cuida da consistência e do armazenamento de estado. A utilização do checkpoint garante que o processo de streaming seja resiliente e possa ser retomado a partir de um ponto de falha, tornando a liberação de memória mais controlada e menos disruptiva.&lt;/p&gt;</description>
       <link>https://pangaio.com.br/blog/unpersist-pyspark/</link>
-      <pubDate>Wed, 22 Jan 2025 13:12:39 +0000</pubDate>
+      <pubDate>Thu, 23 Jan 2025 08:11:19 +0000</pubDate>
       <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
       
       <guid isPermaLink="true">https://pangaio.com.br/blog/unpersist-pyspark/</guid>

@@ -13,8 +13,8 @@
     <language>pt</language>
 
     
-    <pubDate>Thu, 23 Jan 2025 11:10:26 -0000</pubDate>
-    <lastBuildDate>Thu, 23 Jan 2025 11:10:26 -0000</lastBuildDate>
+    <pubDate>Tue, 18 Feb 2025 05:01:12 -0000</pubDate>
+    <lastBuildDate>Tue, 18 Feb 2025 05:01:12 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -30,6 +30,34 @@
     
 
     
+    
+    <item>
+      <title>Utilização do Make/Makefile para simplificar tarefas repetitivas</title>
+      
+      
+        
+      <author>Leonardo Pangaio</author>
+        
+      
+      
+      
+        
+      <category>Automação</category>
+        
+      <category>Build</category>
+        
+      <category>Documentação</category>
+        
+      
+      <description>&lt;h1&gt;Utilização do Make/Makefile para simplificar tarefas repetitivas&lt;/h1&gt;
+&lt;p&gt;Se você já precisou compilar um programa, docker build, organizar comandos repetitivos ou automatizar tarefas dentro de um projeto, talvez tenha se deparado com o termo Makefile. Mas afinal, o que é isso e como ele pode facilitar a vida de quem trabalha com tecnologia?&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/make-e-makefile/</link>
+      <pubDate>Tue, 18 Feb 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/make-e-makefile/</guid>
+      
+    </item>
     
     <item>
       <title>O que é unpersist() em PySpark?</title>

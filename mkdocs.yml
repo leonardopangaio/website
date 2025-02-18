@@ -47,10 +47,16 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/leonardopangaio
+      name: Meu Github
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/leonardo-pangaio
+      name: Meu LinkedIn
     - icon: fontawesome/solid/envelope
       link: mailto:leonardo.pangaio@gmail.com
+      name: Meu E-mail
+    - icon: fontawesome/solid/paper-plane
+      link: https://t.me/leonardo_pangaio
+      name: Meu Telegram
   analytics:
     provider: google
     property: !ENV GOOGLE_ANALYTICS_KEY
@@ -71,10 +77,7 @@ extra:
   consent:
     title: Cookie consent
     description: >- 
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
+      Usamos cookies para reconhecer suas visitas e preferências repetidas, bem como para medir a eficácia da nossa documentação e se os usuários encontram o que estão procurando. Com seu consentimento, você está nos ajudando a tornar nossa documentação melhor.
     actions:
       - accept
 

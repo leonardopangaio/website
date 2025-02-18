@@ -1,0 +1,5668 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Leonardo Pangaio">
+      
+      
+        <link rel="canonical" href="https://pangaio.com.br/blog/make-e-makefile/">
+      
+      
+        <link rel="prev" href="../unpersist-pyspark/">
+      
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="canal RSS" href="../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="canal RSS com conteúdo atualizado" href="../../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Utilização do Make/Makefile para simplificar tarefas repetitivas - O Site do Pangaio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config",""),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>if("undefined"!=typeof __md_analytics){var consent=__md_get("__consent");consent&&consent.analytics&&__md_analytics()}</script>
+  
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#utilizacao-do-makemakefile-para-simplificar-tarefas-repetitivas" class="md-skip">
+          Ir para o conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="O Site do Pangaio" class="md-header__button md-logo" aria-label="O Site do Pangaio" data-md-component="logo">
+      
+  <img src="../../images/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            O Site do Pangaio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Utilização do Make/Makefile para simplificar tarefas repetitivas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando a pesquisa
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+    
+  
+  Blog
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../gloss%C3%A1rio/acid/" class="md-tabs__link">
+          
+  
+    
+  
+  Glossário
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="O Site do Pangaio" class="md-nav__button md-logo" aria-label="O Site do Pangaio" data-md-component="logo">
+      
+  <img src="../../images/favicon.ico" alt="logo">
+
+    </a>
+    O Site do Pangaio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Blog
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Blog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Arquivo
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Arquivo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2025/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2025
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../archive/2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Categorias
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Categorias
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/automa%C3%A7%C3%A3o/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Automação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/build/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/data-science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/desafios/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Desafios
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/dia-a-dia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dia-a-Dia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/documenta%C3%A7%C3%A3o/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documentação
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/estudos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estudos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/functions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Functions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/pyspark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PySpark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+  
+  
+    <li class="md-nav__item">
+      <a href="../category/tech/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tech
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Glossário
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Glossário
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/acid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Atomicidade, Consistência, Isolamento e Durabilidade (ACID)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/airflow/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apache Airflow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/ansible/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ansible
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/argocd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ArgoCD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/arp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Address Resolution Protocol (ARP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/base/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Basically Available, Soft State, Eventual Consistency (BASE)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/bgp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Border Gateway Protocol (BGP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/build/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Build
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/caas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Container as a Service (CaaS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/cad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Computer-Aided Design (CAD)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/cd-continuous-delivery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous Delivery (CD)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/cd-continuous-deployment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous Deployment (CD)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/ci-cd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous Integration/Continuous Delivery (CI/CD)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/ci/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Continuous Integration (CI)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/cifs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Common Internet File System (CIFS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/container/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Container
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cascading Style Sheets (CSS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/csv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comma-Separated Values (CSV)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/dast/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamic Application Security Testing (DAST)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/data_migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Migration (Migração de Dados)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/database_migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Migration (Migração de Banco de Dados)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/dba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Administrator (DBA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/dbaops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Database Administration and Operations (DBAOps)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/dcl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Control Language (DCL)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/ddl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Definition Language (DDL)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/deploy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deploy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/devops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development and Operations (DevOps)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/devsecops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development, Security and Operations (DevSecOps)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/dhcp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamic Host Configuration Protocol (DHCP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/dll/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dynamic Link Library (DLL)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/dlq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dead Letter Queue (DLQ)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/dml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Manipulation Language (DML)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/dmz/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Demilitarized Zone (DMZ)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/dns/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Domain Name System (DNS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/docker-registry/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker Registry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/dql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Query Language (DQL)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/dtl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Data Transformation Language (DTL)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/erp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterprise Resource Planning (ERP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/esb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enterprise Service Bus (ESB)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/ethernet/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ethernet
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/etl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extract, Transform and Load (ETL)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/fhir/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Fast Healthcare Interoperability Resources (FHIR)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/file-docker-compose/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquivo docker-compose.yml
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/file-dockerfile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquivo Dockerfile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/file-dockerignore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquivo .dockerignore
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/file-env/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquivo .env
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/file-gitignore/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquivo .gitignore
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/file-makefile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Arquivo Makefile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/ftp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    File Transfer Protocol (FTP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/gcp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Google Cloud Platform (GCP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/ged/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gerenciamento Eletrônico de Documentos (GED)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/gis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geographic Information System (GIS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/github/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/gitlab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitLab
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/gitops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Operations (GitOps)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/glbp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gateway Load Balancing Protocol (GLBP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/hci/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hyper-Converged Infrastructure (HCI)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/his/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hospital Information System (HIS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/hl7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Health Level Seven (HL7)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/html/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hypertext Markup Language (HTML)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/http/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hypertext Transfer Protocol (HTTP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/https/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Hypertext Transfer Protocol Secure (HTTPS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/iaas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Infrastructure as a Service (IaaS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/iac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Infrastructure as Code (IaC)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/icmp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internet Control Message Protocol (ICMP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/ide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Integrated Development Environment (IDE)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/iis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internet Information Services (IIS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/imap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internet Message Access Protocol (IMAP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/interoperabilidade/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interoperabilidade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/iot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internet of Things (IoT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/ip/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Internet Protocol (IP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/jdbc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java Database Connectivity (JDBC)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/jenkins/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jenkins
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/json/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaScript Object Notation (JSON)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/jumbo_frame/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Jumbo Frames
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/jwt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JSON Web Token (JWT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/kafka/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Apache Kafka
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/kpi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Key Performance Indicator (KPI)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/kubernetes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/kvm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kernel-based Virtual Machine (KVM)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/lan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Local Area Network (LAN)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/ldap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lightweight Directory Access Protocol (LDAP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/lgpd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lei Geral de Proteção de Dados (LGPD)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/lis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Laboratory Information System (LIS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/lvm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logical Volume Manager (LVM)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/mdm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Master Data Management (MDM)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/mea/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mergers and Acquisitions (M&amp;A)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/mfa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multi-Factor Authentication (MFA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/mirth/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mirth Connect
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/modelo_osi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Open Systems Interconnection (OSI Model)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/mpls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Multiprotocol Label Switching (MPLS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/mqtt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Message Queuing Telemetry Transport (MQTT)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/mssql_cdc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Change Data Capture (CDC)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/mtr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    My Traceroute (MTR)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/mtu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Maximum Transmission Unit (MTU)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/mvp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Minimum Viable Product (MVP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/nda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Non-Disclosure Agreement (NDA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/nexus/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Nexus Registry
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/nfs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network File System (NFS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/nmap/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Network Mapper (Nmap)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/nosql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Not Only SQL (NOSQL)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/okr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Objectives and Key Results (OKR)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/openshift/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Openshift
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/orm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Object-Relational Mapping (ORM)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/paas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Platform as a Service (PaaS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/pep/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prontuário Eletrônico do Paciente (PEP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/pipeline/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pipiline
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/pop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Post Office Protocol (POP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/proxmox/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proxmox
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/rabbitmq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RabbitMQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/rdp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Remote Desktop Protocol (RDP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/repositorio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Repositório
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/rfp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Request for Proposal (RFP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/ris/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Radiology Information System (RIS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/rsa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rivest-Shamir-Adleman (RSA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/rundec/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Rundeck
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/saas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software as a Service (Saas)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/samba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Samba
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/sast/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Static Application Security Testing (SAST)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/scp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secure Copy Protocol (SCP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/sdk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Software Development Kit (SDK)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/secops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security and Operations (SecOps)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/sftp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secure File Transfer Protocol (SFTP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/sgdb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sistema de Gerenciamento de Banco de Dados (SGDB)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/smb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Server Message Block (SMB)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/smtp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simple Mail Transfer Protocol (SMTP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/snmp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Simple Network Management Protocol (SNMP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/sql/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Structured Query Language (SQL)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/sre/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Site Reliability Engineering (SRE)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/ssh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secure Shell (SSH)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/ssl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Secure Sockets Layer (SSL)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/stomp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Streaming Text Oriented Messaging Protocol (STOMP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/switch_tor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Switch Top of Rack (ToR)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/tcp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transmission Control Protocol (TCP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/terraform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Terraform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/tls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport Layer Security (TLS)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/toml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tom's Obvious, Minimal Language (TOML)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/ttl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Time to Live (TTL)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/udp/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User Datagram Protocol (UDP)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/uml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unified Modeling Language (UML)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/uri/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uniform Resource Identifier (URI)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/url/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Uniform Resource Locator (URL)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/vba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visual Basic for Applications (VBA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/vbscript/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visual Basic Script (VBScript)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/vlan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Virtual Local Area Network (VLAN)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/vna/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vendor Neutral Archive (VNA)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/vnc/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Virtual Network Computing (VNC)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/vpn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Virtual Private Network (VPN)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/wan/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wide Area Network (WAN)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/xml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    eXtensible Markup Language (XML)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gloss%C3%A1rio/yaml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    YAML Ain't Markup Language (YAML)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-o-gnu-make" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que é o GNU make?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-um-makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      O que é um Makefile?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#terminais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terminais
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variáveis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#variaveis-automaticas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variáveis Automáticas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wildcards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wildcards
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#condicionais-if" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condicionais (IF)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes-nativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funções nativas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes-personalizadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Funções personalizadas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-de-makefile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplo de makefile
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#help-e-alguns-parametros-uteis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Help e alguns parâmetros úteis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+  <div class="md-content md-content--post" data-md-component="content">
+    <div class="md-sidebar md-sidebar--post" data-md-component="sidebar" data-md-type="navigation">
+      <div class="md-sidebar__scrollwrap">
+        <div class="md-sidebar__inner md-post">
+          <nav class="md-nav md-nav--primary">
+            <div class="md-post__back">
+              <div class="md-nav__title md-nav__container">
+                <a href="../" class="md-nav__link">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+                  <span class="md-ellipsis">
+                    Voltar ao índice
+                  </span>
+                </a>
+              </div>
+            </div>
+            
+              <div class="md-post__authors md-typeset">
+                
+                  <div class="md-profile md-post__profile">
+                    <span class="md-author md-author--long">
+                      <img src="https://github.com/leonardopangaio.png" alt="Leonardo Pangaio">
+                    </span>
+                    <span class="md-profile__description">
+                      <strong>
+                        
+                          Leonardo Pangaio
+                        
+                      </strong>
+                      <br>
+                      Curioso
+                    </span>
+                  </div>
+                
+              </div>
+            
+            <ul class="md-post__meta md-nav__list">
+              <li class="md-nav__item md-nav__item--section">
+                <div class="md-post__title">
+                  <span class="md-ellipsis">
+                    Metadados
+                  </span>
+                </div>
+                <nav class="md-nav">
+                  <ul class="md-nav__list">
+                    <li class="md-nav__item">
+                      <div class="md-nav__link">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5z"/></svg>
+                        <time datetime="2025-02-18 00:00:00+00:00" class="md-ellipsis">18 de fevereiro de 2025</time>
+                      </div>
+                    </li>
+                    
+                    
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9 3v15h3V3zm3 2 4 13 3-1-4-13zM5 5v13h3V5zM3 19v2h18v-2z"/></svg>
+                          <span class="md-ellipsis">
+                            em
+                            
+                              <a href="../category/documenta%C3%A7%C3%A3o/">Documentação</a>, 
+                              <a href="../category/build/">Build</a>, 
+                              <a href="../category/automa%C3%A7%C3%A3o/">Automação</a></span>
+                        </div>
+                      </li>
+                    
+                    
+                      
+                      <li class="md-nav__item">
+                        <div class="md-nav__link">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
+                          <span class="md-ellipsis">
+                            
+                              17 min de leitura
+                            
+                          </span>
+                        </div>
+                      </li>
+                    
+                  </ul>
+                </nav>
+              </li>
+            </ul>
+          </nav>
+          
+        </div>
+      </div>
+    </div>
+    <article class="md-content__inner md-typeset">
+      
+        
+
+
+<h1 id="utilizacao-do-makemakefile-para-simplificar-tarefas-repetitivas">Utilização do Make/Makefile para simplificar tarefas repetitivas<a class="headerlink" href="#utilizacao-do-makemakefile-para-simplificar-tarefas-repetitivas" title="Permanent link">&para;</a></h1>
+<p>Se você já precisou compilar um programa, docker build, organizar comandos repetitivos ou automatizar tarefas dentro de um projeto, talvez tenha se deparado com o termo Makefile. Mas afinal, o que é isso e como ele pode facilitar a vida de quem trabalha com tecnologia?</p>
+<!-- more -->
+
+<h2 id="o-que-e-o-gnu-make">O que é o GNU make?<a class="headerlink" href="#o-que-e-o-gnu-make" title="Permanent link">&para;</a></h2>
+<p>O <code>make</code> é uma ferramenta que ajuda a automatizar tarefas no desenvolvimento de software. Ele é amplamente usado para compilar programas, mas também pode ser utilizado para outras tarefas repetitivas, como rodar testes, gerar documentação ou até implantar aplicações.</p>
+<p>Atualmente ele é mantido pela <em>GNU Project - Free Software Foundation</em>.</p>
+<p><a class="glightbox" href="../../images/blog/gnu_make_logo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="GNU Logo" src="../../images/blog/gnu_make_logo.png" width="300" /></a></p>
+<p>Ele funciona baseado em regras definidas em um arquivo chamado <code>Makefile</code> (da pasta corrente), que especifica quais ações devem ser executadas e em qual ordem.</p>
+<p>O <code>Makefile</code> muitas vezes é considerado o <code>readme.md</code> do builder, pois além de simplificar tarefas repetitivas, ele também deixa documentado todos os passos que são feitos para realizar o build/compilação da aplicação.</p>
+<p><a class="glightbox" href="../../images/blog/make_flow.gif" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Make Simple Workflow" src="../../images/blog/make_flow.gif" /></a></p>
+<blockquote>
+<p>GNU Make é uma ferramenta que controla a geração de executáveis ​​e outros arquivos não-fonte de um programa a partir dos arquivos-fonte do programa.</p>
+<p>O Make obtém seu conhecimento de como construir seu programa a partir de um arquivo chamado makefile, que lista cada um dos arquivos não-fonte e como computá-lo a partir de outros arquivos. Quando você escreve um programa, você deve escrever um makefile para ele, para que seja possível usar o Make para construir e instalar o programa.</p>
+</blockquote>
+<p><em>_referência direta do <a href="https://www.gnu.org/software/make/">site oficial</a></em></p>
+<h2 id="o-que-e-um-makefile">O que é um Makefile?<a class="headerlink" href="#o-que-e-um-makefile" title="Permanent link">&para;</a></h2>
+<p>O <code>Makefile</code> é um arquivo de texto que contém regras organizadas em um formato específico. Essas regras informam ao <code>make</code> quais arquivos precisam ser atualizados e quais comandos devem ser executados.</p>
+<p>O <code>make</code> identifica sempre o arquivo <code>Makefile</code> que estiver na pasta corrente, portanto, podemos ter mais de um arquivo <code>Makefile</code> em nosso projeto, e o arquivo que será interpretado pelo <code>make</code> será o da pasta corrente.</p>
+<p>A estrutura básica de um <code>Makefile</code> segue este formato:</p>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">ALVO</span><span class="o">:</span><span class="w"> </span><span class="n">DEPEND</span>Ê<span class="n">NCIAS</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>RECEITA
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span>...
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span>...
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c"># COMENTÁRIO</span>
+</span></code></pre></div>
+<p>Onde:</p>
+<ul>
+<li><strong>Alvo:</strong> O que será gerado ou atualizado.</li>
+<li><strong>Dependências:</strong> Arquivos necessários para gerar o alvo, ou outros alvos dentro do mesmo arquivo <code>makefile</code>.</li>
+<li><strong>Receita:</strong> A ação a ser executada (importante: deve ser indentado com um tab e não espaços).</li>
+<li><strong>Comentários:</strong> São quaisquer textos explicativos ou para desativar um trecho do código. Eles são feitos com o caractere <code>#</code> no início da sentença de comentário.</li>
+</ul>
+<p>Por exemplo:</p>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c"># Alvo padrão do make.</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">all</span><span class="o">:</span><span class="w">  </span><span class="n">mensagem</span>1
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Olá mundo! Eu sou a receita geral do `makefile` desta pasta&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nf">mensagem1</span><span class="o">:</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Olá, eu sou a mensagem 1.&quot;</span>
+</span></code></pre></div>
+<p>Neste exemplo de arquivo <code>Makefile</code> temos dois alvos, um geral, que é interpretado pelo comando <code>make</code> se não passarmos nenhum alvo, que é o alvo <code>all</code>, e o outro é o alvo <code>mensagem1</code>, que é uma dependência do <em>target</em> <code>all</code>.</p>
+<p>Se executarmos o comando <code>make</code> sozinho, ele nos retornará o comando do alvo <code>mensagem1</code> e depois a sua saída e então retornará o comando do alvo <code>all</code> e sua saída.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Olá, eu sou a mensagem 1.&quot;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Olá,<span class="w"> </span>eu<span class="w"> </span>sou<span class="w"> </span>a<span class="w"> </span>mensagem<span class="w"> </span><span class="m">1</span>.
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Olá mundo! Eu sou a receita geral do makefile desta pasta&quot;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>Olá<span class="w"> </span>mundo!<span class="w"> </span>Eu<span class="w"> </span>sou<span class="w"> </span>a<span class="w"> </span>receita<span class="w"> </span>geral<span class="w"> </span><span class="k">do</span><span class="w"> </span>makefile<span class="w"> </span>desta<span class="w"> </span>pasta
+</span></code></pre></div>
+<p>Nos comandos, também podemos ter um operador para ocultar que o <code>make</code> imprima o comando e depois sua saída, deixando apenas a saída do comando aparecendo. Este operador é o <code>@</code> antes do comando.</p>
+<p>Voltando ao nosso exemplo, ficaria assim:</p>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">all</span><span class="o">:</span><span class="w">  </span><span class="n">mensagem</span>1
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;Olá mundo! Eu sou a receita geral do makefile desta pasta&quot;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nf">mensagem1</span><span class="o">:</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;Olá, eu sou a mensagem 1.&quot;</span>
+</span></code></pre></div>
+<p>E sua saída agora seria esta:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Olá,<span class="w"> </span>eu<span class="w"> </span>sou<span class="w"> </span>a<span class="w"> </span>mensagem<span class="w"> </span><span class="m">1</span>.
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Olá<span class="w"> </span>mundo!<span class="w"> </span>Eu<span class="w"> </span>sou<span class="w"> </span>a<span class="w"> </span>receita<span class="w"> </span>geral<span class="w"> </span><span class="k">do</span><span class="w"> </span>makefile<span class="w"> </span>desta<span class="w"> </span>pasta
+</span></code></pre></div>
+<p>Ainda sobre Alvos, o <code>make</code>, por padrão, trata os alvos como arquivos. Portanto quando executamos <code>make &lt;alvo&gt;</code>, ele verifica se o arquivo correspondente ao alvo existe e compara sua data de modificação com as das suas dependências.</p>
+<ol>
+<li><strong>Se o arquivo do alvo não existir:</strong> O <code>make</code> executa os comandos da regra para criá-lo.</li>
+<li><strong>Se o arquivo do alvo existir, mas suas dependências foram modificadas depois:</strong> O <code>make</code> considera que o alvo está desatualizado e executa os comandos da regra para atualizá-lo.</li>
+<li><strong>Se o arquivo do alvo já existir e for mais novo que suas dependências:</strong> O <code>make</code> assume que ele já está atualizado e não executa os comandos. </li>
+</ol>
+<p>Exemplo:</p>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">saida.txt</span><span class="o">:</span><span class="w"> </span><span class="n">entrada</span>.<span class="n">txt</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Processando entrada.txt...&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>saida.txt
+</span></code></pre></div>
+<p>Se <code>entrada.txt</code> for modificado depois de <code>saida.txt</code>, o <code>make</code> irá rodar o comando para atualizar <code>saida.txt</code>.  </p>
+<p>Se <code>saida.txt</code> for mais recente que <code>entrada.txt</code>, o <code>make</code> dirá:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>make:<span class="w"> </span><span class="s1">&#39;saida.txt&#39;</span><span class="w"> </span>está<span class="w"> </span>atualizado.
+</span></code></pre></div>
+<p>Ou seja, o <code>make</code> não executa a regra se o arquivo do alvo já estiver atualizado.</p>
+<p>Caso seja necessário definir alvos que <strong>não são arquivos</strong>, como comandos auxiliares (<code>clean</code>, <code>test</code>, <code>deploy</code>, etc.). Podemos usar o <code>.PHONY</code>, que informa ao <code>make</code> que o alvo <strong>não representa um arquivo</strong>, mas sim um comando a ser sempre executado.</p>
+<p>Por exemplo:</p>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="err">.PHONY</span><span class="w"> </span><span class="err">help</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nf">help</span><span class="o">:</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;Mensagem de ajuda&quot;</span>
+</span></code></pre></div>
+<p>Neste exemplo, caso haja um arquivo chamado help dentro da pasta, o <code>make</code> entenderá que é um comando e vai executar o mesmo.</p>
+<h2 id="terminais">Terminais<a class="headerlink" href="#terminais" title="Permanent link">&para;</a></h2>
+<p>O <code>make</code> gera um terminal para cada comando executado, isso significa que um terminal vai ser criado, o comando executado e o terminal será encerrado, no próximo comando, um novo terminal será aberto e assim por diante.</p>
+<p>Isso afeta como os comandos devem ser escritos, pois caso os comandos não sejam concatenados por <code>;</code> ou <code>&amp;&amp;</code>, e cada comando seja executado em terminais diferentes, podem não ter o funcionamento desejado. Por exemplo:</p>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nf">comandosJuntos</span><span class="o">:</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="nv">VAR</span><span class="o">=</span><span class="s2">&quot;olá mundo&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$$</span><span class="o">{</span>VAR<span class="o">}</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="nf">comandosSeparados</span><span class="o">:</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="nv">VAR</span><span class="o">=</span><span class="s2">&quot;olá mundo&quot;</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="nv">$$</span><span class="o">{</span>VAR<span class="o">}</span>
+</span></code></pre></div>
+<p>A saída desses comandos serial algo parecido com isto:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>make<span class="w"> </span>comandosJuntos
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nv">VAR</span><span class="o">=</span><span class="s2">&quot;Variável do target comandosJuntos&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">VAR</span><span class="si">}</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>Variável<span class="w"> </span><span class="k">do</span><span class="w"> </span>target<span class="w"> </span>comandosJuntos
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>make<span class="w"> </span>comandosSeparados
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nv">VAR</span><span class="o">=</span><span class="s2">&quot;Variável do target comandosSeparados&quot;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nb">echo</span><span class="w"> </span><span class="si">${</span><span class="nv">VAR</span><span class="si">}</span>
+</span></code></pre></div>
+<p>No caso do alvo <code>comandosSeparados</code> como a variável foi declarada em um terminal e o comando <code>echo</code> foi executado em outro terminal, neste segundo a variável não tinha sido criada.</p>
+<p>O <code>make</code> também nos permite informar que interpretador desejamos utilizar. Por padrão ele utiliza o <code>shell</code>, contudo podemos alterar o interpretador desejado utilizando a variável <code>SHELL</code>. Por exemplo:</p>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nv">SHELL</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>/bin/bash
+</span></code></pre></div>
+<p>Desta forma, o <code>make</code> irá utilizar o <code>bash</code> como interpretador invés de utilizar o <code>shell</code>.</p>
+<p>Um caso prático da necessidade desta mudança é, por exemplo, quando trabalhamos com os ambientes virtuais do python (venv). Se criarmos um alvo para iniciar o <em>virtual environment</em> com o comando <code>source</code>, ele não será interpretado pelo <code>shell</code>, mas sim pelo <code>bash</code>.</p>
+<h2 id="variaveis">Variáveis<a class="headerlink" href="#variaveis" title="Permanent link">&para;</a></h2>
+<p>O <code>makefile</code> permite a utilização de variáveis em sua estrutura, não somente nas receitas, mas também nos alvos e dependências. Vale informar também, que o <code>make</code> considera as variáveis como string, portanto não será necessário inserir as <code>""</code> para declarar string. </p>
+<p>Para isto, basta declararmos a variável e atribuir um valor a ela, desta forma:</p>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nv">VARIAVEL</span><span class="o">=</span>VALOR
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="nv">var1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>VALOR
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="nf">testeVariavel</span><span class="o">:</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;A variável é </span><span class="k">$(</span>VARIAVEL<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">    </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;E a variável chamada var1 é </span><span class="k">$(</span>var1<span class="k">)</span><span class="s2">.&quot;</span>
+</span></code></pre></div>
+<p>E a saída será esta:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>make<span class="w"> </span>testeVariavel<span class="w"> </span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>A<span class="w"> </span>variável<span class="w"> </span>é<span class="w"> </span>VALOR<span class="w"> </span>E<span class="w"> </span>a<span class="w"> </span>variável<span class="w"> </span>chamada<span class="w"> </span>var1<span class="w"> </span>é<span class="w"> </span>VALOR.
+</span></code></pre></div>
+<p>As variáveis podem ser utilizadas tanto nos alvos, dependências e receitas, e caso sejam usadas como pré-requisitos, a ordem será da esquerda para a direita.</p>
+<p>Também podemos trabalhar com variáveis com a passagem de parâmetros quando utilizamos o <code>make</code>.</p>
+<p>Por exemplo, podemos ter um alvo, que sua receita utilize alguma estrutura de condicional, e que deve ter o valor passado durante sua chamada para a tomada de decisão. Para este caso, podemos utilizar a passagem de parâmetros do <code>make</code> para definir o valor de uma variável dentro da receita.</p>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nf">testeParametro</span><span class="o">:</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;A variável vparam é igual a &#39;</span><span class="k">$(</span>vparam<span class="k">)</span><span class="s2">&#39;&quot;</span>
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>make<span class="w"> </span>testeParametro<span class="w"> </span><span class="nv">vparam</span><span class="o">=</span><span class="s2">&quot;olá&quot;</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>A<span class="w"> </span>variável<span class="w"> </span>vparam<span class="w"> </span>é<span class="w"> </span>igual<span class="w"> </span>a<span class="w"> </span><span class="s1">&#39;olá&#39;</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A utilização de variáveis (declaração e utilização) é bem parecido com shell script, a diferença é que invés de utilizar <code>${}</code>, no <code>makefile</code> devemos utilizar <code>$()</code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Para realizar a expansão de variáveis do terminal, será necessário a utilização de <code>$$</code> invés do cifrão simples.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>As variáveis podem ser declaradas com espaço ou sem.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Quando declaramos uma variável, para o <code>make</code> é todo o valor da linha, portanto se tentarmos inserir comentário em linha, ele será considerado como parte da variável.</p>
+</div>
+<h2 id="variaveis-automaticas">Variáveis Automáticas<a class="headerlink" href="#variaveis-automaticas" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Suponha que você esteja escrevendo uma regra de padrão para compilar um arquivo ‘.c’ em um arquivo ‘.o’: como você escreve o comando ‘cc’ para que ele opere no nome do arquivo de origem correto? Você não pode escrever o nome na receita, porque o nome é diferente cada vez que a regra implícita é aplicada.</p>
+<p>O que você faz é usar um recurso especial do make, as variáveis ​​automáticas. Essas variáveis ​​têm valores computados novamente para cada regra que é executada, com base no alvo e nos pré-requisitos da regra. Neste exemplo, você usaria ‘$@’ para o nome do arquivo de objeto e ‘$&lt;’ para o nome do arquivo de origem.</p>
+<p>É muito importante que você reconheça o escopo limitado no qual os valores de variáveis ​​automáticas estão disponíveis: eles só têm valores dentro da receita. Em particular, você não pode usá-los em nenhum lugar dentro da lista de alvos de uma regra; eles não têm valor lá e se expandirão para a string vazia. Além disso, eles não podem ser acessados ​​diretamente dentro da lista de pré-requisitos de uma regra. Um erro comum é tentar usar $@ dentro da lista de pré-requisitos; isso não funcionará. Entretanto, há um recurso especial do GNU make, expansão secundária (veja <a href="https://www.gnu.org/software/make/manual/make.html#Secondary-Expansion">Expansão Secundária</a>), que permitirá que valores de variáveis ​​automáticas sejam usados ​​em listas de pré-requisitos.</p>
+</blockquote>
+<p>Podemos, dentro do <code>makefile</code>, utilizar um recurso chamado variáveis automáticas. Elas são variáveis que fazem referência automaticamente a partes já declaradas no <code>makefile</code>, compo por exemplo referenciar o próprio alvo, ou a primeira dependência.</p>
+<p>Neste tópico pretendo dar alguns exemplos mais simples e deixar uma tabela de referência rápida. Caso este assunto lhe seja útil, sugiro dar uma lida na documentação oficial do <strong>GNU Make</strong> sobre <a href="https://www.gnu.org/software/make/manual/make.html#Automatic-Variables">variáveis automáticas</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Variável</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$@</td>
+<td>O nome do alvo</td>
+</tr>
+<tr>
+<td>@&lt;</td>
+<td>Nome da primeira dependência</td>
+</tr>
+<tr>
+<td>$?</td>
+<td>Os nomes de todas as dependências que são mais novas que o alvo, com espaços entre elas</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wildcards">Wildcards<a class="headerlink" href="#wildcards" title="Permanent link">&para;</a></h2>
+<p>Durante a utilização de wildcards temos dois para representar "qualquer coisa", um para as receitas, que será o <code>*</code> e um para os alvos e dependências, que será o <code>%</code>.</p>
+<p>A utilização de caracteres curingas ou wildcards é válida para aumentar a abstração das regras que criamos.</p>
+<p>Por exemplo, caso seja desejado realizar uma determinada tarefa a para todos os arquivos <code>.o</code> de uma pasta, podemos criar um alvo chamado <code>%.o</code> e ele será aplicado para todas as dependências que sejam da extensão <code>.o</code>.</p>
+<blockquote>
+<p>A expansão de <em>wildcard</em> é realizada pelo make automaticamente em alvos e em pré-requisitos. Em receitas, o shell é responsável pela expansão do <em>wildcard</em>.</p>
+</blockquote>
+<p>Os wildcards (ou caracteres curingas) aceitos pelo <code>make</code> são:</p>
+<table>
+<thead>
+<tr>
+<th>Caractere</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>*</code></td>
+<td>Corresponde a qualquer sequência de caracteres (exceto /)</td>
+</tr>
+<tr>
+<td><code>?</code></td>
+<td>Corresponde a qualquer único caractere (exceto /)</td>
+</tr>
+<tr>
+<td><code>[]</code></td>
+<td>Corresponde a um conjunto ou intervalo de caracteres</td>
+</tr>
+</tbody>
+</table>
+<p>Existe também uma função, que veremos algumas mais pra frente, que é para explicitamente forçar a utilização de wildcard, por exemplo, em variáveis.</p>
+<p>Por exemplo:</p>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c"># Todos os arquivos .yml da pasta src</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nv">SRC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>wildcard<span class="w"> </span>./src/*.yml<span class="k">)</span>
+</span></code></pre></div>
+<p>Neste exemplo, a variável vai ter uma lista com todos os arquivos <code>.yml</code> que estão contidas na pasta <code>./src</code>.</p>
+<h2 id="condicionais-if">Condicionais (IF)<a class="headerlink" href="#condicionais-if" title="Permanent link">&para;</a></h2>
+<p>O <code>make</code> tem duas formas de trabalhar com condicionais. A primeira delas e a mais simples é com a estrutura <code>if/else</code> nas receitas.</p>
+<p>A sintaxe padrão de condicionais do <code>makefile</code> podem ser destas 3 formas:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>condição
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    ação caso condição verdadeira
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>endif
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>condição
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>    ação caso condição verdadeira
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>else
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>    ação caso condição falsas
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>endif
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>condição 1
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>    ação caso condição 1 verdadeira
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>else condição 2
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>    ação caso condição 2 verdadeira
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>else
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>    caso condições falsas
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>endif
+</span></code></pre></div>
+<p>Com esta sintaxe podemos realizar 4 tipos de testes:</p>
+<ul>
+<li>Se valor1 igual valor2;</li>
+</ul>
+<p><div class="language-makefile highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="cp">ifeq (arg1, arg2)</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="cp">ifeq &#39;arg1&#39; &#39;arg2&#39;</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="cp">ifeq &quot;arg1&quot; &quot;arg2&quot;</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="cp">ifeq &quot;arg1&quot; &#39;arg2&#39;</span>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="cp">ifeq &#39;arg1&#39; &quot;arg2&quot;</span>
+</span></code></pre></div>
+Este teste, o <code>make</code> expande as variáveis e compara elas, em caso de serem idênticas, a ação de verdade será executada, caso não sejam, a ação de falso será executado, caso haja.</p>
+<p>Um alerta importante é com relação a comparação de variáveis complexas, pois durante as expansões caracteres especiais ou espaços podem ser interpretados como espaços vazios, e isso fará com que a comparação não ocorra da melhor forma. Neste caso é sugerido a utilização de alguma função de manipulação de texto, como a função <code>$(strip)</code>.</p>
+<ul>
+<li>Se valor1 diferente valor2;</li>
+</ul>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="cp">ifneq (arg1, arg2)</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="cp">ifneq &#39;arg1&#39; &#39;arg2&#39;</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="cp">ifneq &quot;arg1&quot; &quot;arg2&quot;</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="cp">ifneq &quot;arg1&quot; &#39;arg2&#39;</span>
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="cp">ifneq &#39;arg1&#39; &quot;arg2&quot;</span>
+</span></code></pre></div>
+<p>Este teste expande as variáveis e compara elas, caso sejam diferentes, a ação de condição verdadeira será executada, caso sejam iguais, a ação de falso será executada, caso exista.</p>
+<ul>
+<li>Se valor foi definido;</li>
+</ul>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="cp">ifdef variable-name</span>
+</span></code></pre></div>
+<p>O teste <code>ifdef</code> utiliza a variável como argumento, e não como uma referência. Se o valor da variável tiver um valor não vazio, a ação de condição verdadeira será executada, caso não haja valor, a ação de condição falsa será executada, caso haja.</p>
+<p>Variáveis que nunca foram definidas, tem um valor vazio. Observe que este teste verifica apenas se a variável tem um valor, ele não realiza a expansão dela.</p>
+<ul>
+<li>Se valor não foi definido;</li>
+</ul>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="cp">ifndef variable-name</span>
+</span></code></pre></div>
+<p>Neste teste, é verificado se a variável tem valor vazio, caso tenha, a ação de condição verdadeira será executada, caso não, a ação de condição falsa será executada, caso haja.</p>
+<p>As regras de expansão deste teste são iguais ao teste <code>ifdef</code>.</p>
+<p>A segunda, são algumas funções de condicionais: <code>if</code>, <code>or</code>, <code>and</code> e <code>intcmp</code>.</p>
+<p>Como são funções mais avançadas, e pessoalmente nunca cheguei a precisar delas, deixo aqui a referência da <a href="https://www.gnu.org/software/make/manual/make.html#Conditional-Functions">documentação oficial</a> sobre elas.</p>
+<h2 id="funcoes-nativas">Funções nativas<a class="headerlink" href="#funcoes-nativas" title="Permanent link">&para;</a></h2>
+<p>O <code>make</code> tem internamente algumas funções que são aceitas nos arquivos <code>makefile</code>.</p>
+<p>As funções permitem que o texto seja processado pelo <code>makefile</code> para computar arquivos e operar neles ou utilizar os comandos nas receitas. Podemos usar uma função, onde damos um nome para a função e passamos seus argumentos para que ela funcione. O resultado do processamento da função é substituído, no <code>makefile</code>, no lugar da chamada da função, assim como as variáveis são substituídas.</p>
+<p>Por exemplo:</p>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c"># Todos os arquivos .yml da pasta src</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="nv">SRC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>wildcard<span class="w"> </span>./src/*.yml<span class="k">)</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="c"># Trocar a extensão .yml por .json</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="nv">OBJ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">$(</span>SRC:.yml<span class="o">=</span>.json<span class="k">)</span>
+</span></code></pre></div>
+<p>Aqui, novamente, eu vou recomendar a leitura da <a href="https://www.gnu.org/software/make/manual/make.html#Functions">documentação oficial</a>, pois são páginas e mais páginas de funções nativas, suas descrições, utilizações, exemplos e etc.</p>
+<p>Vou deixar uma pequena lista de funções, que acredito que sejam as mais utilizadas.</p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Função/Sintaxe</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>wildcard</td>
+<td><code>$(wildcard *.txt)</code></td>
+<td>Informa que será passado um wildcard</td>
+</tr>
+<tr>
+<td>file name</td>
+<td><code>$(addprefix &lt;prefixo&gt;, &lt;arquivos/variáveis&gt;)</code></td>
+<td>Adiciona um prefixo ao nome dos arquivos</td>
+</tr>
+<tr>
+<td>file name</td>
+<td><code>$(addsuffix &lt;sufixo&gt;, &lt;arquivos/variáveis&gt;)</code></td>
+<td>Adiciona um sufixo ao nome dos arquivos</td>
+</tr>
+<tr>
+<td>file name</td>
+<td><code>$(&lt;variável&gt;:&lt;valor_inicial&gt;=&lt;valor_novo&gt;)</code></td>
+<td>Substitui um trecho do nome do arquivo</td>
+</tr>
+<tr>
+<td>file name</td>
+<td><code>$(dir &lt;arquivo&gt;)</code></td>
+<td>Extrai o valor do caminho do arquivo e não o seu nome</td>
+</tr>
+<tr>
+<td>file name</td>
+<td><code>$(notdir &lt;arquivo&gt;)</code></td>
+<td>Extrai o nome do arquivo, desprezando o path do mesmo</td>
+</tr>
+<tr>
+<td>shell</td>
+<td><code>$(shell &lt;comando&gt; &lt;arquivo&gt;)</code></td>
+<td>Realiza a expansão do comando, executa o comando e captura sua saída</td>
+</tr>
+<tr>
+<td>call</td>
+<td><code>$(call var,param1,param2,...)</code></td>
+<td>Realiza a expansão dos parâmetros e envia para a variável (que pode ser uma função personalizada)</td>
+</tr>
+<tr>
+<td>foreach</td>
+<td><code>$(foreach var,list, expression)</code></td>
+<td>Realiza um laço de repetição que aplica uma operação a cada item de uma lista</td>
+</tr>
+<tr>
+<td>file</td>
+<td><code>$(file operation, file, content)</code></td>
+<td>Realiza a criação, escrita, adição ou leitura de um arquivo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="funcoes-personalizadas">Funções personalizadas<a class="headerlink" href="#funcoes-personalizadas" title="Permanent link">&para;</a></h2>
+<p>O <code>make</code> também nos permite a criação de funções personalizadas. Para explicar um pouco da sintaxe, deixarei um exemplo:</p>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="cp">define FUNCAO</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;Olá, o parâmetro 1 é </span><span class="k">$(</span><span class="m">1</span><span class="k">)</span><span class="s2"> e o parâmetro 2 é </span><span class="k">$(</span><span class="m">2</span><span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="cp">endef</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="nf">Alvo</span><span class="o">:</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">    </span><span class="k">$(</span>call<span class="w"> </span>FUNCAO,<span class="s2">&quot;pParam1&quot;</span>,<span class="s2">&quot;pParam2&quot;</span><span class="k">)</span>
+</span></code></pre></div>
+<p>Desta forma, quando o <code>Alvo</code> for chamado/executado, ele vai executar a <code>FUNCAO</code> passando os dois parâmetros definidos.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>make<span class="w"> </span>Alvo
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>Olá,<span class="w"> </span>o<span class="w"> </span>parâmetro<span class="w"> </span><span class="m">1</span><span class="w"> </span>é<span class="w"> </span>pParam1<span class="w"> </span>e<span class="w"> </span>o<span class="w"> </span>parâmetro<span class="w"> </span><span class="m">2</span><span class="w"> </span>é<span class="w"> </span>pParam2
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Ao realizar a chamada da função, podemos também passar variáveis já definidas, variáveis que serão recebidas como parâmetros e variáveis manipuladas por outras funções nativas do <code>make</code>.</p>
+</div>
+<h2 id="exemplo-de-makefile">Exemplo de makefile<a class="headerlink" href="#exemplo-de-makefile" title="Permanent link">&para;</a></h2>
+<p>Deixo aqui o <code>makefile</code> que utilizo para alguns scripts python que utilizo no dia-a-dia.</p>
+<div class="language-makefile highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c"># Versão do Makefile</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="nv">VERSION</span><span class="o">=</span><span class="s2">&quot;2.7.6&quot;</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="c"># Versão da aplicação</span>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="nv">ver</span><span class="o">=</span><span class="s2">&quot;v1.0.0a&quot;</span>
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="nv">SHELL</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span>/bin/bash
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="c"># Pega o nome do diretório atual e converte pra lower case</span>
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="nv">app</span><span class="o">=</span><span class="k">$(</span>shell<span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="k">$(</span>notdir<span class="w"> </span><span class="k">$(</span>shell<span class="w"> </span><span class="nb">pwd</span><span class="k">))</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39;[:upper:]&#39;</span><span class="w"> </span><span class="s1">&#39;[:lower:]&#39;</span><span class="k">)</span>
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a><span class="nv">tag</span><span class="o">=</span><span class="s2">&quot;registryserver:8080/path/</span><span class="k">$(</span>app<span class="k">)</span><span class="s2">-</span><span class="k">$(</span>ver<span class="k">)</span><span class="s2">:latest&quot;</span>
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="nv">cname</span><span class="o">=</span><span class="s2">&quot;docker-compose.</span><span class="k">$(</span>app<span class="k">)</span><span class="s2">.yml&quot;</span>
+</span><span id="__span-27-10"><a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>
+</span><span id="__span-27-11"><a id="__codelineno-27-11" name="__codelineno-27-11" href="#__codelineno-27-11"></a><span class="nf">.PHONY</span><span class="o">:</span><span class="w"> </span><span class="n">help</span> .<span class="n">dockerignore</span> <span class="k">$(</span><span class="nv">cname</span><span class="k">)</span> <span class="n">install_lib</span> <span class="n">fix_reqs</span> <span class="n">build</span> <span class="n">push</span> <span class="n">run_python</span> <span class="n">run_docker</span> <span class="n">docker_test</span> <span class="n">docker_cleanup</span> <span class="n">file_cleanup</span> <span class="n">compose</span>
+</span><span id="__span-27-12"><a id="__codelineno-27-12" name="__codelineno-27-12" href="#__codelineno-27-12"></a>
+</span><span id="__span-27-13"><a id="__codelineno-27-13" name="__codelineno-27-13" href="#__codelineno-27-13"></a><span class="nf">help</span><span class="o">:</span><span class="w"> </span><span class="c">## Mostra essa ajuda/descrição</span>
+</span><span id="__span-27-14"><a id="__codelineno-27-14" name="__codelineno-27-14" href="#__codelineno-27-14"></a><span class="w">    </span>@grep<span class="w"> </span>-E<span class="w"> </span><span class="s1">&#39;^[.a-zA-Z_-]+:.*?## .*$$&#39;</span><span class="w"> </span><span class="k">$(</span>MAKEFILE_LIST<span class="k">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;BEGIN {FS = &quot;:.*?## &quot;}; {printf &quot;\033[36m%-30s\033[0m %s\n&quot;, $$1, $$2}&#39;</span>
+</span><span id="__span-27-15"><a id="__codelineno-27-15" name="__codelineno-27-15" href="#__codelineno-27-15"></a>
+</span><span id="__span-27-16"><a id="__codelineno-27-16" name="__codelineno-27-16" href="#__codelineno-27-16"></a><span class="nf">version</span><span class="o">:</span><span class="w"> </span><span class="c">## Mostra a versão do arquivo makefile</span>
+</span><span id="__span-27-17"><a id="__codelineno-27-17" name="__codelineno-27-17" href="#__codelineno-27-17"></a><span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;A versão do Makefile é: </span><span class="k">$(</span>VERSION<span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-27-18"><a id="__codelineno-27-18" name="__codelineno-27-18" href="#__codelineno-27-18"></a><span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;A versão da aplicação é: </span><span class="k">$(</span>ver<span class="k">)</span><span class="s2">&quot;</span>
+</span><span id="__span-27-19"><a id="__codelineno-27-19" name="__codelineno-27-19" href="#__codelineno-27-19"></a>
+</span><span id="__span-27-20"><a id="__codelineno-27-20" name="__codelineno-27-20" href="#__codelineno-27-20"></a><span class="nf">venv</span><span class="o">:</span><span class="w"> </span><span class="c">## Criação de ambiente virtual para Python</span>
+</span><span id="__span-27-21"><a id="__codelineno-27-21" name="__codelineno-27-21" href="#__codelineno-27-21"></a><span class="w">    </span>@python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</span><span id="__span-27-22"><a id="__codelineno-27-22" name="__codelineno-27-22" href="#__codelineno-27-22"></a>
+</span><span id="__span-27-23"><a id="__codelineno-27-23" name="__codelineno-27-23" href="#__codelineno-27-23"></a><span class="nf">install_lib</span><span class="o">:</span><span class="w"> </span><span class="n">venv</span> <span class="n">requirements</span>.<span class="n">txt</span> <span class="c">## Instalação das dependências</span>
+</span><span id="__span-27-24"><a id="__codelineno-27-24" name="__codelineno-27-24" href="#__codelineno-27-24"></a><span class="w">    </span>@source<span class="w"> </span>venv/bin/activate<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-25"><a id="__codelineno-27-25" name="__codelineno-27-25" href="#__codelineno-27-25"></a><span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-26"><a id="__codelineno-27-26" name="__codelineno-27-26" href="#__codelineno-27-26"></a><span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>--trusted-host<span class="w"> </span>pypi.org<span class="w"> </span>--trusted-host<span class="w"> </span>files.pythonhosted.org<span class="w"> </span>--no-cache-dir<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</span><span id="__span-27-27"><a id="__codelineno-27-27" name="__codelineno-27-27" href="#__codelineno-27-27"></a>
+</span><span id="__span-27-28"><a id="__codelineno-27-28" name="__codelineno-27-28" href="#__codelineno-27-28"></a><span class="nf">run_python</span><span class="o">:</span><span class="w"> </span><span class="n">venv</span> <span class="n">requirements</span>.<span class="n">txt</span> <span class="n">install_lib</span> <span class="c">## Testa execução do script Python</span>
+</span><span id="__span-27-29"><a id="__codelineno-27-29" name="__codelineno-27-29" href="#__codelineno-27-29"></a><span class="w">    </span>@source<span class="w"> </span>venv/bin/activate<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>python3<span class="w"> </span>main.py
+</span><span id="__span-27-30"><a id="__codelineno-27-30" name="__codelineno-27-30" href="#__codelineno-27-30"></a>
+</span><span id="__span-27-31"><a id="__codelineno-27-31" name="__codelineno-27-31" href="#__codelineno-27-31"></a><span class="nf">run_docker</span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">cname</span><span class="k">)</span> <span class="c">## Testa execução via container docker</span>
+</span><span id="__span-27-32"><a id="__codelineno-27-32" name="__codelineno-27-32" href="#__codelineno-27-32"></a><span class="w">    </span>@sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span><span class="k">$(</span>app<span class="k">)</span>
+</span><span id="__span-27-33"><a id="__codelineno-27-33" name="__codelineno-27-33" href="#__codelineno-27-33"></a>
+</span><span id="__span-27-34"><a id="__codelineno-27-34" name="__codelineno-27-34" href="#__codelineno-27-34"></a><span class="nf">requirements.txt</span><span class="o">:</span><span class="w"> </span><span class="n">venv</span> <span class="c">## Gera o arquivo requirements.txt com as dependências</span>
+</span><span id="__span-27-35"><a id="__codelineno-27-35" name="__codelineno-27-35" href="#__codelineno-27-35"></a><span class="w">    </span>@if<span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span>requirements.txt<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-36"><a id="__codelineno-27-36" name="__codelineno-27-36" href="#__codelineno-27-36"></a><span class="w">            </span><span class="nb">source</span><span class="w"> </span>venv/bin/activate<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-37"><a id="__codelineno-27-37" name="__codelineno-27-37" href="#__codelineno-27-37"></a><span class="w">            </span><span class="o">&amp;&amp;</span><span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>pipreqs<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-38"><a id="__codelineno-27-38" name="__codelineno-27-38" href="#__codelineno-27-38"></a><span class="w">            </span><span class="o">&amp;&amp;</span><span class="w"> </span>pipreqs<span class="w"> </span>.<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-39"><a id="__codelineno-27-39" name="__codelineno-27-39" href="#__codelineno-27-39"></a><span class="w">    </span><span class="k">fi</span>
+</span><span id="__span-27-40"><a id="__codelineno-27-40" name="__codelineno-27-40" href="#__codelineno-27-40"></a>
+</span><span id="__span-27-41"><a id="__codelineno-27-41" name="__codelineno-27-41" href="#__codelineno-27-41"></a><span class="nf">fix_reqs</span><span class="o">:</span><span class="w"> </span><span class="n">venv</span> <span class="c">## Gera o requirements.txt baseado no que está instalado no venv</span>
+</span><span id="__span-27-42"><a id="__codelineno-27-42" name="__codelineno-27-42" href="#__codelineno-27-42"></a><span class="w">    </span>@source<span class="w"> </span>venv/bin/activate<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-43"><a id="__codelineno-27-43" name="__codelineno-27-43" href="#__codelineno-27-43"></a><span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span>pip3<span class="w"> </span>freeze<span class="w"> </span>&gt;<span class="w"> </span>requirements.txt<span class="w"> </span>
+</span><span id="__span-27-44"><a id="__codelineno-27-44" name="__codelineno-27-44" href="#__codelineno-27-44"></a>
+</span><span id="__span-27-45"><a id="__codelineno-27-45" name="__codelineno-27-45" href="#__codelineno-27-45"></a><span class="nf">build</span><span class="o">:</span><span class="w"> </span><span class="n">requirements</span>.<span class="n">txt</span> <span class="n">Dockerfile</span> .<span class="n">dockerignore</span> <span class="c">## Build simples da imagem localmente</span>
+</span><span id="__span-27-46"><a id="__codelineno-27-46" name="__codelineno-27-46" href="#__codelineno-27-46"></a><span class="w">    </span>@sudo<span class="w"> </span>docker<span class="w"> </span>build<span class="w"> </span>--no-cache<span class="w"> </span>-t<span class="w"> </span><span class="k">$(</span>app<span class="k">)</span><span class="w"> </span>.
+</span><span id="__span-27-47"><a id="__codelineno-27-47" name="__codelineno-27-47" href="#__codelineno-27-47"></a>
+</span><span id="__span-27-48"><a id="__codelineno-27-48" name="__codelineno-27-48" href="#__codelineno-27-48"></a><span class="nf">push</span><span class="o">:</span><span class="w"> </span><span class="n">build</span> <span class="c">## Upload para o registry</span>
+</span><span id="__span-27-49"><a id="__codelineno-27-49" name="__codelineno-27-49" href="#__codelineno-27-49"></a><span class="w">    </span>@sudo<span class="w"> </span>docker<span class="w"> </span>tag<span class="w"> </span><span class="k">$(</span>app<span class="k">)</span><span class="w"> </span><span class="k">$(</span>tag<span class="k">)</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-50"><a id="__codelineno-27-50" name="__codelineno-27-50" href="#__codelineno-27-50"></a><span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>docker<span class="w"> </span>--debug<span class="w"> </span>push<span class="w"> </span><span class="k">$(</span>tag<span class="k">)</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-51"><a id="__codelineno-27-51" name="__codelineno-27-51" href="#__codelineno-27-51"></a><span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$$</span><span class="s2">(date +&quot;</span>%Y-%m-%d<span class="w"> </span>%H:%M:%S<span class="s2">&quot;) - The last tag pushed was </span><span class="k">$(</span>tag<span class="k">)</span><span class="s2"> and was made by </span><span class="nv">$$</span><span class="s2">USER&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>last_push.log<span class="w"> </span><span class="m">2</span>&gt;<span class="p">&amp;</span><span class="m">1</span>
+</span><span id="__span-27-52"><a id="__codelineno-27-52" name="__codelineno-27-52" href="#__codelineno-27-52"></a>
+</span><span id="__span-27-53"><a id="__codelineno-27-53" name="__codelineno-27-53" href="#__codelineno-27-53"></a><span class="nf">docker_test</span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">cname</span><span class="k">)</span> <span class="c">## Conjunto de comandos para teste de um container stand alone</span>
+</span><span id="__span-27-54"><a id="__codelineno-27-54" name="__codelineno-27-54" href="#__codelineno-27-54"></a><span class="w">    </span>@sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>down<span class="w"> </span>-v<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-55"><a id="__codelineno-27-55" name="__codelineno-27-55" href="#__codelineno-27-55"></a><span class="w">        </span>sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="w"> </span>up<span class="w"> </span>--build<span class="w"> </span>-d<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-56"><a id="__codelineno-27-56" name="__codelineno-27-56" href="#__codelineno-27-56"></a><span class="w">        </span>sudo<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>--tail<span class="w"> </span><span class="m">100</span><span class="w"> </span><span class="k">$(</span>app<span class="k">)</span><span class="p">;</span>
+</span><span id="__span-27-57"><a id="__codelineno-27-57" name="__codelineno-27-57" href="#__codelineno-27-57"></a>
+</span><span id="__span-27-58"><a id="__codelineno-27-58" name="__codelineno-27-58" href="#__codelineno-27-58"></a><span class="nf">docker_cleanup</span><span class="o">:</span><span class="w"> </span><span class="c">## Limpeza TOTAL Docker</span>
+</span><span id="__span-27-59"><a id="__codelineno-27-59" name="__codelineno-27-59" href="#__codelineno-27-59"></a><span class="w">    </span>@sudo<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-q<span class="w"> </span><span class="p">|</span><span class="w"> </span>xargs<span class="w"> </span>-r<span class="w"> </span>sudo<span class="w"> </span>docker<span class="w"> </span>stop<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-60"><a id="__codelineno-27-60" name="__codelineno-27-60" href="#__codelineno-27-60"></a><span class="w">        </span>sudo<span class="w"> </span>docker<span class="w"> </span>system<span class="w"> </span>prune<span class="w"> </span>-af<span class="w"> </span>--volumes
+</span><span id="__span-27-61"><a id="__codelineno-27-61" name="__codelineno-27-61" href="#__codelineno-27-61"></a>
+</span><span id="__span-27-62"><a id="__codelineno-27-62" name="__codelineno-27-62" href="#__codelineno-27-62"></a><span class="nf">file_cleanup</span><span class="o">:</span><span class="w"> </span><span class="c">## Limpeza dos arquivos temporários</span>
+</span><span id="__span-27-63"><a id="__codelineno-27-63" name="__codelineno-27-63" href="#__codelineno-27-63"></a><span class="w">    </span>@sudo<span class="w"> </span>rm<span class="w"> </span>-rf<span class="w"> </span>./__pycache__/<span class="w"> </span>./logs/<span class="w"> </span>./data/<span class="w"> </span>.dockerignore<span class="w"> </span>Dockerfile<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span>
+</span><span id="__span-27-64"><a id="__codelineno-27-64" name="__codelineno-27-64" href="#__codelineno-27-64"></a>
+</span><span id="__span-27-65"><a id="__codelineno-27-65" name="__codelineno-27-65" href="#__codelineno-27-65"></a><span class="nf">$(cname)</span><span class="o">:</span><span class="w"> </span><span class="c">## Criação do arquivo $(cname)</span>
+</span><span id="__span-27-66"><a id="__codelineno-27-66" name="__codelineno-27-66" href="#__codelineno-27-66"></a><span class="w">    </span>@if<span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-67"><a id="__codelineno-27-67" name="__codelineno-27-67" href="#__codelineno-27-67"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;networks:&quot;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-68"><a id="__codelineno-27-68" name="__codelineno-27-68" href="#__codelineno-27-68"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  internal:&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-69"><a id="__codelineno-27-69" name="__codelineno-27-69" href="#__codelineno-27-69"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;    driver: bridge&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-70"><a id="__codelineno-27-70" name="__codelineno-27-70" href="#__codelineno-27-70"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-71"><a id="__codelineno-27-71" name="__codelineno-27-71" href="#__codelineno-27-71"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;services:&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-72"><a id="__codelineno-27-72" name="__codelineno-27-72" href="#__codelineno-27-72"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;  </span><span class="k">$(</span>app<span class="k">)</span><span class="s2">:&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-73"><a id="__codelineno-27-73" name="__codelineno-27-73" href="#__codelineno-27-73"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;    # build: .&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-74"><a id="__codelineno-27-74" name="__codelineno-27-74" href="#__codelineno-27-74"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;    image: </span><span class="k">$(</span>tag<span class="k">)</span><span class="s2">&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-75"><a id="__codelineno-27-75" name="__codelineno-27-75" href="#__codelineno-27-75"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;    stdin_open: true&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-76"><a id="__codelineno-27-76" name="__codelineno-27-76" href="#__codelineno-27-76"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;    tty: true&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-77"><a id="__codelineno-27-77" name="__codelineno-27-77" href="#__codelineno-27-77"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;    environment:&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-78"><a id="__codelineno-27-78" name="__codelineno-27-78" href="#__codelineno-27-78"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;      TZ: America/Sao_Paulo&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-79"><a id="__codelineno-27-79" name="__codelineno-27-79" href="#__codelineno-27-79"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;      FORCE_COLOR: true&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-80"><a id="__codelineno-27-80" name="__codelineno-27-80" href="#__codelineno-27-80"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;    volumes:&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-81"><a id="__codelineno-27-81" name="__codelineno-27-81" href="#__codelineno-27-81"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;      - ./logs/:/app/logs&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-82"><a id="__codelineno-27-82" name="__codelineno-27-82" href="#__codelineno-27-82"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;      - ./data/:/app/data&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-83"><a id="__codelineno-27-83" name="__codelineno-27-83" href="#__codelineno-27-83"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;    networks:&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-84"><a id="__codelineno-27-84" name="__codelineno-27-84" href="#__codelineno-27-84"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;      - internal&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-85"><a id="__codelineno-27-85" name="__codelineno-27-85" href="#__codelineno-27-85"></a><span class="cp">    else \</span>
+</span><span id="__span-27-86"><a id="__codelineno-27-86" name="__codelineno-27-86" href="#__codelineno-27-86"></a><span class="cp">        sed -i &quot;s|^\(\s*image:\s*\).*|\1$(tag)|&quot; $(cname); \</span>
+</span><span id="__span-27-87"><a id="__codelineno-27-87" name="__codelineno-27-87" href="#__codelineno-27-87"></a><span class="cp">    fi</span>
+</span><span id="__span-27-88"><a id="__codelineno-27-88" name="__codelineno-27-88" href="#__codelineno-27-88"></a>
+</span><span id="__span-27-89"><a id="__codelineno-27-89" name="__codelineno-27-89" href="#__codelineno-27-89"></a><span class="nf">Dockerfile</span><span class="o">:</span><span class="w"> </span>.<span class="n">dockerignore</span> <span class="c">## Criação do arquivo Dockerfile</span>
+</span><span id="__span-27-90"><a id="__codelineno-27-90" name="__codelineno-27-90" href="#__codelineno-27-90"></a><span class="w">    </span>@if<span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-f<span class="w"> </span>Dockerfile<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-91"><a id="__codelineno-27-91" name="__codelineno-27-91" href="#__codelineno-27-91"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;FROM python:3.12-slim&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-92"><a id="__codelineno-27-92" name="__codelineno-27-92" href="#__codelineno-27-92"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-93"><a id="__codelineno-27-93" name="__codelineno-27-93" href="#__codelineno-27-93"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;RUN mkdir /app&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-94"><a id="__codelineno-27-94" name="__codelineno-27-94" href="#__codelineno-27-94"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;WORKDIR /app&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-95"><a id="__codelineno-27-95" name="__codelineno-27-95" href="#__codelineno-27-95"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-96"><a id="__codelineno-27-96" name="__codelineno-27-96" href="#__codelineno-27-96"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# Instalar dependências do sistema necessárias&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-97"><a id="__codelineno-27-97" name="__codelineno-27-97" href="#__codelineno-27-97"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;RUN apt-get update &amp;&amp; apt-get install -y freetds-dev libsybdb5 build-essential gcc&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-98"><a id="__codelineno-27-98" name="__codelineno-27-98" href="#__codelineno-27-98"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;RUN apt-get clean &amp;&amp; rm -rf /var/lib/apt/lists/*&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-99"><a id="__codelineno-27-99" name="__codelineno-27-99" href="#__codelineno-27-99"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-100"><a id="__codelineno-27-100" name="__codelineno-27-100" href="#__codelineno-27-100"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# Instalar dependências python necessárias&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-101"><a id="__codelineno-27-101" name="__codelineno-27-101" href="#__codelineno-27-101"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;COPY requirements.txt ./&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-102"><a id="__codelineno-27-102" name="__codelineno-27-102" href="#__codelineno-27-102"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;RUN pip install --upgrade pip&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-103"><a id="__codelineno-27-103" name="__codelineno-27-103" href="#__codelineno-27-103"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;RUN pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org --no-cache-dir -r requirements.txt&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-104"><a id="__codelineno-27-104" name="__codelineno-27-104" href="#__codelineno-27-104"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-105"><a id="__codelineno-27-105" name="__codelineno-27-105" href="#__codelineno-27-105"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;COPY . .&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-106"><a id="__codelineno-27-106" name="__codelineno-27-106" href="#__codelineno-27-106"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-107"><a id="__codelineno-27-107" name="__codelineno-27-107" href="#__codelineno-27-107"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;CMD [ &quot;python&quot;, &quot;./main.py&quot; ]&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>Dockerfile<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-108"><a id="__codelineno-27-108" name="__codelineno-27-108" href="#__codelineno-27-108"></a><span class="w">    </span><span class="k">fi</span>
+</span><span id="__span-27-109"><a id="__codelineno-27-109" name="__codelineno-27-109" href="#__codelineno-27-109"></a>
+</span><span id="__span-27-110"><a id="__codelineno-27-110" name="__codelineno-27-110" href="#__codelineno-27-110"></a><span class="nf">.dockerignore</span><span class="o">:</span><span class="w"> </span><span class="c">## Criação do arquivo .dockerignore</span>
+</span><span id="__span-27-111"><a id="__codelineno-27-111" name="__codelineno-27-111" href="#__codelineno-27-111"></a><span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;# Folders to be ignored&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>.dockerignore<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-112"><a id="__codelineno-27-112" name="__codelineno-27-112" href="#__codelineno-27-112"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;__pycache__/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-113"><a id="__codelineno-27-113" name="__codelineno-27-113" href="#__codelineno-27-113"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;venv/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-114"><a id="__codelineno-27-114" name="__codelineno-27-114" href="#__codelineno-27-114"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;logs/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-115"><a id="__codelineno-27-115" name="__codelineno-27-115" href="#__codelineno-27-115"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;data/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-116"><a id="__codelineno-27-116" name="__codelineno-27-116" href="#__codelineno-27-116"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;old/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-117"><a id="__codelineno-27-117" name="__codelineno-27-117" href="#__codelineno-27-117"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;tests/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-118"><a id="__codelineno-27-118" name="__codelineno-27-118" href="#__codelineno-27-118"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-119"><a id="__codelineno-27-119" name="__codelineno-27-119" href="#__codelineno-27-119"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;# Files to be ignored&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-120"><a id="__codelineno-27-120" name="__codelineno-27-120" href="#__codelineno-27-120"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;.env&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-121"><a id="__codelineno-27-121" name="__codelineno-27-121" href="#__codelineno-27-121"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;*.md&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-122"><a id="__codelineno-27-122" name="__codelineno-27-122" href="#__codelineno-27-122"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;makefile&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-123"><a id="__codelineno-27-123" name="__codelineno-27-123" href="#__codelineno-27-123"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;*.log&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-124"><a id="__codelineno-27-124" name="__codelineno-27-124" href="#__codelineno-27-124"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;*.yml&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore<span class="p">;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-125"><a id="__codelineno-27-125" name="__codelineno-27-125" href="#__codelineno-27-125"></a><span class="w">        </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;*.yaml&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.dockerignore<span class="p">;</span>
+</span><span id="__span-27-126"><a id="__codelineno-27-126" name="__codelineno-27-126" href="#__codelineno-27-126"></a>
+</span><span id="__span-27-127"><a id="__codelineno-27-127" name="__codelineno-27-127" href="#__codelineno-27-127"></a><span class="nf">compose</span><span class="o">:</span><span class="w"> </span><span class="k">$(</span><span class="nv">cname</span><span class="k">)</span> <span class="c">## Método manual para chamar a criação do docker-compose.yml $(cname)</span>
+</span><span id="__span-27-128"><a id="__codelineno-27-128" name="__codelineno-27-128" href="#__codelineno-27-128"></a><span class="w">    </span>@echo<span class="w"> </span><span class="s2">&quot;Calling the method to create the compose file.&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-129"><a id="__codelineno-27-129" name="__codelineno-27-129" href="#__codelineno-27-129"></a><span class="w">        </span><span class="o">&amp;&amp;</span><span class="w"> </span>cp<span class="w"> </span>-u<span class="w"> </span><span class="k">$(</span>cname<span class="k">)</span><span class="w"> </span>./path/yml_files/
+</span></code></pre></div>
+<p>Deixo aqui um diagrama em mermaid de como os alvos, dependências e variáveis estão interagindo.</p>
+<pre class="mermaid"><code>graph TD
+    %% Alvos
+    help
+    version
+    venv
+    docker_cleanup
+    file_cleanup
+    install_lib --&gt; venv
+    install_lib --&gt; requirements.txt
+    run_python --&gt; venv
+    run_python --&gt; requirements.txt
+    run_python --&gt; install_lib
+    run_docker --&gt; $(cname)
+    requirements.txt --&gt; venv
+    fix_reqs --&gt; venv
+    build --&gt; requirements.txt
+    build --&gt; Dockerfile
+    build --&gt; .dockerignore
+    push --&gt; build
+    docker_test --&gt; $(cname)
+    $(cname) --&gt; Dockerfile
+    $(cname) --&gt; .dockerignore
+    Dockerfile --&gt; .dockerignore
+    compose --&gt; $(cname)
+    compose --&gt; cname
+    cleanup
+
+    %% Variáveis
+    VERSION(("VERSION"))
+    ver(("ver"))
+    app(("app"))
+    tag(("tag"))
+    cname(("cname"))
+    SHELL(("SHELL"))
+
+    %% Relações entre variáveis
+    tag --&gt; app
+    tag --&gt; ver
+    cname --&gt; app
+
+    %% Relações dos alvos com as variáveis
+    version --&gt; VERSION
+    version --&gt; ver
+    build --&gt; tag
+    push --&gt; tag
+    $(cname) --&gt; tag
+    $(cname) --&gt; cname
+    run_docker --&gt; cname
+    docker_test --&gt; cname</code></pre>
+<h2 id="help-e-alguns-parametros-uteis">Help e alguns parâmetros úteis<a class="headerlink" href="#help-e-alguns-parametros-uteis" title="Permanent link">&para;</a></h2>
+<p>Para acessar o help do <code>make</code>, basta digitarmos <code>make --help</code>, e teremos acesso a este conteúdo, que pode variar de versão para versão.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>Uso: make [opções] [alvo] ...
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>Opções:
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>  -b, -m                      Ignorado para compatibilidade.
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>  -B, --always-make           Processa todos os alvos incondicionalmente.
+</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>  -C DIRETÓRIO, --directory=DIRETÓRIO
+</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>                              Muda para o DIRETÓRIO antes de fazer algo.
+</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>  -d                          Imprime muita informação de depuração.
+</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>  --debug[=OPÇÕES]            Imprime vários tipos de informações de depuração.
+</span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>  -e, --environment-overrides
+</span><span id="__span-28-10"><a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>                              Assume os valores das variáveis de ambiente.
+</span><span id="__span-28-11"><a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>  -E STRING,  --eval=STRING    Avalia a STRING como uma declaração para um makefile.
+</span><span id="__span-28-12"><a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>  -f ARQUIVO, --file=ARQUIVO, --makefile=ARQUIVO
+</span><span id="__span-28-13"><a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a>                              Lê o ARQUIVO como se fosse um arquivo make.
+</span><span id="__span-28-14"><a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>  -h, --help                   Imprime esta mensagem e sai.
+</span><span id="__span-28-15"><a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a>  -i, --ignore-errors         Ignora os erros dos comandos.
+</span><span id="__span-28-16"><a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a>  -I DIRETÓRIO, --include-dir=DIRETÓRIO
+</span><span id="__span-28-17"><a id="__codelineno-28-17" name="__codelineno-28-17" href="#__codelineno-28-17"></a>                              Pesquisa o DIRETÒRIO por arquivos make a incluir.
+</span><span id="__span-28-18"><a id="__codelineno-28-18" name="__codelineno-28-18" href="#__codelineno-28-18"></a>  -j [N], --jobs[=N]          Permite N tarefas de uma vez; tarefas infinitas sem argumentos.
+</span><span id="__span-28-19"><a id="__codelineno-28-19" name="__codelineno-28-19" href="#__codelineno-28-19"></a>  -k, --keep-going            Continua mesmo que alguns alvos não possam ser processados.
+</span><span id="__span-28-20"><a id="__codelineno-28-20" name="__codelineno-28-20" href="#__codelineno-28-20"></a>  -l [N], --load-average[=N], --max-load[=N]
+</span><span id="__span-28-21"><a id="__codelineno-28-21" name="__codelineno-28-21" href="#__codelineno-28-21"></a>                              Não inicia múltiplas tarefas a menos que a carga seja menor que N.
+</span><span id="__span-28-22"><a id="__codelineno-28-22" name="__codelineno-28-22" href="#__codelineno-28-22"></a>  -L, --check-symlink-times  Usa o tempo mais antigo entre o vínculo simbólico e o alvo.
+</span><span id="__span-28-23"><a id="__codelineno-28-23" name="__codelineno-28-23" href="#__codelineno-28-23"></a>  -n, --just-print, --dry-run, --recon
+</span><span id="__span-28-24"><a id="__codelineno-28-24" name="__codelineno-28-24" href="#__codelineno-28-24"></a>                              Não executa quaisquer comandos; apenas imprime-os.
+</span><span id="__span-28-25"><a id="__codelineno-28-25" name="__codelineno-28-25" href="#__codelineno-28-25"></a>  -o ARQUIVO, --old-file=ARQUIVO, --assume-old=ARQUIVO
+</span><span id="__span-28-26"><a id="__codelineno-28-26" name="__codelineno-28-26" href="#__codelineno-28-26"></a>                              Considera o ARQUIVO como muito antigo e não reprocessá-o.
+</span><span id="__span-28-27"><a id="__codelineno-28-27" name="__codelineno-28-27" href="#__codelineno-28-27"></a>  -O[TYPE], --output-sync[=TYPE]
+</span><span id="__span-28-28"><a id="__codelineno-28-28" name="__codelineno-28-28" href="#__codelineno-28-28"></a>                              Sincroniza a saída de tarefas paralelas pelo TIPO.
+</span><span id="__span-28-29"><a id="__codelineno-28-29" name="__codelineno-28-29" href="#__codelineno-28-29"></a>  -p, --print-data-base       Imprime o banco de dados interno do make.
+</span><span id="__span-28-30"><a id="__codelineno-28-30" name="__codelineno-28-30" href="#__codelineno-28-30"></a>  -q, --question              Não executa os comandos; O código de saida indica se está atualizado.
+</span><span id="__span-28-31"><a id="__codelineno-28-31" name="__codelineno-28-31" href="#__codelineno-28-31"></a>  -r, --no-builtin-rules      Desabilita as regras implícitas.
+</span><span id="__span-28-32"><a id="__codelineno-28-32" name="__codelineno-28-32" href="#__codelineno-28-32"></a>  -R, --no-builtin-variables  Desabilita a configuração das variáveis embutidas.
+</span><span id="__span-28-33"><a id="__codelineno-28-33" name="__codelineno-28-33" href="#__codelineno-28-33"></a>  -s, --silent, --quiet       Não ecoa os comandos.
+</span><span id="__span-28-34"><a id="__codelineno-28-34" name="__codelineno-28-34" href="#__codelineno-28-34"></a>  --no-silent                 Ecoa as instruções (desabilita o modo --silent).
+</span><span id="__span-28-35"><a id="__codelineno-28-35" name="__codelineno-28-35" href="#__codelineno-28-35"></a>  -S, --no-keep-going, --stop
+</span><span id="__span-28-36"><a id="__codelineno-28-36" name="__codelineno-28-36" href="#__codelineno-28-36"></a>                              Desativa a opção -k.
+</span><span id="__span-28-37"><a id="__codelineno-28-37" name="__codelineno-28-37" href="#__codelineno-28-37"></a>  -t, --touch                 Executa um `touch&#39; nos alvos ao invés de reprocessá-los.
+</span><span id="__span-28-38"><a id="__codelineno-28-38" name="__codelineno-28-38" href="#__codelineno-28-38"></a>  --trace                     Imprime informação de depuração.
+</span><span id="__span-28-39"><a id="__codelineno-28-39" name="__codelineno-28-39" href="#__codelineno-28-39"></a>  -v, --version               Imprime o número de versão do make e sai.
+</span><span id="__span-28-40"><a id="__codelineno-28-40" name="__codelineno-28-40" href="#__codelineno-28-40"></a>  -w, --print-directory       Imprime o diretório atual.
+</span><span id="__span-28-41"><a id="__codelineno-28-41" name="__codelineno-28-41" href="#__codelineno-28-41"></a>  --no-print-directory        Desativa a opção -w, mesmo que ela esteja implicitamente ativada.
+</span><span id="__span-28-42"><a id="__codelineno-28-42" name="__codelineno-28-42" href="#__codelineno-28-42"></a>  -W ARQUIVO, --what-if=ARQUIVO, --new-file=ARQUIVO, --assume-new=ARQUIVO
+</span><span id="__span-28-43"><a id="__codelineno-28-43" name="__codelineno-28-43" href="#__codelineno-28-43"></a>                              Considera o ARQUIVO infinitamente novo.
+</span><span id="__span-28-44"><a id="__codelineno-28-44" name="__codelineno-28-44" href="#__codelineno-28-44"></a>  --warn-undefined-variables  Avisa quando um variável não definida for referenciada.
+</span><span id="__span-28-45"><a id="__codelineno-28-45" name="__codelineno-28-45" href="#__codelineno-28-45"></a>
+</span><span id="__span-28-46"><a id="__codelineno-28-46" name="__codelineno-28-46" href="#__codelineno-28-46"></a>Este programa foi compilado para x86_64-pc-linux-gnu
+</span><span id="__span-28-47"><a id="__codelineno-28-47" name="__codelineno-28-47" href="#__codelineno-28-47"></a>Informe os problemas para &lt;bug-make@gnu.org&gt;.
+</span></code></pre></div>
+<p>Aqui deixo uma pequena relação de opções que já utilizei, ou por curiosidade ou por necessidade.</p>
+<table>
+<thead>
+<tr>
+<th>Opção</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>make -n ALVO</code></td>
+<td>Opção utilizada para analisar a expansão das variáveis</td>
+</tr>
+<tr>
+<td><code>make --trace ALVO</code></td>
+<td>Opção utilizada para depurar execução com erro</td>
+</tr>
+<tr>
+<td><code>make --help</code></td>
+<td>Opção utilizada para lembrar dos demais parâmetros</td>
+</tr>
+<tr>
+<td><code>make -d ALVO</code></td>
+<td>Opção utilizada para gerar mais informação de debug que a opção <code>--trace</code></td>
+</tr>
+<tr>
+<td><code>make -v</code></td>
+<td>Opção utilizada para comparar versão de <code>make</code> entre servidores</td>
+</tr>
+<tr>
+<td><code>make -p</code></td>
+<td>Opção utilizada por pura curiosidade, para identificar quais são as variáveis nativas do <code>make</code></td>
+</tr>
+<tr>
+<td><code>info make</code></td>
+<td>Opção para abrir um manual resumido da ferramenta</td>
+</tr>
+</tbody>
+</table>
+<h2 id="conclusao">Conclusão<a class="headerlink" href="#conclusao" title="Permanent link">&para;</a></h2>
+<p>A ferramenta <code>make</code> é tão completa, complexa e abrangente, que além de sua documentação extensa, eu poderia ficar aqui escrevendo capítulos e mais capítulos sobre pontos interessantes da ferramenta.</p>
+<p>Ficaram de fora deste primeiro artigo, por exemplo, sobre caracteres especiais, caracteres de escape, sobre tipos de alvo/regras especiais como a <code>.PHONY</code> (que foi a única que teve uma breve explicação), diversas funções nativas e sobre o próprio funcionamento interno do <code>make</code>.</p>
+<p>Ainda assim, mesmo com o que não foi explicado, acredito que este artigo possa ser considerado como uma boa base introdutória a utilização do <code>make</code> para automações e documentações de atividades repetitivas.</p>
+<p>Vale ressaltar que ainda podemos aumentar a complexidade, entendendo que o <code>makefile</code> pode ser chamado por dentro de scripts em shell, e também pode chamar scripts em shell e outras formas de chamada, aumentando ainda assim a versatilidade desta ferramenta.</p>
+<p>Mais uma vez, caso tenha se interessado pela ferramenta, deixo aqui meu convite para consultar a documentação oficial que é extremamente completa e com exemplos.</p>
+<h2 id="referencias">Referências<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.gnu.org/software/make/">Site Oficial - GNU Make</a></li>
+<li><a href="https://www.gnu.org/software/make/manual/make.html">Documentação Oficial GNU make</a>;</li>
+<li><a href="https://pt.wikipedia.org/wiki/Make">Wikipedia sobre make</a>;</li>
+<li><a href="https://docs.redhat.com/pt-br/documentation/red_hat_enterprise_linux/8/html/developing_c_and_cpp_applications_in_rhel_8/managing-more-code-with-make_creating-c-or-c-applications#managing-more-code-with-make_creating-c-or-c-applications">RedHat sobre GNU</a>;</li>
+<li><a href="https://youtube.com/playlist?list=PLLCFxfe9wkl-tCZvSCbzQGcNv9nSN5ZAP&amp;si=8GFFomwqnxSBTXGP">Playlist no youtube recomendada</a>;</li>
+<li><a href="https://man7.org/linux/man-pages/man1/make.1p.html">Man page for make</a>;</li>
+</ul>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Última atualização">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">18 de fevereiro de 2025</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Criada">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">18 de fevereiro de 2025</span>
+  </span>
+
+    
+    
+      
+  
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Colaboradores">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.5A3.5 3.5 0 0 1 15.5 9a3.5 3.5 0 0 1-3.5 3.5A3.5 3.5 0 0 1 8.5 9 3.5 3.5 0 0 1 12 5.5M5 8c.56 0 1.08.15 1.53.42-.15 1.43.27 2.85 1.13 3.96C7.16 13.34 6.16 14 5 14a3 3 0 0 1-3-3 3 3 0 0 1 3-3m14 0a3 3 0 0 1 3 3 3 3 0 0 1-3 3c-1.16 0-2.16-.66-2.66-1.62a5.54 5.54 0 0 0 1.13-3.96c.45-.27.97-.42 1.53-.42M5.5 18.25c0-2.07 2.91-3.75 6.5-3.75s6.5 1.68 6.5 3.75V20h-13zM0 20v-1.5c0-1.39 1.89-2.56 4.45-2.9-.59.68-.95 1.62-.95 2.65V20zm24 0h-3.5v-1.75c0-1.03-.36-1.97-.95-2.65 2.56.34 4.45 1.51 4.45 2.9z"/></svg>
+      
+    </span>
+    <nav>
+      
+    </nav>
+  </span>
+
+    
+    
+  </aside>
+
+
+  
+
+
+  
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Esta página foi útil?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Essa página foi útil." data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="Essa página pode ser melhorada." data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Obrigado pelo feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Obrigado pelo feedback!
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+  <h2 id="__comments">Comentários</h2>
+  <!-- Insert generated snippet here -->
+
+  <script src="https://giscus.app/client.js"
+  data-repo="leonardopangaio/website"
+  data-repo-id="R_kgDONjH4HA"
+  data-category="Announcements"
+  data-category-id="DIC_kwDONjH4HM4ClmmA"
+  data-mapping="title"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="1"
+  data-input-position="top"
+  data-theme="preferred_color_scheme"
+  data-lang="pt"
+  crossorigin="anonymous"
+  async>
+</script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    // Set palette on initial load
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate"
+        ? "transparent_dark"
+        : "light"
+
+      // Instruct Giscus to set theme
+      giscus.setAttribute("data-theme", theme) 
+
+
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate"
+            ? "transparent_dark"
+            : "light"
+
+          // Instruct Giscus to change theme
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
+      
+    </article>
+  </div>
+
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar ao topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Rodapé" >
+        
+          
+          <a href="../unpersist-pyspark/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: O que é unpersist() em PySpark?">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                O que é unpersist() em PySpark?
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2024 - 2025 Leonardo Pangaio
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://github.com/leonardopangaio" target="_blank" rel="noopener" title="Meu Github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://linkedin.com/in/leonardo-pangaio" target="_blank" rel="noopener" title="Meu LinkedIn" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:leonardo.pangaio@gmail.com" target="_blank" rel="noopener" title="Meu E-mail" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4l217.6 163.2c11.4 8.5 27 8.5 38.4 0l217.6-163.2c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48zM0 176v208c0 35.3 28.7 64 64 64h384c35.3 0 64-28.7 64-64V176L294.4 339.2a63.9 63.9 0 0 1-76.8 0z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://t.me/leonardo_pangaio" target="_blank" rel="noopener" title="Meu Telegram" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.8l167.6-182.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
+        <div class="md-consent__overlay"></div>
+        <aside class="md-consent__inner">
+          <form class="md-consent__form md-grid md-typeset" name="consent">
+            
+
+  
+    
+  
+
+
+
+
+
+  
+
+<h4>Cookie consent</h4>
+<p>Usamos cookies para reconhecer suas visitas e preferências repetidas, bem como para medir a eficácia da nossa documentação e se os usuários encontram o que estão procurando. Com seu consentimento, você está nos ajudando a tornar nossa documentação melhor.</p>
+<input class="md-toggle" type="checkbox" id="__settings" checked>
+<div class="md-consent__settings">
+  <ul class="task-list">
+    
+      
+      
+        
+        
+      
+      <li class="task-list-item">
+        <label class="task-list-control">
+          <input type="checkbox" name="analytics" checked>
+          <span class="task-list-indicator"></span>
+          Google Analytics
+        </label>
+      </li>
+    
+  </ul>
+</div>
+<div class="md-consent__controls">
+  
+    
+      <button class="md-button md-button--primary">Aceitar</button>
+    
+    
+    
+  
+</div>
+          </form>
+        </aside>
+      </div>
+      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout((function(){document.querySelector("[data-md-component=consent]").hidden=!1}),250);var form=document.forms.consent;for(var action of["submit","reset"])form.addEventListener(action,(function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map((function(e){return[e,!0]})))),location.hash="",location.reload()}))</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.tracking", "navigation.top", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "navigation.footer", "content.tooltips", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "Mais 1 nesta p\u00e1gina", "search.result.more.other": "Mais # nesta p\u00e1gina", "search.result.none": "Nenhum resultado encontrado", "search.result.one": "1 resultado encontrado", "search.result.other": "# resultados encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
