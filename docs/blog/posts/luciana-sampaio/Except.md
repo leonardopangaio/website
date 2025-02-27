@@ -4,7 +4,7 @@ date:
 authors:
   - luciana
 categories:
-  - PySpark
+  - SQL
   - Tech
   - Data Science
 comments: true
