@@ -13,12 +13,30 @@
     "language": "pt",
     "items": [
         {
+            "id": "https://pangaio.com.br/blog/except-function/",
+            "url": "https://pangaio.com.br/blog/except-function/",
+            "title": "Otimizar consultas com EXCEPT",
+            "content_html": "<h1>Otimizar consultas com EXCEPT</h1>\n<p>A fun\u00e7\u00e3o EXCEPT \u00e9 tipo aquele amigo que ajuda voc\u00ea a se livrar do que n\u00e3o precisa! \ud83d\ude06\u2728</p>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/image-2copy.png\"></p>",
+            "image": null,
+            "date_modified": "2025-02-27T16:05:40.313370+00:00",
+            "authors": [
+                {
+                    "name": "Luciana Sampaio"
+                }
+            ],
+            "tags": [
+                "Data Science",
+                "PySpark",
+                "Tech"
+            ]
+        },
+        {
             "id": "https://pangaio.com.br/blog/make-e-makefile/",
             "url": "https://pangaio.com.br/blog/make-e-makefile/",
             "title": "Utiliza\u00e7\u00e3o do Make/Makefile para simplificar tarefas repetitivas",
             "content_html": "<h1>Utiliza\u00e7\u00e3o do Make/Makefile para simplificar tarefas repetitivas</h1>\n<p>Se voc\u00ea j\u00e1 precisou compilar um programa, docker build, organizar comandos repetitivos ou automatizar tarefas dentro de um projeto, talvez tenha se deparado com o termo Makefile. Mas afinal, o que \u00e9 isso e como ele pode facilitar a vida de quem trabalha com tecnologia?</p>",
             "image": null,
-            "date_modified": "2025-02-18T02:01:33+00:00",
+            "date_modified": "2025-02-18T15:54:06+00:00",
             "authors": [
                 {
                     "name": "Leonardo Pangaio"
