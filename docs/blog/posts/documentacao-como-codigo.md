@@ -7,9 +7,8 @@ categories:
   - Documentação
   - Estudos
   - Site
-  - Desafios
 comments: true
-slug: como-criei-meu-site
+slug: documentacao-como-codigo
 draft: true
 ---
 
@@ -45,7 +44,9 @@ Aqui vou focar em alguns tipos de documentação:
 - Documentação de código (manual e automática);
 - Documentação de APIs;
 
-E cada uma destas formas, ou tipos de documentações, vão ter abordagens diferentes, com tecnologias, utilizações e ferramentas levemente diferentes.
+E cada uma destas formas, ou tipos de documentações, vão ter abordagens diferentes, com tecnologias, utilizações e ferramentas levemente diferentes, mas em suma são bem parecidas.
+
+![Exemplo Genérico de DaC](../../images/blog/simple_dac_flow.gif)
 
 ### Documentações Genéricas
 
@@ -55,7 +56,7 @@ Neste cenário, vamos ter o pensamento da criação do conteúdo, armazenamento 
 
 **Criação do Conteúdo**
 
-Para criar o conteúdo de nossa documentação, podemos utilizar algumas ferramentas como editores de textos, IDEs e outras ferramentas como Obsidian para criar o conteúdo em Markdown e com alguma organização de anexos como imagens, vídeos e outros documentos que por ventura o autor queira compartilhar com seus leitores.
+Para criar o conteúdo de nossa documentação, podemos utilizar algumas ferramentas como editores de textos, IDEs e outras ferramentas como Obsidian para criar o conteúdo em Markdown (ou outra linguagem de marcação como a reStructuredText) e com alguma organização de anexos como imagens, vídeos e outros documentos que por ventura o autor queira compartilhar com seus leitores.
 
 **Armazenamento e Versionamento**
 
@@ -90,7 +91,14 @@ Para isto, deixo aqui alguns exemplos de "plugins" ou ferramentas externas que p
 - [Diagrams](https://diagrams.mingrammer.com/): Biblioteca em Python para criação de diagramas como código;
 - [GoDiagram](https://godiagram.com/): Biblioteca para .NET para geração de diagramas como código;
 - [Plant UML](https://www.plantuml.com): Ferramenta para criação de diagramas UML como código;
-- [MarkMap]():
+
+**Exemplo**
+
+Este cenário é o que eu construí o meu site https://pangaio.com.br, onde os documentos são escritos em markdown e convertidos pelo Material for MkDocs e hospedados pelo Github Pages.
+
+![Exemplo de Documentação com Markdown](../../images/blog/simple_dac_flow2.gif)
+
+E como exemplo deste cenário, deixo aqui o [repositório](https://github.com/leonardopangaio/website) do meu site.
 
 ### Documentação de código
 
@@ -110,6 +118,16 @@ A partir dessa documentação existente no código, podemos ir para a próxima e
 
 Nesse cenário aqui, já podemos começar a pensar em um pipeline para a geração da documentação de forma automática, onde usamos uma ferramenta para validar a qualidade da documentação, uma para gerar a documentação pendente de forma automática e uma para gerar um site estático e realizar o deploy em algum ambiente para hospedagem.
 
+**Exemplo**
+
+A grande diferença desse cenário para o anterior, é que a documentação está inserida no código fonte da aplicação, e não mais em um arquivo separado.
+
+Contudo o pipeline segue o mesmo, sendo repetitivo, mudando apenas o tipo de arquivo de entrada.
+
+![Exemplo Genérico de Pipeline de DaC](../../images/blog/simple_dac_flow3.gif)
+
+Para este cenário, criei esse [repositório](https://github.com/leonardopangaio/Sphinx_Test) como exemplo.
+
 ### Documentação de API
 
 Aqui temos a base semelhante aos outros dois tipos, onde a documentação é gerada como se fosse código, armazenado em um repositório git, onde será versionado e por aí vai.
@@ -117,6 +135,14 @@ Aqui temos a base semelhante aos outros dois tipos, onde a documentação é ger
 O que difere aqui, é que na documentação de API, teremos a possibilidade de escolha de formato, onde a mais comum e aceita é a OpenAPI, que em resumo é uma especificação padronizada de como se criar a documentação para APIs REST.
 
 A partir da criação dessa documentação podemos utilizar ferramentas como Swagger ou ReDoc para gerar um site onde o usuário pode navegar e buscar as informações desejadas.
+
+**Exemplo**
+
+Este cenário segue parecido com os dois anteriores, porém, a diferença é que o resultado, geralmente, não é mais um site estático, pois em sua grande maioria, passa a realizar requisições além de simples GET.
+
+![Exemplo Genérico de DaC para APIs](../../images/blog/simple_dac_flow4.gif)
+
+Para este último cenário, criei esse [repositório](https://github.com/leonardopangaio/OpenAPI_Test) como exemplo.
 
 ## Desafio
 
@@ -127,15 +153,18 @@ Por mais que a ideia de se trabalhar com a documentação como se fosse código 
 ## Referências
 
 **Documentation as Code (DaC)**
-https://dev.to/giladmaayan/beginners-guide-to-documentation-as-code-11o1
-https://www.writethedocs.org/guide/docs-as-code/
-https://www.tabnine.com/blog/documentation-as-code-principles-workflow-and-challenges/
+
+- https://dev.to/giladmaayan/beginners-guide-to-documentation-as-code-11o1
+- https://www.writethedocs.org/guide/docs-as-code/
+- https://www.tabnine.com/blog/documentation-as-code-principles-workflow-and-challenges/
 
 **OpenAPI**
-https://en.wikipedia.org/wiki/OpenAPI_Specification
-https://docs.github.com/pt/rest/about-the-rest-api/about-the-openapi-description-for-the-rest-api?apiVersion=2022-11-28
-https://www.openapis.org/what-is-openapi
-https://swagger.io/specification/
+
+- https://en.wikipedia.org/wiki/OpenAPI_Specification
+- https://docs.github.com/pt/rest/about-the-rest-api/about-the-openapi-description-for-the-rest-api?apiVersion=2022-11-28
+- https://www.openapis.org/what-is-openapi
+- https://swagger.io/specification/
 
 **Diagram as Code**
-https://youtu.be/jCd6XfWLZsg?si=tW8Ol4cIyo5TcHg4
+
+- https://youtu.be/jCd6XfWLZsg?si=tW8Ol4cIyo5TcHg4
