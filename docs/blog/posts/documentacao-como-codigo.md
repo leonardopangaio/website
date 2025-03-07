@@ -1,6 +1,6 @@
 ---
 date:
-  created: 2025-01-13
+  created: 2025-03-11
 authors:
   - leonardo
 categories:
@@ -110,7 +110,7 @@ A documentação de código é dependente de cada linguagem, pois cada uma vai t
 
 Existem ferramentas que fazem o arquivo readme de forma automática, como o readme-ai, readme.so, auto-readme dentre outros, que farão a análise do código e vão escrever um documento explicando o código.
 
-Ainda sobre "dockstrings", existem ferramentas que geram elas de forma automática, como por exemplo **pyment** para Python, ou **JSDoc** para Javascript e o **javadoc** para Java são alguns exemplos que geram a documentação, ou pelo menos um esboço dela, a partir da análise do código.
+Ainda sobre "docstrings", existem ferramentas que geram elas de forma automática, como por exemplo **pyment** para Python, ou **JSDoc** para Javascript e o **javadoc** para Java são alguns exemplos que geram a documentação, ou pelo menos um esboço dela, a partir da análise do código.
 
 Também existem ferramentas que validam a qualidade da documentação interna do código, como o **docstr-coverage** que ele verifica se as funções e/ou classes do código fonte em Python estão documentadas com "docstrings".
 
@@ -148,7 +148,7 @@ Para este último cenário, criei esse [repositório](https://github.com/leonard
 
 O grande desafio na adoção de DaC, seja para qualquer uma das finalidades é a adoção cultural dela, seja para os desenvolvedores melhorarem as documentações internas ou externas, seja para a equipe de suporte aumentar a base de conhecimento de erros conhecidos, seja para o time de QA aumentar a relação de casos de testes ou quais quer outro tipo de documentação, o mais importante é a equipe responsável pela manutenção da documentação efetivamente administrar ela.
 
-Por mais que a ideia de se trabalhar com a documentação como se fosse código seja a simplicidade, rastreio e cooperação, de nada adianta se os times efetivamente não trabalharem em cima das documentações.
+Por mais que a ideia de se trabalhar com a documentação como se fosse código seja a simplicidade, rastreio e cooperação, de nada adianta se os times efetivamente não trabalharem em cima das documentações (criando, atualizando e consumindo).
 
 ## Referências
 

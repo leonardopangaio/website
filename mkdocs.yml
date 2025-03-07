@@ -2,6 +2,10 @@ site_name: O Site do Pangaio
 site_url: https://pangaio.com.br/
 site_author: Leonardo Pangaio
 
+repo_url: https://github.com/leonardopangaio/website
+repo_name: leonardopangaio/website
+edit_uri: edit/main/docs/
+
 theme:
   name: material
   custom_dir: overrides
@@ -26,6 +30,9 @@ theme:
     - content.tooltips
     - toc.follow
     - content.code.copy
+    - content.action.view
+  icon:
+    repo: fontawesome/brands/github
 
   palette: 
     # Palette toggle for light mode
