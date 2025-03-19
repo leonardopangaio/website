@@ -19,7 +19,7 @@ No mundo do desenvolvimento de software, a qualidade do código é um dos pilare
 
 <!-- more -->
 
- ## O que é SOLID?
+## O que é SOLID?
 
 SOLID é um acrônimo que representa cinco princípios de design de software, introduzidos por Robert C. Martin (também conhecido como Uncle Bob). Esses princípios visam melhorar a estrutura do código, facilitando a manutenção, a extensibilidade e a reutilização. Vamos explorar cada um deles:
 
