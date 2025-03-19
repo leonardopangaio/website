@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <channel>
+    
+    <title>O Site do Pangaio</title>
+    
+    <link>https://pangaio.com.br/</link>
+    <atom:link href="https://pangaio.com.br/feed_rss_created.xml" rel="self" type="application/rss+xml" />
+
+    
+    <managingEditor>Leonardo Pangaio</managingEditor>
+    <docs>https://github.com/leonardopangaio/website</docs>
+    <language>pt</language>
+
+    
+    <pubDate>Wed, 19 Mar 2025 14:37:01 -0000</pubDate>
+    <lastBuildDate>Wed, 19 Mar 2025 14:37:01 -0000</lastBuildDate>
+    <ttl>1440</ttl>
+
+    
+    <generator>MkDocs RSS plugin - v1.17.1</generator>
+
+    
+    
+    <image>
+      <url>None</url>
+      <title>O Site do Pangaio</title>
+      <link>https://pangaio.com.br/</link>
+    </image>
+    
+
+    
+    
+    <item>
+      <title>Documentação como Código (DaC)</title>
+      
+      
+        
+      <author>Leonardo Pangaio</author>
+        
+      
+      
+      
+        
+      <category>Documentação</category>
+        
+      <category>Estudos</category>
+        
+      <category>Site</category>
+        
+      
+      <description>&lt;h1&gt;Documentação como Código (DaC)&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;Documentation as Code (DaC)&lt;/em&gt; é uma abordagem que trata a documentação de software como parte integrante do desenvolvimento de código, utilizando as mesmas práticas e ferramentas aplicadas ao código-fonte. Em vez de manter a documentação separada em sistemas distintos, ela é escrita em formatos de texto, como &lt;a href=&#34;https://www.markdownguide.org/&#34;&gt;Markdown&lt;/a&gt;, &lt;a href=&#34;https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html&#34;&gt;reStructuredText&lt;/a&gt; ou &lt;a href=&#34;https://www.latex-project.org/&#34;&gt;LaTeX&lt;/a&gt;, e armazenada em repositórios versionados. Essa prática permite que a documentação evolua junto com o software, garantindo que as informações estejam sempre atualizadas e alinhadas com as mudanças de implementação.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/documentacao-como-codigo/</link>
+      <pubDate>Tue, 11 Mar 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/documentacao-como-codigo/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Utilização do Make/Makefile para simplificar tarefas repetitivas</title>
+      
+      
+        
+      <author>Leonardo Pangaio</author>
+        
+      
+      
+      
+        
+      <category>Automação</category>
+        
+      <category>Build</category>
+        
+      <category>Documentação</category>
+        
+      
+      <description>&lt;h1&gt;Utilização do Make/Makefile para simplificar tarefas repetitivas&lt;/h1&gt;
+&lt;p&gt;Se você já precisou compilar um programa, docker build, organizar comandos repetitivos ou automatizar tarefas dentro de um projeto, talvez tenha se deparado com o termo Makefile. Mas afinal, o que é isso e como ele pode facilitar a vida de quem trabalha com tecnologia?&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/make-e-makefile/</link>
+      <pubDate>Tue, 18 Feb 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/make-e-makefile/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Otimizar consultas com EXCEPT</title>
+      
+      
+        
+      <author>Luciana Sampaio</author>
+        
+      
+      
+      
+        
+      <category>Data Science</category>
+        
+      <category>SQL</category>
+        
+      <category>Tech</category>
+        
+      
+      <description>&lt;h1&gt;Otimizar consultas com EXCEPT&lt;/h1&gt;
+&lt;p&gt;A função EXCEPT é tipo aquele amigo que ajuda você a se livrar do que não precisa! 😆✨&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;../../../images/blog/luciana/image-2copy.png&#34;&gt;&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/except-function/</link>
+      <pubDate>Fri, 14 Feb 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/except-function/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Solid</title>
+      
+      
+        
+      <author>Alberto Sanches</author>
+        
+      
+      
+      
+        
+      <category>Dev</category>
+        
+      <category>Framework</category>
+        
+      <category>Quality</category>
+        
+      
+      <description>&lt;p&gt;&lt;img alt=&#34;SOLID&#34; src=&#34;../../../images/blog/alberto/solid.png&#34;&gt;&lt;/p&gt;
+&lt;h1&gt;A Importância do SOLID no Desenvolvimento de Software: Construindo Códigos Sustentáveis e Escaláveis&lt;/h1&gt;
+&lt;p&gt;No mundo do desenvolvimento de software, a qualidade do código é um dos pilares fundamentais para o sucesso de qualquer projeto. À medida que os sistemas se tornam mais complexos e as demandas por novas funcionalidades aumentam, a necessidade de escrever código que seja fácil de manter, escalar e entender se torna cada vez mais crítica. É aqui que os princípios SOLID entram em cena, oferecendo diretrizes valiosas para desenvolvedores que desejam criar soluções robustas e sustentáveis.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/solid/</link>
+      <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/solid/</guid>
+      
+    </item>
+    
+    <item>
+      <title>O que é unpersist() em PySpark?</title>
+      
+      
+        
+      <author>Luciana Sampaio</author>
+        
+      
+      
+      
+        
+      <category>Data Science</category>
+        
+      <category>PySpark</category>
+        
+      <category>Tech</category>
+        
+      
+      <description>&lt;h1&gt;O que é unpersist() em PySpark?&lt;/h1&gt;
+&lt;p&gt;O método &lt;code&gt;unpersist()&lt;/code&gt; é eficaz para liberar recursos em processos de batch, onde você pode controlar quando o cache não é mais necessário. Em streaming, no entanto, o uso de &lt;code&gt;unpersist()&lt;/code&gt; não é recomendado, pois os dados são processados continuamente e o checkpoint já cuida da consistência e do armazenamento de estado. A utilização do checkpoint garante que o processo de streaming seja resiliente e possa ser retomado a partir de um ponto de falha, tornando a liberação de memória mais controlada e menos disruptiva.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/unpersist-pyspark/</link>
+      <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/unpersist-pyspark/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Como criei meu site</title>
+      
+      
+        
+      <author>Leonardo Pangaio</author>
+        
+      
+      
+      
+        
+      <category>Desafios</category>
+        
+      <category>Documentação</category>
+        
+      <category>Estudos</category>
+        
+      <category>Site</category>
+        
+      
+      <description>&lt;h1&gt;Como criei meu site&lt;/h1&gt;
+&lt;p&gt;Resolvi escrever este post depois de ver o que acabei aprendendo durante o processo de criação do meu site. Não que eu tenha virado um dev, ou devops ou um webmaster (denunciei a idade), nesse caminho, que começou ali em outubro de 2024.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/como-criei-meu-site/</link>
+      <pubDate>Mon, 13 Jan 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/como-criei-meu-site/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Utilização de Diário em 2025</title>
+      
+      
+        
+      <author>Leonardo Pangaio</author>
+        
+      
+      
+      
+        
+      <category>Dia-a-Dia</category>
+        
+      <category>Documentação</category>
+        
+      
+      <description>&lt;h1&gt;Utilização de Diário em 2025&lt;/h1&gt;
+&lt;p&gt;Continuando com o assunto estudos, organização, anotações e etc... Resolvi escrever sobre como tenho organizado a minha vida, meu dia a dia, tanto pessoal quanto profissional.&lt;/p&gt;
+&lt;p&gt;Em um super resumo, eu diria que a adoção de um diário e utilização de uma agenda (seja ela qual for) é o que tem me salvado bastante.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/utilizacao-de-diario-em-2025/</link>
+      <pubDate>Thu, 02 Jan 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/utilizacao-de-diario-em-2025/</guid>
+      
+    </item>
+    
+    <item>
+      <title>O que é pyspark.sql.context? 🎩✨</title>
+      
+      
+        
+      <author>Luciana Sampaio</author>
+        
+      
+      
+      
+        
+      <category>Data Science</category>
+        
+      <category>PySpark</category>
+        
+      <category>Tech</category>
+        
+      
+      <description>&lt;h1&gt;O que é &lt;code&gt;pyspark.sql.context&lt;/code&gt;? 🎩✨&lt;/h1&gt;
+&lt;p&gt;Quando comecei a trabalhar com &lt;strong&gt;Databricks&lt;/strong&gt;, confesso que me senti como um terráqueo vendo um disco voador pela primeira vez. Era outro mundo, meu povo! 🌌&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/pyspark-context/</link>
+      <pubDate>Thu, 21 Nov 2024 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/pyspark-context/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Ah, relacionamentos no SQL?</title>
+      
+      
+        
+      <author>Luciana Sampaio</author>
+        
+      
+      
+      
+        
+      <category>Data Science</category>
+        
+      <category>PySpark</category>
+        
+      <category>Tech</category>
+        
+      
+      <description>&lt;h1&gt;Ah, relacionamentos no SQL?&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;../../../images/blog/luciana/divertidamente.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Pense nisso como dramas de relacionamento, mas entre tabelas de dados! 😂 Vamos lá:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Relacionamento de “Um pra Um” (1:1)
+Esse é aquele namoro exclusivo, onde cada item em uma tabela só pode estar com um único item em outra tabela. Nada de triangulo amoroso aqui!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Exemplo: Uma tabela de pessoas e uma tabela de carteira de identidade. Cada pessoa tem uma carteira, e cada carteira pertence a uma única pessoa. Bem monogâmico.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/pyspark-context/</link>
+      <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/pyspark-context/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Como estudo em 2024</title>
+      
+      
+        
+      <author>Leonardo Pangaio</author>
+        
+      
+      
+      
+        
+      <category>Documentação</category>
+        
+      <category>Estudos</category>
+        
+      
+      <description>&lt;h1&gt;Como estudo em 2024&lt;/h1&gt;
+&lt;p&gt;Em resumo, tenho escrito todas as minhas anotações em &lt;a href=&#34;https://www.markdownguide.org/&#34;&gt;Markdown&lt;/a&gt;. Faço isso pois além da escrita ser simples, não me preocupo muito pouco com a formatação do documento, e mais com o conteúdo. O Markdown é versátil, então se for necessário converter para HTML é simples, se eu for publicar usando o Github Pages também será fácil. E no documento eu consigo inserir imagens, links externos, diagramas, &#34;mermaid&#34;, referências a outros documentos do mesmo repositório e etc...&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/como-estudo-em-2024/</link>
+      <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/como-estudo-em-2024/</guid>
+      
+    </item>
+    
+    <item>
+      <title>FuncoesPySpark</title>
+      
+      
+        
+      <author>Luciana Sampaio</author>
+        
+      
+      
+      
+        
+      <category>Data Science</category>
+        
+      <category>PySpark</category>
+        
+      <category>Tech</category>
+        
+      
+      <description>&lt;h2&gt;PySpark&lt;/h2&gt;
+&lt;h3&gt;Afinal o que são funções?&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;../../../images/blog/luciana/func_1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Afinal, o que são funções? 🤔
+Se a gente fizer um paralelo com a etimologia da palavra &#34;função&#34;, dá pra pensar em algo que expressa ou controla um comportamento – só que, no mundo da programação, isso rola por meio de código. Legal, né? Ou talvez até meio nerd, rs.&lt;/p&gt;
+&lt;p&gt;Eu gosto de pensar que funções são as ferramentas mágicas do desenvolvedor. Tipo aquela “caixa de ferramentas” onde você encontra tudo que precisa pra fazer magia com os dados. Quer somar colunas? Beleza. Transformar texto pra minúsculas? Fácil. Ordenar, calcular média, e até umas coisas mais avançadas? Tá tudo lá, prontinho pra usar. 🚀&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/pyspark/</link>
+      <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/pyspark/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Como os Aplicativos PySpark podem ser redimensionados.</title>
+      
+      
+        
+      <author>Luciana Sampaio</author>
+        
+      
+      
+      
+        
+      <category>Data Science</category>
+        
+      <category>PySpark</category>
+        
+      <category>Tech</category>
+        
+      
+      <description>&lt;h1&gt;Como os Aplicativos PySpark podem ser redimensionados.&lt;/h1&gt;
+&lt;h3&gt;Como Dimensionar Aplicativos PySpark de Forma Eficiente?&lt;/h3&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;../../../images/blog/luciana/redimens_1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Lidar com o dimensionamento de aplicativos PySpark nem sempre é uma tarefa fácil, especialmente quando estamos falando de &lt;strong&gt;processamentos em larga escala&lt;/strong&gt;.  &lt;/p&gt;
+&lt;hr&gt;
+&lt;h3&gt;&lt;strong&gt;Como fazer isso de modo mais eficiente?&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Antes de tudo, é fundamental entender que o &lt;strong&gt;número de nós (executores)&lt;/strong&gt; tem um impacto significativo na escalabilidade do seu projeto.  &lt;/p&gt;
+&lt;p&gt;No entanto, a escolha do tamanho ideal do cluster não depende apenas do tamanho dos dados. Outros fatores também precisam ser considerados, como o poder de processamento (CPU) e a memória disponível.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/aplicativos-pyspark-redimensionados/</link>
+      <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/aplicativos-pyspark-redimensionados/</guid>
+      
+    </item>
+    
+    <item>
+      <title>O que é uma função lambda? 🤔</title>
+      
+      
+        
+      <author>Luciana Sampaio</author>
+        
+      
+      
+      
+        
+      <category>Functions</category>
+        
+      <category>Python</category>
+        
+      <category>Tech</category>
+        
+      
+      <description>&lt;h1&gt;O que é uma função lambda? 🤔&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;../../../images/blog/luciana/lamb.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Ah, funções lambda... O que seriam elas? Nada mais, nada menos que &lt;strong&gt;funções sem nome&lt;/strong&gt;! Isso mesmo, é tipo aquele colega que você conhece de vista, mas nunca sabe o nome. 🤷‍♀️&lt;/p&gt;
+&lt;p&gt;A ideia aqui é simples: elas são feitas para serem pequenas, rápidas e diretas ao ponto. Ou seja, são as &#34;funções ninja&#34; do Python. 🥷🐍&lt;/p&gt;
+&lt;p&gt;Enquanto em uma função regular você precisa de toda uma cerimônia — &lt;em&gt;&#34;declara, define, passa parâmetros, dá nome, e blá-blá-blá&#34;&lt;/em&gt; — a lambda chega, resolve o que precisa e sai sem nem pedir crédito. &lt;strong&gt;Elegância pura.&lt;/strong&gt;&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/lambda-function/</link>
+      <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/lambda-function/</guid>
+      
+    </item>
+    
+  </channel>
+</rss>
