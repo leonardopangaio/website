@@ -2,7 +2,7 @@ VERSION="1.0"
 pname="website"
 SHELL := /bin/bash
 message="Making a new commit."
-.PHONY: help requirements.txt
+.PHONY: help requirements.txt build
 
 help: ## Shows this help
 	@grep -E '^[.a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
@@ -22,7 +22,7 @@ create: ## Create a new website
 	@source venv/bin/activate \
 		&& mkdocs new $(pname)
 
-start: ## Start the dev env
+start: build ## Start the dev env
 	@source venv/bin/activate \
 		&& mkdocs serve
 

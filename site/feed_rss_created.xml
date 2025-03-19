@@ -13,8 +13,8 @@
     <language>pt</language>
 
     
-    <pubDate>Tue, 11 Mar 2025 21:06:43 -0000</pubDate>
-    <lastBuildDate>Tue, 11 Mar 2025 21:06:43 -0000</lastBuildDate>
+    <pubDate>Wed, 19 Mar 2025 14:18:15 -0000</pubDate>
+    <lastBuildDate>Wed, 19 Mar 2025 14:18:15 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -113,6 +113,35 @@
       <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
       
       <guid isPermaLink="true">https://pangaio.com.br/blog/except-function/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Solid</title>
+      
+      
+        
+      <author>Alberto Sanches</author>
+        
+      
+      
+      
+        
+      <category>Dev</category>
+        
+      <category>Framework</category>
+        
+      <category>Quality</category>
+        
+      
+      <description>&lt;p&gt;&lt;img alt=&#34;SOLID&#34; src=&#34;../../../images/blog/alberto/solid.png&#34;&gt;&lt;/p&gt;
+&lt;h1&gt;A Importância do SOLID no Desenvolvimento de Software: Construindo Códigos Sustentáveis e Escaláveis&lt;/h1&gt;
+&lt;p&gt;No mundo do desenvolvimento de software, a qualidade do código é um dos pilares fundamentais para o sucesso de qualquer projeto. À medida que os sistemas se tornam mais complexos e as demandas por novas funcionalidades aumentam, a necessidade de escrever código que seja fácil de manter, escalar e entender se torna cada vez mais crítica. É aqui que os princípios SOLID entram em cena, oferecendo diretrizes valiosas para desenvolvedores que desejam criar soluções robustas e sustentáveis.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/solid/</link>
+      <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/solid/</guid>
       
     </item>
     

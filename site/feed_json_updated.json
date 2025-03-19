@@ -13,12 +13,30 @@
     "language": "pt",
     "items": [
         {
+            "id": "https://pangaio.com.br/blog/solid/",
+            "url": "https://pangaio.com.br/blog/solid/",
+            "title": "Solid",
+            "content_html": "<p><img alt=\"SOLID\" src=\"../../../images/blog/alberto/solid.png\"></p>\n<h1>A Import\u00e2ncia do SOLID no Desenvolvimento de Software: Construindo C\u00f3digos Sustent\u00e1veis e Escal\u00e1veis</h1>\n<p>No mundo do desenvolvimento de software, a qualidade do c\u00f3digo \u00e9 um dos pilares fundamentais para o sucesso de qualquer projeto. \u00c0 medida que os sistemas se tornam mais complexos e as demandas por novas funcionalidades aumentam, a necessidade de escrever c\u00f3digo que seja f\u00e1cil de manter, escalar e entender se torna cada vez mais cr\u00edtica. \u00c9 aqui que os princ\u00edpios SOLID entram em cena, oferecendo diretrizes valiosas para desenvolvedores que desejam criar solu\u00e7\u00f5es robustas e sustent\u00e1veis.</p>",
+            "image": null,
+            "date_modified": "2025-03-19T14:18:23.252970+00:00",
+            "authors": [
+                {
+                    "name": "Alberto Sanches"
+                }
+            ],
+            "tags": [
+                "Dev",
+                "Framework",
+                "Quality"
+            ]
+        },
+        {
             "id": "https://pangaio.com.br/blog/documentacao-como-codigo/",
             "url": "https://pangaio.com.br/blog/documentacao-como-codigo/",
             "title": "Documenta\u00e7\u00e3o como C\u00f3digo (DaC)",
             "content_html": "<h1>Documenta\u00e7\u00e3o como C\u00f3digo (DaC)</h1>\n<p><em>Documentation as Code (DaC)</em> \u00e9 uma abordagem que trata a documenta\u00e7\u00e3o de software como parte integrante do desenvolvimento de c\u00f3digo, utilizando as mesmas pr\u00e1ticas e ferramentas aplicadas ao c\u00f3digo-fonte. Em vez de manter a documenta\u00e7\u00e3o separada em sistemas distintos, ela \u00e9 escrita em formatos de texto, como <a href=\"https://www.markdownguide.org/\">Markdown</a>, <a href=\"https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html\">reStructuredText</a> ou <a href=\"https://www.latex-project.org/\">LaTeX</a>, e armazenada em reposit\u00f3rios versionados. Essa pr\u00e1tica permite que a documenta\u00e7\u00e3o evolua junto com o software, garantindo que as informa\u00e7\u00f5es estejam sempre atualizadas e alinhadas com as mudan\u00e7as de implementa\u00e7\u00e3o.</p>",
             "image": null,
-            "date_modified": "2025-03-07T15:54:10+00:00",
+            "date_modified": "2025-03-11T18:07:26+00:00",
             "authors": [
                 {
                     "name": "Leonardo Pangaio"
