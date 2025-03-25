@@ -2,7 +2,7 @@ VERSION="1.0"
 pname="website"
 SHELL := /bin/bash
 message="Making a new commit."
-.PHONY: help requirements.txt build
+.PHONY: help requirements.txt build git pip create start version
 
 help: ## Shows this help
 	@grep -E '^[.a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
@@ -33,6 +33,6 @@ build: ## Build the project
 git: build ## Push to Github
 	@git fetch origin \
 		&& git add . \
-		&& git commit -m $(message) \
+		&& git commit -m '$(message)' \
 		&& git pull --no-rebase origin \
 		&& git push origin
