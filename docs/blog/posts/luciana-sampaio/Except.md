@@ -4,9 +4,7 @@ date:
 authors:
   - luciana
 categories:
-  - SQL
-  - Tech
-  - Data Science
+  - Luciana Sampaio
 comments: true
 slug: except-function
 ---

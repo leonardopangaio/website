@@ -4,9 +4,7 @@ date:
 authors:
   - luciana
 categories:
-  - PySpark
-  - Data Science
-  - Tech
+  - Luciana Sampaio
 comments: true
 slug: unpersist-pyspark
 ---

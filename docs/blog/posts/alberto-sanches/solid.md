@@ -4,9 +4,7 @@ date:
 authors:
   - alberto
 categories:
-  - Dev
-  - Quality
-  - Framework
+  - Alberto Sanches
 comments: true
 slug: solid
 ---

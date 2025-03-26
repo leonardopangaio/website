@@ -4,9 +4,7 @@ date:
 authors:
   - luciana
 categories:
-  - Python
-  - Functions
-  - Tech
+  - Luciana Sampaio
 comments: true
 slug: lambda-function
 ---

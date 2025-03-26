@@ -13,6 +13,86 @@
     "language": "pt",
     "items": [
         {
+            "id": "https://pangaio.com.br/blog/utilizacao-de-diario-em-2025/",
+            "url": "https://pangaio.com.br/blog/utilizacao-de-diario-em-2025/",
+            "title": "Utiliza\u00e7\u00e3o de Di\u00e1rio em 2025",
+            "content_html": "<h1>Utiliza\u00e7\u00e3o de Di\u00e1rio em 2025</h1>\n<p>Continuando com o assunto estudos, organiza\u00e7\u00e3o, anota\u00e7\u00f5es e etc... Resolvi escrever sobre como tenho organizado a minha vida, meu dia a dia, tanto pessoal quanto profissional.</p>\n<p>Em um super resumo, eu diria que a ado\u00e7\u00e3o de um di\u00e1rio e utiliza\u00e7\u00e3o de uma agenda (seja ela qual for) \u00e9 o que tem me salvado bastante.</p>",
+            "image": null,
+            "date_modified": "2025-03-26T17:04:20.904435+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Pangaio"
+                }
+            ],
+            "tags": [
+                "Leonardo Pangaio"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/make-e-makefile/",
+            "url": "https://pangaio.com.br/blog/make-e-makefile/",
+            "title": "Utiliza\u00e7\u00e3o do Make/Makefile para simplificar tarefas repetitivas",
+            "content_html": "<h1>Utiliza\u00e7\u00e3o do Make/Makefile para simplificar tarefas repetitivas</h1>\n<p>Se voc\u00ea j\u00e1 precisou compilar um programa, docker build, organizar comandos repetitivos ou automatizar tarefas dentro de um projeto, talvez tenha se deparado com o termo Makefile. Mas afinal, o que \u00e9 isso e como ele pode facilitar a vida de quem trabalha com tecnologia?</p>",
+            "image": null,
+            "date_modified": "2025-03-26T17:04:20.867961+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Pangaio"
+                }
+            ],
+            "tags": [
+                "Leonardo Pangaio"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/documentacao-como-codigo/",
+            "url": "https://pangaio.com.br/blog/documentacao-como-codigo/",
+            "title": "Documenta\u00e7\u00e3o como C\u00f3digo (DaC)",
+            "content_html": "<h1>Documenta\u00e7\u00e3o como C\u00f3digo (DaC)</h1>\n<p><em>Documentation as Code (DaC)</em> \u00e9 uma abordagem que trata a documenta\u00e7\u00e3o de software como parte integrante do desenvolvimento de c\u00f3digo, utilizando as mesmas pr\u00e1ticas e ferramentas aplicadas ao c\u00f3digo-fonte. Em vez de manter a documenta\u00e7\u00e3o separada em sistemas distintos, ela \u00e9 escrita em formatos de texto, como <a href=\"https://www.markdownguide.org/\">Markdown</a>, <a href=\"https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html\">reStructuredText</a> ou <a href=\"https://www.latex-project.org/\">LaTeX</a>, e armazenada em reposit\u00f3rios versionados. Essa pr\u00e1tica permite que a documenta\u00e7\u00e3o evolua junto com o software, garantindo que as informa\u00e7\u00f5es estejam sempre atualizadas e alinhadas com as mudan\u00e7as de implementa\u00e7\u00e3o.</p>",
+            "image": null,
+            "date_modified": "2025-03-26T17:04:20.709903+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Pangaio"
+                }
+            ],
+            "tags": [
+                "Leonardo Pangaio"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/como-estudo-em-2024/",
+            "url": "https://pangaio.com.br/blog/como-estudo-em-2024/",
+            "title": "Como estudo em 2024",
+            "content_html": "<h1>Como estudo em 2024</h1>\n<p>Em resumo, tenho escrito todas as minhas anota\u00e7\u00f5es em <a href=\"https://www.markdownguide.org/\">Markdown</a>. Fa\u00e7o isso pois al\u00e9m da escrita ser simples, n\u00e3o me preocupo muito pouco com a formata\u00e7\u00e3o do documento, e mais com o conte\u00fado. O Markdown \u00e9 vers\u00e1til, ent\u00e3o se for necess\u00e1rio converter para HTML \u00e9 simples, se eu for publicar usando o Github Pages tamb\u00e9m ser\u00e1 f\u00e1cil. E no documento eu consigo inserir imagens, links externos, diagramas, \"mermaid\", refer\u00eancias a outros documentos do mesmo reposit\u00f3rio e etc...</p>",
+            "image": null,
+            "date_modified": "2025-03-26T17:04:20.627194+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Pangaio"
+                }
+            ],
+            "tags": [
+                "Leonardo Pangaio"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/como-criei-meu-site/",
+            "url": "https://pangaio.com.br/blog/como-criei-meu-site/",
+            "title": "Como criei meu site",
+            "content_html": "<h1>Como criei meu site</h1>\n<p>Resolvi escrever este post depois de ver o que acabei aprendendo durante o processo de cria\u00e7\u00e3o do meu site. N\u00e3o que eu tenha virado um dev, ou devops ou um webmaster (denunciei a idade), nesse caminho, que come\u00e7ou ali em outubro de 2024.</p>",
+            "image": null,
+            "date_modified": "2025-03-26T17:04:20.581887+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Pangaio"
+                }
+            ],
+            "tags": [
+                "Leonardo Pangaio"
+            ]
+        },
+        {
             "id": "https://pangaio.com.br/blog/solid/",
             "url": "https://pangaio.com.br/blog/solid/",
             "title": "Solid",
@@ -25,27 +105,7 @@
                 }
             ],
             "tags": [
-                "Dev",
-                "Framework",
-                "Quality"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/documentacao-como-codigo/",
-            "url": "https://pangaio.com.br/blog/documentacao-como-codigo/",
-            "title": "Documenta\u00e7\u00e3o como C\u00f3digo (DaC)",
-            "content_html": "<h1>Documenta\u00e7\u00e3o como C\u00f3digo (DaC)</h1>\n<p><em>Documentation as Code (DaC)</em> \u00e9 uma abordagem que trata a documenta\u00e7\u00e3o de software como parte integrante do desenvolvimento de c\u00f3digo, utilizando as mesmas pr\u00e1ticas e ferramentas aplicadas ao c\u00f3digo-fonte. Em vez de manter a documenta\u00e7\u00e3o separada em sistemas distintos, ela \u00e9 escrita em formatos de texto, como <a href=\"https://www.markdownguide.org/\">Markdown</a>, <a href=\"https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html\">reStructuredText</a> ou <a href=\"https://www.latex-project.org/\">LaTeX</a>, e armazenada em reposit\u00f3rios versionados. Essa pr\u00e1tica permite que a documenta\u00e7\u00e3o evolua junto com o software, garantindo que as informa\u00e7\u00f5es estejam sempre atualizadas e alinhadas com as mudan\u00e7as de implementa\u00e7\u00e3o.</p>",
-            "image": null,
-            "date_modified": "2025-03-11T18:07:26+00:00",
-            "authors": [
-                {
-                    "name": "Leonardo Pangaio"
-                }
-            ],
-            "tags": [
-                "Documenta\u00e7\u00e3o",
-                "Estudos",
-                "Site"
+                "Alberto Sanches"
             ]
         },
         {
@@ -61,27 +121,7 @@
                 }
             ],
             "tags": [
-                "Data Science",
-                "SQL",
-                "Tech"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/make-e-makefile/",
-            "url": "https://pangaio.com.br/blog/make-e-makefile/",
-            "title": "Utiliza\u00e7\u00e3o do Make/Makefile para simplificar tarefas repetitivas",
-            "content_html": "<h1>Utiliza\u00e7\u00e3o do Make/Makefile para simplificar tarefas repetitivas</h1>\n<p>Se voc\u00ea j\u00e1 precisou compilar um programa, docker build, organizar comandos repetitivos ou automatizar tarefas dentro de um projeto, talvez tenha se deparado com o termo Makefile. Mas afinal, o que \u00e9 isso e como ele pode facilitar a vida de quem trabalha com tecnologia?</p>",
-            "image": null,
-            "date_modified": "2025-02-18T15:54:06+00:00",
-            "authors": [
-                {
-                    "name": "Leonardo Pangaio"
-                }
-            ],
-            "tags": [
-                "Automa\u00e7\u00e3o",
-                "Build",
-                "Documenta\u00e7\u00e3o"
+                "Luciana Sampaio"
             ]
         },
         {
@@ -97,9 +137,7 @@
                 }
             ],
             "tags": [
-                "Data Science",
-                "PySpark",
-                "Tech"
+                "Luciana Sampaio"
             ]
         },
         {
@@ -115,9 +153,7 @@
                 }
             ],
             "tags": [
-                "Data Science",
-                "PySpark",
-                "Tech"
+                "Luciana Sampaio"
             ]
         },
         {
@@ -133,9 +169,7 @@
                 }
             ],
             "tags": [
-                "Data Science",
-                "PySpark",
-                "Tech"
+                "Luciana Sampaio"
             ]
         },
         {
@@ -151,9 +185,7 @@
                 }
             ],
             "tags": [
-                "Data Science",
-                "PySpark",
-                "Tech"
+                "Luciana Sampaio"
             ]
         },
         {
@@ -169,9 +201,7 @@
                 }
             ],
             "tags": [
-                "Data Science",
-                "PySpark",
-                "Tech"
+                "Luciana Sampaio"
             ]
         },
         {
@@ -187,62 +217,7 @@
                 }
             ],
             "tags": [
-                "Functions",
-                "Python",
-                "Tech"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/como-criei-meu-site/",
-            "url": "https://pangaio.com.br/blog/como-criei-meu-site/",
-            "title": "Como criei meu site",
-            "content_html": "<h1>Como criei meu site</h1>\n<p>Resolvi escrever este post depois de ver o que acabei aprendendo durante o processo de cria\u00e7\u00e3o do meu site. N\u00e3o que eu tenha virado um dev, ou devops ou um webmaster (denunciei a idade), nesse caminho, que come\u00e7ou ali em outubro de 2024.</p>",
-            "image": null,
-            "date_modified": "2025-01-14T00:27:24+00:00",
-            "authors": [
-                {
-                    "name": "Leonardo Pangaio"
-                }
-            ],
-            "tags": [
-                "Desafios",
-                "Documenta\u00e7\u00e3o",
-                "Estudos",
-                "Site"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/como-estudo-em-2024/",
-            "url": "https://pangaio.com.br/blog/como-estudo-em-2024/",
-            "title": "Como estudo em 2024",
-            "content_html": "<h1>Como estudo em 2024</h1>\n<p>Em resumo, tenho escrito todas as minhas anota\u00e7\u00f5es em <a href=\"https://www.markdownguide.org/\">Markdown</a>. Fa\u00e7o isso pois al\u00e9m da escrita ser simples, n\u00e3o me preocupo muito pouco com a formata\u00e7\u00e3o do documento, e mais com o conte\u00fado. O Markdown \u00e9 vers\u00e1til, ent\u00e3o se for necess\u00e1rio converter para HTML \u00e9 simples, se eu for publicar usando o Github Pages tamb\u00e9m ser\u00e1 f\u00e1cil. E no documento eu consigo inserir imagens, links externos, diagramas, \"mermaid\", refer\u00eancias a outros documentos do mesmo reposit\u00f3rio e etc...</p>",
-            "image": null,
-            "date_modified": "2025-01-05T01:32:01+00:00",
-            "authors": [
-                {
-                    "name": "Leonardo Pangaio"
-                }
-            ],
-            "tags": [
-                "Documenta\u00e7\u00e3o",
-                "Estudos"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/utilizacao-de-diario-em-2025/",
-            "url": "https://pangaio.com.br/blog/utilizacao-de-diario-em-2025/",
-            "title": "Utiliza\u00e7\u00e3o de Di\u00e1rio em 2025",
-            "content_html": "<h1>Utiliza\u00e7\u00e3o de Di\u00e1rio em 2025</h1>\n<p>Continuando com o assunto estudos, organiza\u00e7\u00e3o, anota\u00e7\u00f5es e etc... Resolvi escrever sobre como tenho organizado a minha vida, meu dia a dia, tanto pessoal quanto profissional.</p>\n<p>Em um super resumo, eu diria que a ado\u00e7\u00e3o de um di\u00e1rio e utiliza\u00e7\u00e3o de uma agenda (seja ela qual for) \u00e9 o que tem me salvado bastante.</p>",
-            "image": null,
-            "date_modified": "2025-01-05T01:32:01+00:00",
-            "authors": [
-                {
-                    "name": "Leonardo Pangaio"
-                }
-            ],
-            "tags": [
-                "Dia-a-Dia",
-                "Documenta\u00e7\u00e3o"
+                "Luciana Sampaio"
             ]
         }
     ]

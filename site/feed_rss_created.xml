@@ -13,8 +13,8 @@
     <language>pt</language>
 
     
-    <pubDate>Wed, 26 Mar 2025 16:44:29 -0000</pubDate>
-    <lastBuildDate>Wed, 26 Mar 2025 16:44:29 -0000</lastBuildDate>
+    <pubDate>Wed, 26 Mar 2025 17:04:14 -0000</pubDate>
+    <lastBuildDate>Wed, 26 Mar 2025 17:04:14 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -42,11 +42,7 @@
       
       
         
-      <category>Documentação</category>
-        
-      <category>Estudos</category>
-        
-      <category>Site</category>
+      <category>Leonardo Pangaio</category>
         
       
       <description>&lt;h1&gt;Documentação como Código (DaC)&lt;/h1&gt;
@@ -70,11 +66,7 @@
       
       
         
-      <category>Automação</category>
-        
-      <category>Build</category>
-        
-      <category>Documentação</category>
+      <category>Leonardo Pangaio</category>
         
       
       <description>&lt;h1&gt;Utilização do Make/Makefile para simplificar tarefas repetitivas&lt;/h1&gt;
@@ -98,11 +90,7 @@
       
       
         
-      <category>Data Science</category>
-        
-      <category>SQL</category>
-        
-      <category>Tech</category>
+      <category>Luciana Sampaio</category>
         
       
       <description>&lt;h1&gt;Otimizar consultas com EXCEPT&lt;/h1&gt;
@@ -127,11 +115,7 @@
       
       
         
-      <category>Dev</category>
-        
-      <category>Framework</category>
-        
-      <category>Quality</category>
+      <category>Alberto Sanches</category>
         
       
       <description>&lt;p&gt;&lt;img alt=&#34;SOLID&#34; src=&#34;../../../images/blog/alberto/solid.png&#34;&gt;&lt;/p&gt;
@@ -156,11 +140,7 @@
       
       
         
-      <category>Data Science</category>
-        
-      <category>PySpark</category>
-        
-      <category>Tech</category>
+      <category>Luciana Sampaio</category>
         
       
       <description>&lt;h1&gt;O que é unpersist() em PySpark?&lt;/h1&gt;
@@ -184,13 +164,7 @@
       
       
         
-      <category>Desafios</category>
-        
-      <category>Documentação</category>
-        
-      <category>Estudos</category>
-        
-      <category>Site</category>
+      <category>Leonardo Pangaio</category>
         
       
       <description>&lt;h1&gt;Como criei meu site&lt;/h1&gt;
@@ -214,9 +188,7 @@
       
       
         
-      <category>Dia-a-Dia</category>
-        
-      <category>Documentação</category>
+      <category>Leonardo Pangaio</category>
         
       
       <description>&lt;h1&gt;Utilização de Diário em 2025&lt;/h1&gt;
@@ -241,11 +213,7 @@
       
       
         
-      <category>Data Science</category>
-        
-      <category>PySpark</category>
-        
-      <category>Tech</category>
+      <category>Luciana Sampaio</category>
         
       
       <description>&lt;h1&gt;O que é &lt;code&gt;pyspark.sql.context&lt;/code&gt;? 🎩✨&lt;/h1&gt;
@@ -269,11 +237,7 @@
       
       
         
-      <category>Data Science</category>
-        
-      <category>PySpark</category>
-        
-      <category>Tech</category>
+      <category>Luciana Sampaio</category>
         
       
       <description>&lt;h1&gt;Ah, relacionamentos no SQL?&lt;/h1&gt;
@@ -303,9 +267,7 @@ Esse é aquele namoro exclusivo, onde cada item em uma tabela só pode estar com
       
       
         
-      <category>Documentação</category>
-        
-      <category>Estudos</category>
+      <category>Leonardo Pangaio</category>
         
       
       <description>&lt;h1&gt;Como estudo em 2024&lt;/h1&gt;
@@ -329,11 +291,7 @@ Esse é aquele namoro exclusivo, onde cada item em uma tabela só pode estar com
       
       
         
-      <category>Data Science</category>
-        
-      <category>PySpark</category>
-        
-      <category>Tech</category>
+      <category>Luciana Sampaio</category>
         
       
       <description>&lt;h2&gt;PySpark&lt;/h2&gt;
@@ -361,11 +319,7 @@ Se a gente fizer um paralelo com a etimologia da palavra &#34;função&#34;, dá
       
       
         
-      <category>Data Science</category>
-        
-      <category>PySpark</category>
-        
-      <category>Tech</category>
+      <category>Luciana Sampaio</category>
         
       
       <description>&lt;h1&gt;Como os Aplicativos PySpark podem ser redimensionados.&lt;/h1&gt;
@@ -395,11 +349,7 @@ Se a gente fizer um paralelo com a etimologia da palavra &#34;função&#34;, dá
       
       
         
-      <category>Functions</category>
-        
-      <category>Python</category>
-        
-      <category>Tech</category>
+      <category>Luciana Sampaio</category>
         
       
       <description>&lt;h1&gt;O que é uma função lambda? 🤔&lt;/h1&gt;

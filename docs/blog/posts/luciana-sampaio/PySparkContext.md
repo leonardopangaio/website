@@ -4,9 +4,7 @@ date:
 authors:
   - luciana
 categories:
-  - PySpark
-  - Data Science
-  - Tech
+  - Luciana Sampaio
 comments: true
 slug: pyspark-context
 ---
@@ -50,11 +48,11 @@ Como diria Zeca Pagodinho: **"Nunca vi nem comi, eu só ouço falar!"** 🎶😂
 
 ### Meu primeiro rascunho sobre `pyspark.sql.context`
 
-![alt text](/../../../images/blog/luciana/image-6.png)
+![alt text](../../../images/blog/luciana/image-6.png)
 
 
 
-![alt text](/../../../images/blog/luciana/image-7.png)
+![alt text](../../../images/blog/luciana/image-7.png)
 
 
 # Quando Tudo Fez Sentido: O Dia em Que Entendi o **Context** 🧠💡
