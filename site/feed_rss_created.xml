@@ -13,8 +13,8 @@
     <language>pt</language>
 
     
-    <pubDate>Wed, 26 Mar 2025 17:04:14 -0000</pubDate>
-    <lastBuildDate>Wed, 26 Mar 2025 17:04:14 -0000</lastBuildDate>
+    <pubDate>Mon, 31 Mar 2025 15:49:16 -0000</pubDate>
+    <lastBuildDate>Mon, 31 Mar 2025 15:49:16 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -30,6 +30,31 @@
     
 
     
+    
+    <item>
+      <title>Acumuladores no PySpark: O que são e como usá-los?</title>
+      
+      
+        
+      <author>Luciana Sampaio</author>
+        
+      
+      
+      
+        
+      <category>Luciana Sampaio</category>
+        
+      
+      <description>&lt;h1&gt;Acumuladores no PySpark: O que são e como usá-los?&lt;/h1&gt;
+&lt;p&gt;Imagine que você está cozinhando um prato incrível, mas precisa contar quantas vezes adicionou tempero. Agora, multiplique isso por milhares de nós trabalhando juntos! 🍲🔥&lt;/p&gt;
+&lt;p&gt;No mundo do PySpark, os acumuladores fazem exatamente isso: ajudam a contar e somar valores sem causar caos no cluster!&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/acumuladores/</link>
+      <pubDate>Tue, 25 Mar 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/acumuladores/</guid>
+      
+    </item>
     
     <item>
       <title>Documentação como Código (DaC)</title>
@@ -52,6 +77,31 @@
       <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
       
       <guid isPermaLink="true">https://pangaio.com.br/blog/documentacao-como-codigo/</guid>
+      
+    </item>
+    
+    <item>
+      <title>📢 Broadcast: O Wi-Fi da Engenharia de Dados!</title>
+      
+      
+        
+      <author>Luciana Sampaio</author>
+        
+      
+      
+      
+        
+      <category>Luciana Sampaio</category>
+        
+      
+      <description>&lt;h1&gt;📢 &lt;strong&gt;Broadcast: O Wi-Fi da Engenharia de Dados!&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Fala, pessoal! Hoje vou falar sobre &lt;strong&gt;variável de transmissão (Broadcast)&lt;/strong&gt;, mas antes... bora filosofar um pouco sobre o que faz um &lt;strong&gt;Engenheiro de Dados&lt;/strong&gt;?  &lt;/p&gt;
+&lt;p&gt;🤔 Já parou para pensar? Qual é uma das grandes missões desse ser místico que habita planilhas, bancos de dados e clusters Spark?  &lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/broadcast-variavel/</link>
+      <pubDate>Tue, 11 Mar 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/broadcast-variavel/</guid>
       
     </item>
     
