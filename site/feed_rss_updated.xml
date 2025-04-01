@@ -13,8 +13,8 @@
     <language>pt</language>
 
     
-    <pubDate>Mon, 31 Mar 2025 15:49:16 -0000</pubDate>
-    <lastBuildDate>Mon, 31 Mar 2025 15:49:16 -0000</lastBuildDate>
+    <pubDate>Tue, 01 Apr 2025 13:32:56 -0000</pubDate>
+    <lastBuildDate>Tue, 01 Apr 2025 13:32:56 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -32,27 +32,26 @@
     
     
     <item>
-      <title>📢 Broadcast: O Wi-Fi da Engenharia de Dados!</title>
+      <title>Criando mesa de desenho em tempo real com F#, SignalR e Javascript</title>
       
       
         
-      <author>Luciana Sampaio</author>
+      <author>Diego Costa</author>
         
       
       
       
         
-      <category>Luciana Sampaio</category>
+      <category>Diego Costa</category>
         
       
-      <description>&lt;h1&gt;📢 &lt;strong&gt;Broadcast: O Wi-Fi da Engenharia de Dados!&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;Fala, pessoal! Hoje vou falar sobre &lt;strong&gt;variável de transmissão (Broadcast)&lt;/strong&gt;, mas antes... bora filosofar um pouco sobre o que faz um &lt;strong&gt;Engenheiro de Dados&lt;/strong&gt;?  &lt;/p&gt;
-&lt;p&gt;🤔 Já parou para pensar? Qual é uma das grandes missões desse ser místico que habita planilhas, bancos de dados e clusters Spark?  &lt;/p&gt;</description>
-      <link>https://pangaio.com.br/blog/broadcast-variavel/</link>
-      <pubDate>Mon, 31 Mar 2025 15:49:25 +0000</pubDate>
+      <description>&lt;h1&gt;Criando mesa de desenho em tempo real com F#, SignalR e Javascript&lt;/h1&gt;
+&lt;p&gt;Esse é um pequeno tutorial de como usar F# e SignalR dentro da plataforma .NET Core 3 (preview 6), escolhi o F# para esse tutorial por ser uma linguagem com declarações mais simples que o C# e por trabalhar com tipo seguros. O F# tem crescido muito como referência em programação funcional e multi-paradigma, a intenção desse material não é se aprofundar nos conceitos envolvendo a linguagem F# mas demonstrar sua simplicidade em um programa .NET Core.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/mesa-desenho-fsharp/</link>
+      <pubDate>Tue, 01 Apr 2025 13:33:02 +0000</pubDate>
       <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
       
-      <guid isPermaLink="true">https://pangaio.com.br/blog/broadcast-variavel/</guid>
+      <guid isPermaLink="true">https://pangaio.com.br/blog/mesa-desenho-fsharp/</guid>
       
     </item>
     
@@ -74,10 +73,35 @@
 &lt;p&gt;Imagine que você está cozinhando um prato incrível, mas precisa contar quantas vezes adicionou tempero. Agora, multiplique isso por milhares de nós trabalhando juntos! 🍲🔥&lt;/p&gt;
 &lt;p&gt;No mundo do PySpark, os acumuladores fazem exatamente isso: ajudam a contar e somar valores sem causar caos no cluster!&lt;/p&gt;</description>
       <link>https://pangaio.com.br/blog/acumuladores/</link>
-      <pubDate>Mon, 31 Mar 2025 15:49:24 +0000</pubDate>
+      <pubDate>Mon, 31 Mar 2025 12:49:54 +0000</pubDate>
       <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
       
       <guid isPermaLink="true">https://pangaio.com.br/blog/acumuladores/</guid>
+      
+    </item>
+    
+    <item>
+      <title>📢 Broadcast: O Wi-Fi da Engenharia de Dados!</title>
+      
+      
+        
+      <author>Luciana Sampaio</author>
+        
+      
+      
+      
+        
+      <category>Luciana Sampaio</category>
+        
+      
+      <description>&lt;h1&gt;📢 &lt;strong&gt;Broadcast: O Wi-Fi da Engenharia de Dados!&lt;/strong&gt;&lt;/h1&gt;
+&lt;p&gt;Fala, pessoal! Hoje vou falar sobre &lt;strong&gt;variável de transmissão (Broadcast)&lt;/strong&gt;, mas antes... bora filosofar um pouco sobre o que faz um &lt;strong&gt;Engenheiro de Dados&lt;/strong&gt;?  &lt;/p&gt;
+&lt;p&gt;🤔 Já parou para pensar? Qual é uma das grandes missões desse ser místico que habita planilhas, bancos de dados e clusters Spark?  &lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/broadcast-variavel/</link>
+      <pubDate>Mon, 31 Mar 2025 12:49:54 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/broadcast-variavel/</guid>
       
     </item>
     

@@ -13,12 +13,28 @@
     "language": "pt",
     "items": [
         {
-            "id": "https://pangaio.com.br/blog/broadcast-variavel/",
-            "url": "https://pangaio.com.br/blog/broadcast-variavel/",
-            "title": "\ud83d\udce2 Broadcast: O Wi-Fi da Engenharia de Dados!",
-            "content_html": "<h1>\ud83d\udce2 <strong>Broadcast: O Wi-Fi da Engenharia de Dados!</strong></h1>\n<p>Fala, pessoal! Hoje vou falar sobre <strong>vari\u00e1vel de transmiss\u00e3o (Broadcast)</strong>, mas antes... bora filosofar um pouco sobre o que faz um <strong>Engenheiro de Dados</strong>?  </p>\n<p>\ud83e\udd14 J\u00e1 parou para pensar? Qual \u00e9 uma das grandes miss\u00f5es desse ser m\u00edstico que habita planilhas, bancos de dados e clusters Spark?  </p>",
+            "id": "https://pangaio.com.br/blog/mesa-desenho-fsharp/",
+            "url": "https://pangaio.com.br/blog/mesa-desenho-fsharp/",
+            "title": "Criando mesa de desenho em tempo real com F#, SignalR e Javascript",
+            "content_html": "<h1>Criando mesa de desenho em tempo real com F#, SignalR e Javascript</h1>\n<p>Esse \u00e9 um pequeno tutorial de como usar F# e SignalR dentro da plataforma .NET Core 3 (preview 6), escolhi o F# para esse tutorial por ser uma linguagem com declara\u00e7\u00f5es mais simples que o C# e por trabalhar com tipo seguros. O F# tem crescido muito como refer\u00eancia em programa\u00e7\u00e3o funcional e multi-paradigma, a inten\u00e7\u00e3o desse material n\u00e3o \u00e9 se aprofundar nos conceitos envolvendo a linguagem F# mas demonstrar sua simplicidade em um programa .NET Core.</p>",
             "image": null,
-            "date_modified": "2025-03-31T15:49:25.677306+00:00",
+            "date_modified": "2025-04-01T13:33:02.195798+00:00",
+            "authors": [
+                {
+                    "name": "Diego Costa"
+                }
+            ],
+            "tags": [
+                "Diego Costa"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/acumuladores/",
+            "url": "https://pangaio.com.br/blog/acumuladores/",
+            "title": "Acumuladores no PySpark: O que s\u00e3o e como us\u00e1-los?",
+            "content_html": "<h1>Acumuladores no PySpark: O que s\u00e3o e como us\u00e1-los?</h1>\n<p>Imagine que voc\u00ea est\u00e1 cozinhando um prato incr\u00edvel, mas precisa contar quantas vezes adicionou tempero. Agora, multiplique isso por milhares de n\u00f3s trabalhando juntos! \ud83c\udf72\ud83d\udd25</p>\n<p>No mundo do PySpark, os acumuladores fazem exatamente isso: ajudam a contar e somar valores sem causar caos no cluster!</p>",
+            "image": null,
+            "date_modified": "2025-03-31T12:49:54+00:00",
             "authors": [
                 {
                     "name": "Luciana Sampaio"
@@ -29,12 +45,12 @@
             ]
         },
         {
-            "id": "https://pangaio.com.br/blog/acumuladores/",
-            "url": "https://pangaio.com.br/blog/acumuladores/",
-            "title": "Acumuladores no PySpark: O que s\u00e3o e como us\u00e1-los?",
-            "content_html": "<h1>Acumuladores no PySpark: O que s\u00e3o e como us\u00e1-los?</h1>\n<p>Imagine que voc\u00ea est\u00e1 cozinhando um prato incr\u00edvel, mas precisa contar quantas vezes adicionou tempero. Agora, multiplique isso por milhares de n\u00f3s trabalhando juntos! \ud83c\udf72\ud83d\udd25</p>\n<p>No mundo do PySpark, os acumuladores fazem exatamente isso: ajudam a contar e somar valores sem causar caos no cluster!</p>",
+            "id": "https://pangaio.com.br/blog/broadcast-variavel/",
+            "url": "https://pangaio.com.br/blog/broadcast-variavel/",
+            "title": "\ud83d\udce2 Broadcast: O Wi-Fi da Engenharia de Dados!",
+            "content_html": "<h1>\ud83d\udce2 <strong>Broadcast: O Wi-Fi da Engenharia de Dados!</strong></h1>\n<p>Fala, pessoal! Hoje vou falar sobre <strong>vari\u00e1vel de transmiss\u00e3o (Broadcast)</strong>, mas antes... bora filosofar um pouco sobre o que faz um <strong>Engenheiro de Dados</strong>?  </p>\n<p>\ud83e\udd14 J\u00e1 parou para pensar? Qual \u00e9 uma das grandes miss\u00f5es desse ser m\u00edstico que habita planilhas, bancos de dados e clusters Spark?  </p>",
             "image": null,
-            "date_modified": "2025-03-31T15:49:24.743442+00:00",
+            "date_modified": "2025-03-31T12:49:54+00:00",
             "authors": [
                 {
                     "name": "Luciana Sampaio"
