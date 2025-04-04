@@ -7,6 +7,9 @@ categories:
   - Luciana Sampaio
 comments: true
 slug: except-function
+tags:
+  - Database
+  - SQL
 ---
 
 # Otimizar consultas com EXCEPT 
@@ -52,8 +55,6 @@ Reduzir passos não é apenas uma questão de organização, mas também de **pe
 - Moral da história: nem toda limpeza de dados precisa ser uma missão impossível. 
 
 - Quanto mais eficiente formos, mais rápido chegamos ao nosso destino! 😉
-
-
 
 - Com EXCEPT, você simplesmente diz: "Quero tudo, menos essas colunas aqui!" e pronto, sua consulta fica mais leve e rápida, sem precisar listar uma por uma. 🚀💡
 

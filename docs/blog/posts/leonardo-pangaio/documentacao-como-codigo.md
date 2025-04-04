@@ -7,6 +7,11 @@ categories:
   - Leonardo Pangaio
 comments: true
 slug: documentacao-como-codigo
+tags:
+  - Documentação
+  - Inspiração
+  - Apresentação
+  - Guia Rápido
 ---
 
 # Documentação como Código (DaC)

@@ -7,6 +7,8 @@ categories:
   - Luciana Sampaio
 comments: true
 slug: lambda-function
+tags:
+  - Desenvolvimento de Software
 ---
 
 # O que é uma função lambda? 🤔
@@ -28,17 +30,13 @@ Olha só a diferença:
 
 Viu? A lambda é tipo aquela pessoa prática que resolve tudo com uma frase só. Então, se você precisa de algo rápido e sem enrolação, é só chamar a função lambda. 🚀
 
-
 ![alt text](../../../images/blog/luciana/lamb2.png)
 
-
 ![alt text](../../../images/blog/luciana/lamb3.png)
-
 
 ### Simples assim!
 
 Se puderem dar aquele like camarada, juro que envio boas vibes de pipelines sem erro pra vocês! 🚀
-
 
 ### Meus Contatos! 🌟
 

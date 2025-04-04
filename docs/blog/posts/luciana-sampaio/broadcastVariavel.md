@@ -7,6 +7,9 @@ categories:
   - Luciana Sampaio
 comments: true
 slug: broadcast-variavel
+tags:
+  - Engenharia de Dados
+  - Databricks
 ---
 
 # 📢 **Broadcast: O Wi-Fi da Engenharia de Dados!**  

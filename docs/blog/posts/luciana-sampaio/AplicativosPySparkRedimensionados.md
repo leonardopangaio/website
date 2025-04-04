@@ -7,6 +7,10 @@ categories:
   - Luciana Sampaio
 comments: true
 slug: aplicativos-pyspark-redimensionados
+tags:
+  - Engenharia de Dados
+  - pySpark
+  - How-to
 ---
 
 # Como os Aplicativos PySpark podem ser redimensionados.

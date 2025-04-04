@@ -18,14 +18,18 @@
             "title": "Criando mesa de desenho em tempo real com F#, SignalR e Javascript",
             "content_html": "<h1>Criando mesa de desenho em tempo real com F#, SignalR e Javascript</h1>\n<p>Esse \u00e9 um pequeno tutorial de como usar F# e SignalR dentro da plataforma .NET Core 3 (preview 6), escolhi o F# para esse tutorial por ser uma linguagem com declara\u00e7\u00f5es mais simples que o C# e por trabalhar com tipo seguros. O F# tem crescido muito como refer\u00eancia em programa\u00e7\u00e3o funcional e multi-paradigma, a inten\u00e7\u00e3o desse material n\u00e3o \u00e9 se aprofundar nos conceitos envolvendo a linguagem F# mas demonstrar sua simplicidade em um programa .NET Core.</p>",
             "image": null,
-            "date_modified": "2025-04-01T13:33:02.195798+00:00",
+            "date_modified": "2025-04-01T10:33:40+00:00",
             "authors": [
                 {
                     "name": "Diego Costa"
                 }
             ],
             "tags": [
-                "Diego Costa"
+                "Apresenta\u00e7\u00e3o",
+                "Desenvolvimento de Software",
+                "Diego Costa",
+                "Fsharp",
+                "How-to"
             ]
         },
         {
@@ -41,7 +45,10 @@
                 }
             ],
             "tags": [
-                "Luciana Sampaio"
+                "Engenharia de Dados",
+                "How-to",
+                "Luciana Sampaio",
+                "pySpark"
             ]
         },
         {
@@ -57,6 +64,8 @@
                 }
             ],
             "tags": [
+                "Databricks",
+                "Engenharia de Dados",
                 "Luciana Sampaio"
             ]
         },
@@ -73,7 +82,12 @@
                 }
             ],
             "tags": [
-                "Alberto Sanches"
+                "Agilidade",
+                "Alberto Sanches",
+                "Boas Pr\u00e1ticas",
+                "Clean Code",
+                "Desenvolvimento de Software",
+                "Engenharia de Software"
             ]
         },
         {
@@ -89,6 +103,8 @@
                 }
             ],
             "tags": [
+                "Hist\u00f3ria",
+                "Inspira\u00e7\u00e3o",
                 "Leonardo Pangaio"
             ]
         },
@@ -105,6 +121,10 @@
                 }
             ],
             "tags": [
+                "Documenta\u00e7\u00e3o",
+                "Hist\u00f3ria",
+                "How-to",
+                "Inspira\u00e7\u00e3o",
                 "Leonardo Pangaio"
             ]
         },
@@ -121,6 +141,10 @@
                 }
             ],
             "tags": [
+                "Apresenta\u00e7\u00e3o",
+                "Documenta\u00e7\u00e3o",
+                "Guia R\u00e1pido",
+                "Inspira\u00e7\u00e3o",
                 "Leonardo Pangaio"
             ]
         },
@@ -137,6 +161,10 @@
                 }
             ],
             "tags": [
+                "Apresenta\u00e7\u00e3o",
+                "Automa\u00e7\u00e3o",
+                "Documenta\u00e7\u00e3o",
+                "Guia R\u00e1pido",
                 "Leonardo Pangaio"
             ]
         },
@@ -153,6 +181,9 @@
                 }
             ],
             "tags": [
+                "Documenta\u00e7\u00e3o",
+                "Hist\u00f3ria",
+                "Inspira\u00e7\u00e3o",
                 "Leonardo Pangaio"
             ]
         },
@@ -169,7 +200,10 @@
                 }
             ],
             "tags": [
-                "Luciana Sampaio"
+                "Engenharia de Dados",
+                "How-to",
+                "Luciana Sampaio",
+                "pySpark"
             ]
         },
         {
@@ -185,7 +219,9 @@
                 }
             ],
             "tags": [
-                "Luciana Sampaio"
+                "Database",
+                "Luciana Sampaio",
+                "SQL"
             ]
         },
         {
@@ -201,7 +237,9 @@
                 }
             ],
             "tags": [
-                "Luciana Sampaio"
+                "Engenharia de Dados",
+                "Luciana Sampaio",
+                "pySpark"
             ]
         },
         {
@@ -217,7 +255,9 @@
                 }
             ],
             "tags": [
-                "Luciana Sampaio"
+                "Engenharia de Dados",
+                "Luciana Sampaio",
+                "pySpark"
             ]
         },
         {
@@ -233,7 +273,9 @@
                 }
             ],
             "tags": [
-                "Luciana Sampaio"
+                "Database",
+                "Luciana Sampaio",
+                "SQL"
             ]
         },
         {
@@ -249,6 +291,7 @@
                 }
             ],
             "tags": [
+                "Desenvolvimento de Software",
                 "Luciana Sampaio"
             ]
         },
@@ -265,7 +308,9 @@
                 }
             ],
             "tags": [
-                "Luciana Sampaio"
+                "Engenharia de Dados",
+                "Luciana Sampaio",
+                "pySpark"
             ]
         }
     ]

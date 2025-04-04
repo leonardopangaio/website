@@ -7,6 +7,9 @@ categories:
   - Luciana Sampaio
 comments: true
 slug: pyspark
+tags:
+  - Engenharia de Dados
+  - pySpark
 ---
 
 ## PySpark
@@ -31,12 +34,9 @@ Ah, meu amigo, quando o assunto é PySpark, estamos falando de lidar com montanh
 
   - O **locate()**  é basicamente o Sherlock Holmes das suas colunas. Ele serve para encontrar onde um determinado valor (ou substring) aparece dentro de uma coluna de texto.
 
-
- 
  - Mas diferente de um simples "achar" como por exemplo o  **instr()** , ele pode começar a busca a partir de uma posição específica.
   
  É como falar: “Ei, Sherlock, começa a procurar a partir do meio do livro, tá bom?”
-
 
 - Ele procura por uma palavra ou parte de um texto em uma coluna e te devolve a posição em que encontrou essa palavra. Se ele não encontrar nada, ele devolve zero – é como se dissesse: "Nada aqui, parceiro."
 
@@ -53,15 +53,11 @@ locate("Luciana", col("nome")):
 - Aqui, você está dizendo ao Spark: “Ei, procura aí a palavra ‘Luciana’ dentro da coluna nome."
 - Ele vai olhar em cada linha da coluna "nome" e te dizer a posição em que a palavra "Luciana" aparece pela primeira vez.
 
-
 ![alt text](../../../images/blog/luciana/func_5.png)
-
-
 
 Bora testar outro nome, então! Afinal o que mais gostamos é entender sobre dados. Agora com uma substring.
 
 Pedi para encontrar "Mayer" e para adicionar no nome coluna “locate_mayer” e ele me mostrou exatamente a posição 10 e se ele não tiver encontrado nada , vai mostrar 0.
-
 
  - Sério curti demais essa função!
 

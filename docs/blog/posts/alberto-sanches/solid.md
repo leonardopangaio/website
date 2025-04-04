@@ -7,6 +7,12 @@ categories:
   - Alberto Sanches
 comments: true
 slug: solid
+tags:
+  - Desenvolvimento de Software
+  - Boas Práticas
+  - Engenharia de Software
+  - Clean Code
+  - Agilidade
 ---
 
 ![SOLID](../../../images/blog/alberto/solid.png)

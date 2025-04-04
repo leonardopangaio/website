@@ -7,6 +7,10 @@ categories:
   - Luciana Sampaio
 comments: true
 slug: acumuladores
+tags:
+  - Engenharia de Dados
+  - pySpark
+  - How-to
 ---
 
 # Acumuladores no PySpark: O que são e como usá-los?
@@ -29,7 +33,6 @@ No mundo do PySpark, os acumuladores fazem exatamente isso: ajudam a contar e so
 Você pode definir um acumulador no PySpark usando o método `accumulator` disponível no `SparkContext`.
 
 ![alt text](../../../images/blog/luciana/acum3.png)
-
 
 
 # Por que isso é útil?

@@ -13,8 +13,8 @@
     <language>pt</language>
 
     
-    <pubDate>Tue, 01 Apr 2025 13:32:56 -0000</pubDate>
-    <lastBuildDate>Tue, 01 Apr 2025 13:32:56 -0000</lastBuildDate>
+    <pubDate>Fri, 04 Apr 2025 18:00:55 -0000</pubDate>
+    <lastBuildDate>Fri, 04 Apr 2025 18:00:55 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -42,7 +42,13 @@
       
       
         
+      <category>Engenharia de Dados</category>
+        
+      <category>How-to</category>
+        
       <category>Luciana Sampaio</category>
+        
+      <category>pySpark</category>
         
       
       <description>&lt;h1&gt;Acumuladores no PySpark: O que são e como usá-los?&lt;/h1&gt;
@@ -67,6 +73,14 @@
       
       
         
+      <category>Apresentação</category>
+        
+      <category>Documentação</category>
+        
+      <category>Guia Rápido</category>
+        
+      <category>Inspiração</category>
+        
       <category>Leonardo Pangaio</category>
         
       
@@ -90,6 +104,10 @@
       
       
       
+        
+      <category>Databricks</category>
+        
+      <category>Engenharia de Dados</category>
         
       <category>Luciana Sampaio</category>
         
@@ -116,6 +134,14 @@
       
       
         
+      <category>Apresentação</category>
+        
+      <category>Automação</category>
+        
+      <category>Documentação</category>
+        
+      <category>Guia Rápido</category>
+        
       <category>Leonardo Pangaio</category>
         
       
@@ -140,7 +166,11 @@
       
       
         
+      <category>Database</category>
+        
       <category>Luciana Sampaio</category>
+        
+      <category>SQL</category>
         
       
       <description>&lt;h1&gt;Otimizar consultas com EXCEPT&lt;/h1&gt;
@@ -165,7 +195,17 @@
       
       
         
+      <category>Agilidade</category>
+        
       <category>Alberto Sanches</category>
+        
+      <category>Boas Práticas</category>
+        
+      <category>Clean Code</category>
+        
+      <category>Desenvolvimento de Software</category>
+        
+      <category>Engenharia de Software</category>
         
       
       <description>&lt;p&gt;&lt;img alt=&#34;SOLID&#34; src=&#34;../../../images/blog/alberto/solid.png&#34;&gt;&lt;/p&gt;
@@ -190,7 +230,11 @@
       
       
         
+      <category>Engenharia de Dados</category>
+        
       <category>Luciana Sampaio</category>
+        
+      <category>pySpark</category>
         
       
       <description>&lt;h1&gt;O que é unpersist() em PySpark?&lt;/h1&gt;
@@ -213,6 +257,10 @@
       
       
       
+        
+      <category>História</category>
+        
+      <category>Inspiração</category>
         
       <category>Leonardo Pangaio</category>
         
@@ -237,6 +285,12 @@
       
       
       
+        
+      <category>Documentação</category>
+        
+      <category>História</category>
+        
+      <category>Inspiração</category>
         
       <category>Leonardo Pangaio</category>
         
@@ -263,7 +317,11 @@
       
       
         
+      <category>Engenharia de Dados</category>
+        
       <category>Luciana Sampaio</category>
+        
+      <category>pySpark</category>
         
       
       <description>&lt;h1&gt;O que é &lt;code&gt;pyspark.sql.context&lt;/code&gt;? 🎩✨&lt;/h1&gt;
@@ -287,7 +345,11 @@
       
       
         
+      <category>Database</category>
+        
       <category>Luciana Sampaio</category>
+        
+      <category>SQL</category>
         
       
       <description>&lt;h1&gt;Ah, relacionamentos no SQL?&lt;/h1&gt;
@@ -317,6 +379,14 @@ Esse é aquele namoro exclusivo, onde cada item em uma tabela só pode estar com
       
       
         
+      <category>Documentação</category>
+        
+      <category>História</category>
+        
+      <category>How-to</category>
+        
+      <category>Inspiração</category>
+        
       <category>Leonardo Pangaio</category>
         
       
@@ -341,7 +411,11 @@ Esse é aquele namoro exclusivo, onde cada item em uma tabela só pode estar com
       
       
         
+      <category>Engenharia de Dados</category>
+        
       <category>Luciana Sampaio</category>
+        
+      <category>pySpark</category>
         
       
       <description>&lt;h2&gt;PySpark&lt;/h2&gt;
@@ -369,7 +443,13 @@ Se a gente fizer um paralelo com a etimologia da palavra &#34;função&#34;, dá
       
       
         
+      <category>Engenharia de Dados</category>
+        
+      <category>How-to</category>
+        
       <category>Luciana Sampaio</category>
+        
+      <category>pySpark</category>
         
       
       <description>&lt;h1&gt;Como os Aplicativos PySpark podem ser redimensionados.&lt;/h1&gt;
@@ -399,6 +479,8 @@ Se a gente fizer um paralelo com a etimologia da palavra &#34;função&#34;, dá
       
       
         
+      <category>Desenvolvimento de Software</category>
+        
       <category>Luciana Sampaio</category>
         
       
@@ -426,7 +508,15 @@ Se a gente fizer um paralelo com a etimologia da palavra &#34;função&#34;, dá
       
       
         
+      <category>Apresentação</category>
+        
+      <category>Desenvolvimento de Software</category>
+        
       <category>Diego Costa</category>
+        
+      <category>Fsharp</category>
+        
+      <category>How-to</category>
         
       
       <description>&lt;h1&gt;Criando mesa de desenho em tempo real com F#, SignalR e Javascript&lt;/h1&gt;

@@ -7,6 +7,9 @@ categories:
   - Leonardo Pangaio
 comments: true
 slug: como-criei-meu-site
+tags:
+  - Inspiração
+  - História
 ---
 
 # Como criei meu site

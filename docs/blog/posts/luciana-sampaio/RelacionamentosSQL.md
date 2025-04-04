@@ -7,6 +7,9 @@ categories:
   - Luciana Sampaio
 comments: true
 slug: pyspark-context
+tags:
+  - Database
+  - SQL
 ---
 
 # Ah, relacionamentos no SQL?

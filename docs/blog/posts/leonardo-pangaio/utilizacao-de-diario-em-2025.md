@@ -7,6 +7,10 @@ categories:
   - Leonardo Pangaio
 comments: true
 slug: utilizacao-de-diario-em-2025
+tags:
+  - Inspiração
+  - História
+  - Documentação
 ---
 
 # Utilização de Diário em 2025

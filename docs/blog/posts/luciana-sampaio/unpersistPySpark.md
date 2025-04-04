@@ -7,6 +7,9 @@ categories:
   - Luciana Sampaio
 comments: true
 slug: unpersist-pyspark
+tags:
+  - Engenharia de Dados
+  - pySpark
 ---
 
 # O que é unpersist() em PySpark?

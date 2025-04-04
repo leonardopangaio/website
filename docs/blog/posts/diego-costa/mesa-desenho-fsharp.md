@@ -7,6 +7,11 @@ categories:
   - Diego Costa
 comments: true
 slug: mesa-desenho-fsharp
+tags:
+  - Fsharp
+  - Desenvolvimento de Software
+  - How-to
+  - Apresentação
 ---
 
 # Criando mesa de desenho em tempo real com F#, SignalR e Javascript

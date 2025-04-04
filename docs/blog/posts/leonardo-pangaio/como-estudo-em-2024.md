@@ -7,6 +7,11 @@ categories:
   - Leonardo Pangaio
 comments: true
 slug: como-estudo-em-2024
+tags:
+  - Inspiração
+  - História
+  - How-to
+  - Documentação
 ---
 
 # Como estudo em 2024

@@ -13,8 +13,8 @@
     <language>pt</language>
 
     
-    <pubDate>Tue, 01 Apr 2025 13:32:56 -0000</pubDate>
-    <lastBuildDate>Tue, 01 Apr 2025 13:32:56 -0000</lastBuildDate>
+    <pubDate>Fri, 04 Apr 2025 18:00:55 -0000</pubDate>
+    <lastBuildDate>Fri, 04 Apr 2025 18:00:55 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -42,13 +42,21 @@
       
       
         
+      <category>Apresentação</category>
+        
+      <category>Desenvolvimento de Software</category>
+        
       <category>Diego Costa</category>
+        
+      <category>Fsharp</category>
+        
+      <category>How-to</category>
         
       
       <description>&lt;h1&gt;Criando mesa de desenho em tempo real com F#, SignalR e Javascript&lt;/h1&gt;
 &lt;p&gt;Esse é um pequeno tutorial de como usar F# e SignalR dentro da plataforma .NET Core 3 (preview 6), escolhi o F# para esse tutorial por ser uma linguagem com declarações mais simples que o C# e por trabalhar com tipo seguros. O F# tem crescido muito como referência em programação funcional e multi-paradigma, a intenção desse material não é se aprofundar nos conceitos envolvendo a linguagem F# mas demonstrar sua simplicidade em um programa .NET Core.&lt;/p&gt;</description>
       <link>https://pangaio.com.br/blog/mesa-desenho-fsharp/</link>
-      <pubDate>Tue, 01 Apr 2025 13:33:02 +0000</pubDate>
+      <pubDate>Tue, 01 Apr 2025 10:33:40 +0000</pubDate>
       <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
       
       <guid isPermaLink="true">https://pangaio.com.br/blog/mesa-desenho-fsharp/</guid>
@@ -66,7 +74,13 @@
       
       
         
+      <category>Engenharia de Dados</category>
+        
+      <category>How-to</category>
+        
       <category>Luciana Sampaio</category>
+        
+      <category>pySpark</category>
         
       
       <description>&lt;h1&gt;Acumuladores no PySpark: O que são e como usá-los?&lt;/h1&gt;
@@ -90,6 +104,10 @@
       
       
       
+        
+      <category>Databricks</category>
+        
+      <category>Engenharia de Dados</category>
         
       <category>Luciana Sampaio</category>
         
@@ -116,7 +134,17 @@
       
       
         
+      <category>Agilidade</category>
+        
       <category>Alberto Sanches</category>
+        
+      <category>Boas Práticas</category>
+        
+      <category>Clean Code</category>
+        
+      <category>Desenvolvimento de Software</category>
+        
+      <category>Engenharia de Software</category>
         
       
       <description>&lt;p&gt;&lt;img alt=&#34;SOLID&#34; src=&#34;../../../images/blog/alberto/solid.png&#34;&gt;&lt;/p&gt;
@@ -140,6 +168,10 @@
       
       
       
+        
+      <category>História</category>
+        
+      <category>Inspiração</category>
         
       <category>Leonardo Pangaio</category>
         
@@ -165,6 +197,14 @@
       
       
         
+      <category>Documentação</category>
+        
+      <category>História</category>
+        
+      <category>How-to</category>
+        
+      <category>Inspiração</category>
+        
       <category>Leonardo Pangaio</category>
         
       
@@ -188,6 +228,14 @@
       
       
       
+        
+      <category>Apresentação</category>
+        
+      <category>Documentação</category>
+        
+      <category>Guia Rápido</category>
+        
+      <category>Inspiração</category>
         
       <category>Leonardo Pangaio</category>
         
@@ -213,6 +261,14 @@
       
       
         
+      <category>Apresentação</category>
+        
+      <category>Automação</category>
+        
+      <category>Documentação</category>
+        
+      <category>Guia Rápido</category>
+        
       <category>Leonardo Pangaio</category>
         
       
@@ -236,6 +292,12 @@
       
       
       
+        
+      <category>Documentação</category>
+        
+      <category>História</category>
+        
+      <category>Inspiração</category>
         
       <category>Leonardo Pangaio</category>
         
@@ -262,7 +324,13 @@
       
       
         
+      <category>Engenharia de Dados</category>
+        
+      <category>How-to</category>
+        
       <category>Luciana Sampaio</category>
+        
+      <category>pySpark</category>
         
       
       <description>&lt;h1&gt;Como os Aplicativos PySpark podem ser redimensionados.&lt;/h1&gt;
@@ -292,7 +360,11 @@
       
       
         
+      <category>Database</category>
+        
       <category>Luciana Sampaio</category>
+        
+      <category>SQL</category>
         
       
       <description>&lt;h1&gt;Otimizar consultas com EXCEPT&lt;/h1&gt;
@@ -317,7 +389,11 @@
       
       
         
+      <category>Engenharia de Dados</category>
+        
       <category>Luciana Sampaio</category>
+        
+      <category>pySpark</category>
         
       
       <description>&lt;h2&gt;PySpark&lt;/h2&gt;
@@ -345,7 +421,11 @@ Se a gente fizer um paralelo com a etimologia da palavra &#34;função&#34;, dá
       
       
         
+      <category>Engenharia de Dados</category>
+        
       <category>Luciana Sampaio</category>
+        
+      <category>pySpark</category>
         
       
       <description>&lt;h1&gt;O que é &lt;code&gt;pyspark.sql.context&lt;/code&gt;? 🎩✨&lt;/h1&gt;
@@ -369,7 +449,11 @@ Se a gente fizer um paralelo com a etimologia da palavra &#34;função&#34;, dá
       
       
         
+      <category>Database</category>
+        
       <category>Luciana Sampaio</category>
+        
+      <category>SQL</category>
         
       
       <description>&lt;h1&gt;Ah, relacionamentos no SQL?&lt;/h1&gt;
@@ -399,6 +483,8 @@ Esse é aquele namoro exclusivo, onde cada item em uma tabela só pode estar com
       
       
         
+      <category>Desenvolvimento de Software</category>
+        
       <category>Luciana Sampaio</category>
         
       
@@ -426,7 +512,11 @@ Esse é aquele namoro exclusivo, onde cada item em uma tabela só pode estar com
       
       
         
+      <category>Engenharia de Dados</category>
+        
       <category>Luciana Sampaio</category>
+        
+      <category>pySpark</category>
         
       
       <description>&lt;h1&gt;O que é unpersist() em PySpark?&lt;/h1&gt;

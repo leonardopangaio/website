@@ -7,6 +7,11 @@ categories:
   - Leonardo Pangaio
 comments: true
 slug: make-e-makefile
+tags:
+  - Apresentação
+  - Guia Rápido
+  - Automação
+  - Documentação
 ---
 
 # Utilização do Make/Makefile para simplificar tarefas repetitivas

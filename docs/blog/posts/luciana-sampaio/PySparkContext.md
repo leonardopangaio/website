@@ -7,6 +7,9 @@ categories:
   - Luciana Sampaio
 comments: true
 slug: pyspark-context
+tags:
+   - Engenharia de Dados
+   - pySpark
 ---
 
 # O que é `pyspark.sql.context`? 🎩✨
@@ -27,7 +30,6 @@ De repente, surge o **Databricks**, todo chique e moderno, rodando na **nuvem** 
 Eu olhava e pensava:  
 *"Como assim, não preciso instalar nada? Não tem servidor físico? Cadê o drama?!"* 🤯
 
-
 ## A adaptação 🚀
 
 Foi desafiador no início, mas logo percebi que o **Databricks** era como um smartphone de última geração comparado ao meu celular com flip dos anos 2000. 📞➡️ 
@@ -40,20 +42,15 @@ Agora, posso trabalhar com **Python, Spark, SQL e até gráficos lindões**, tud
 
 ![alt text](../../../images/blog/luciana/image-5.png)
 
-
 Um dos primeiros mistérios que eu queria desvendar era: o que diabos é esse tal de `pyspark.sql.context`?! 🤔  
 
 Como diria Zeca Pagodinho: **"Nunca vi nem comi, eu só ouço falar!"** 🎶😂
-
 
 ### Meu primeiro rascunho sobre `pyspark.sql.context`
 
 ![alt text](../../../images/blog/luciana/image-6.png)
 
-
-
 ![alt text](../../../images/blog/luciana/image-7.png)
-
 
 # Quando Tudo Fez Sentido: O Dia em Que Entendi o **Context** 🧠💡
 
@@ -109,7 +106,6 @@ O pyspark.sql.context é o amigo organizado que traduz tudo:
 - Seus dados se transformam em tabelas temporárias.
 - Você faz perguntas usando SQL (muito mais intuitivo).
 - E o melhor: ele deixa tudo prontinho para análise.
-
 
 Aqui estão os links de referência formatados em **Markdown**:
 
