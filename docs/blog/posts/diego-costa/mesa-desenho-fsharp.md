@@ -168,8 +168,8 @@ O código completo do projeto pode ser encontrado nesse [link](https://github.co
 
 ## Referências e Leitura Adicional
 
-- https://docs.microsoft.com/pt-br/aspnet/core/signalr/configuration?view=aspnetcore-3.0
-- https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-3.0
-- https://devblogs.microsoft.com/dotnet/announcing-f-4-6
+- [Configuração do SignalR ASP.NET Core](https://docs.microsoft.com/pt-br/aspnet/core/signalr/configuration?view=aspnetcore-3.0);
+- [KestrelServidor Web no ASP.NET Core](https://docs.microsoft.com/pt-br/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-3.0);
+- [Announcing F# 4.6](https://devblogs.microsoft.com/dotnet/announcing-f-4-6);
 
 *_texto original publicado em [medium.com](https://medium.com/@diegobassay/criando-mesa-de-desenho-em-tempo-real-com-f-signalr-e-javascript-b24bf77c052c)*
