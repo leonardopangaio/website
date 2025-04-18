@@ -13,6 +13,26 @@
     "language": "pt",
     "items": [
         {
+            "id": "https://pangaio.com.br/blog/mesa-desenho-fsharp/",
+            "url": "https://pangaio.com.br/blog/mesa-desenho-fsharp/",
+            "title": "Criando mesa de desenho em tempo real com F#, SignalR e Javascript",
+            "content_html": "<h1>Criando mesa de desenho em tempo real com F#, SignalR e Javascript</h1>\n<p>Esse \u00e9 um pequeno tutorial de como usar F# e SignalR dentro da plataforma .NET Core 3 (preview 6), escolhi o F# para esse tutorial por ser uma linguagem com declara\u00e7\u00f5es mais simples que o C# e por trabalhar com tipo seguros. O F# tem crescido muito como refer\u00eancia em programa\u00e7\u00e3o funcional e multi-paradigma, a inten\u00e7\u00e3o desse material n\u00e3o \u00e9 se aprofundar nos conceitos envolvendo a linguagem F# mas demonstrar sua simplicidade em um programa .NET Core.</p>",
+            "image": null,
+            "date_modified": "2025-04-07T11:56:19+00:00",
+            "authors": [
+                {
+                    "name": "Diego Costa"
+                }
+            ],
+            "tags": [
+                "Apresenta\u00e7\u00e3o",
+                "Desenvolvimento de Software",
+                "Diego Costa",
+                "Fsharp",
+                "How-to"
+            ]
+        },
+        {
             "id": "https://pangaio.com.br/blog/solid/",
             "url": "https://pangaio.com.br/blog/solid/",
             "title": "Solid",
@@ -31,26 +51,6 @@
                 "Clean Code",
                 "Desenvolvimento de Software",
                 "Engenharia de Software"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/mesa-desenho-fsharp/",
-            "url": "https://pangaio.com.br/blog/mesa-desenho-fsharp/",
-            "title": "Criando mesa de desenho em tempo real com F#, SignalR e Javascript",
-            "content_html": "<h1>Criando mesa de desenho em tempo real com F#, SignalR e Javascript</h1>\n<p>Esse \u00e9 um pequeno tutorial de como usar F# e SignalR dentro da plataforma .NET Core 3 (preview 6), escolhi o F# para esse tutorial por ser uma linguagem com declara\u00e7\u00f5es mais simples que o C# e por trabalhar com tipo seguros. O F# tem crescido muito como refer\u00eancia em programa\u00e7\u00e3o funcional e multi-paradigma, a inten\u00e7\u00e3o desse material n\u00e3o \u00e9 se aprofundar nos conceitos envolvendo a linguagem F# mas demonstrar sua simplicidade em um programa .NET Core.</p>",
-            "image": null,
-            "date_modified": "2025-04-04T15:01:35+00:00",
-            "authors": [
-                {
-                    "name": "Diego Costa"
-                }
-            ],
-            "tags": [
-                "Apresenta\u00e7\u00e3o",
-                "Desenvolvimento de Software",
-                "Diego Costa",
-                "Fsharp",
-                "How-to"
             ]
         },
         {

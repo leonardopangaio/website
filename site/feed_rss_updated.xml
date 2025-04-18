@@ -13,8 +13,8 @@
     <language>pt</language>
 
     
-    <pubDate>Mon, 07 Apr 2025 14:55:40 -0000</pubDate>
-    <lastBuildDate>Mon, 07 Apr 2025 14:55:40 -0000</lastBuildDate>
+    <pubDate>Fri, 18 Apr 2025 05:43:42 -0000</pubDate>
+    <lastBuildDate>Fri, 18 Apr 2025 05:43:42 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -30,6 +30,38 @@
     
 
     
+    
+    <item>
+      <title>Criando mesa de desenho em tempo real com F#, SignalR e Javascript</title>
+      
+      
+        
+      <author>Diego Costa</author>
+        
+      
+      
+      
+        
+      <category>Apresentação</category>
+        
+      <category>Desenvolvimento de Software</category>
+        
+      <category>Diego Costa</category>
+        
+      <category>Fsharp</category>
+        
+      <category>How-to</category>
+        
+      
+      <description>&lt;h1&gt;Criando mesa de desenho em tempo real com F#, SignalR e Javascript&lt;/h1&gt;
+&lt;p&gt;Esse é um pequeno tutorial de como usar F# e SignalR dentro da plataforma .NET Core 3 (preview 6), escolhi o F# para esse tutorial por ser uma linguagem com declarações mais simples que o C# e por trabalhar com tipo seguros. O F# tem crescido muito como referência em programação funcional e multi-paradigma, a intenção desse material não é se aprofundar nos conceitos envolvendo a linguagem F# mas demonstrar sua simplicidade em um programa .NET Core.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/mesa-desenho-fsharp/</link>
+      <pubDate>Mon, 07 Apr 2025 11:56:19 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/mesa-desenho-fsharp/</guid>
+      
+    </item>
     
     <item>
       <title>Solid</title>
@@ -63,38 +95,6 @@
       <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
       
       <guid isPermaLink="true">https://pangaio.com.br/blog/solid/</guid>
-      
-    </item>
-    
-    <item>
-      <title>Criando mesa de desenho em tempo real com F#, SignalR e Javascript</title>
-      
-      
-        
-      <author>Diego Costa</author>
-        
-      
-      
-      
-        
-      <category>Apresentação</category>
-        
-      <category>Desenvolvimento de Software</category>
-        
-      <category>Diego Costa</category>
-        
-      <category>Fsharp</category>
-        
-      <category>How-to</category>
-        
-      
-      <description>&lt;h1&gt;Criando mesa de desenho em tempo real com F#, SignalR e Javascript&lt;/h1&gt;
-&lt;p&gt;Esse é um pequeno tutorial de como usar F# e SignalR dentro da plataforma .NET Core 3 (preview 6), escolhi o F# para esse tutorial por ser uma linguagem com declarações mais simples que o C# e por trabalhar com tipo seguros. O F# tem crescido muito como referência em programação funcional e multi-paradigma, a intenção desse material não é se aprofundar nos conceitos envolvendo a linguagem F# mas demonstrar sua simplicidade em um programa .NET Core.&lt;/p&gt;</description>
-      <link>https://pangaio.com.br/blog/mesa-desenho-fsharp/</link>
-      <pubDate>Fri, 04 Apr 2025 15:01:35 +0000</pubDate>
-      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
-      
-      <guid isPermaLink="true">https://pangaio.com.br/blog/mesa-desenho-fsharp/</guid>
       
     </item>
     
