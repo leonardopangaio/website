@@ -1,0 +1,396 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "O Site do Pangaio",
+    "home_page_url": "https://pangaio.com.br/",
+    "feed_url": "https://pangaio.com.br/feed_json_updated.json",
+    "description": null,
+    "icon": null,
+    "authors": [
+        {
+            "name": "Leonardo Pangaio"
+        }
+    ],
+    "language": "pt",
+    "items": [
+        {
+            "id": "https://pangaio.com.br/blog/solid/",
+            "url": "https://pangaio.com.br/blog/solid/",
+            "title": "Solid",
+            "content_html": "<p><img alt=\"SOLID\" src=\"../../../images/blog/alberto/solid.png\"></p>\n<h1>A Import\u00e2ncia do SOLID no Desenvolvimento de Software: Construindo C\u00f3digos Sustent\u00e1veis e Escal\u00e1veis</h1>\n<p>No mundo do desenvolvimento de software, a qualidade do c\u00f3digo \u00e9 um dos pilares fundamentais para o sucesso de qualquer projeto. \u00c0 medida que os sistemas se tornam mais complexos e as demandas por novas funcionalidades aumentam, a necessidade de escrever c\u00f3digo que seja f\u00e1cil de manter, escalar e entender se torna cada vez mais cr\u00edtica. \u00c9 aqui que os princ\u00edpios SOLID entram em cena, oferecendo diretrizes valiosas para desenvolvedores que desejam criar solu\u00e7\u00f5es robustas e sustent\u00e1veis.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Alberto Sanches"
+                }
+            ],
+            "tags": [
+                "Agilidade",
+                "Alberto Sanches",
+                "Boas Pr\u00e1ticas",
+                "Clean Code",
+                "Desenvolvimento",
+                "Engenharia de Software"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/mesa-desenho-fsharp/",
+            "url": "https://pangaio.com.br/blog/mesa-desenho-fsharp/",
+            "title": "Criando mesa de desenho em tempo real com F#, SignalR e Javascript",
+            "content_html": "<h1>Criando mesa de desenho em tempo real com F#, SignalR e Javascript</h1>\n<p>Esse \u00e9 um pequeno tutorial de como usar F# e SignalR dentro da plataforma .NET Core 3 (preview 6), escolhi o F# para esse tutorial por ser uma linguagem com declara\u00e7\u00f5es mais simples que o C# e por trabalhar com tipo seguros. O F# tem crescido muito como refer\u00eancia em programa\u00e7\u00e3o funcional e multi-paradigma, a inten\u00e7\u00e3o desse material n\u00e3o \u00e9 se aprofundar nos conceitos envolvendo a linguagem F# mas demonstrar sua simplicidade em um programa .NET Core.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Diego Costa"
+                }
+            ],
+            "tags": [
+                "Apresenta\u00e7\u00e3o",
+                "Desenvolvimento de Software",
+                "Diego Costa",
+                "Fsharp",
+                "How-to"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-go/",
+            "url": "https://pangaio.com.br/blog/in-go/",
+            "title": "Voc\u00ea conhece a maneira fant\u00e1stica com que Go gerencia concorr\u00eancia?",
+            "content_html": "<h1>Voc\u00ea conhece a maneira fant\u00e1stica com que Go gerencia concorr\u00eancia?</h1>\n<p>Para vagas pleno/senior de Dev Go \u00e9 importante que saiba como funciona a gest\u00e3o de Go routines por baixo dos panos. </p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Desenvolvimento",
+                "GO",
+                "Leonardo Henrique",
+                "SRE"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-helm/",
+            "url": "https://pangaio.com.br/blog/in-helm/",
+            "title": "Helm - Gerenciador de pacotes para Kibernetes (K8s)",
+            "content_html": "<h1>Helm - Gerenciador de pacotes para Kibernetes (K8s)</h1>\n<p>O Helm \u00e9 o gerenciador de pacotes para Kubernetes. Assim como o NPM/YARN/PNPM est\u00e3o para o Javascript, o Helm est\u00e1 para o k8s.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Helm",
+                "K8s",
+                "Leonardo Henrique",
+                "SRE",
+                "Tools"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-kill/",
+            "url": "https://pangaio.com.br/blog/in-kill/",
+            "title": "Dica r\u00e1pida: como encontrar e matar processos ocupando portas de seu servidor",
+            "content_html": "<h1>Dica r\u00e1pida: como encontrar e matar processos ocupando portas de seu servidor</h1>\n<p>J\u00e1 tentou rodar uma aplica\u00e7\u00e3o localmente e recebeu um erro de \u201cport already in use\u201d? Isso aconteceu comigo ao rodar uma aplica\u00e7\u00e3o Next.js em meu computador pessoal e percebi que o processo anterior ainda estava ativo, segurando a porta. </p>\n<p>Resolver essa situa\u00e7\u00e3o \u00e9 bem simples, basta localizar o processo que est\u00e1 ouvindo na porta espec\u00edfica e mat\u00e1-lo.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Command Line",
+                "How-to",
+                "Leonardo Henrique",
+                "SRE"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-make/",
+            "url": "https://pangaio.com.br/blog/in-make/",
+            "title": "Como o Makefile pode te salvar?",
+            "content_html": "<h1>Como o Makefile pode te salvar?</h1>\n<p>Cansado/a de ficar repetindo os mesmos comandos enquanto desenvolve? Makefile pode te salvar!</p>\n<p>Originalmente, ele foi criado para facilitar o processo de build de aplica\u00e7\u00f5es, evitando que voc\u00ea tenha que ficar repetindo comandos gigantes \u00e0 exaust\u00e3o.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Command Line",
+                "How-to",
+                "Leonardo Henrique",
+                "Make",
+                "SRE"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-rfc/",
+            "url": "https://pangaio.com.br/blog/in-rfc/",
+            "title": "Voc\u00ea conhece o RFC 3339? Saiba como ele pode facilitar sua vida (e da sua equipe) quando estiverem lidando com datas!",
+            "content_html": "<h1>Voc\u00ea conhece o RFC 3339? Saiba como ele pode facilitar sua vida (e da sua equipe) quando estiverem lidando com datas!</h1>\n<p>Se existe algo que toda a equipe enfrenta, sem exce\u00e7\u00e3o, s\u00e3o problemas ou dificuldades na hora de se padronizar datas. </p>\n<p>Essa defini\u00e7\u00e3o \u00e9 important\u00edssima para evitar inconsist\u00eancias, principalmente, em ambientes distribu\u00eddos e de microsservi\u00e7os. </p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Boas Pr\u00e1ticas",
+                "Leonardo Henrique",
+                "SRE"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-tsemgo/",
+            "url": "https://pangaio.com.br/blog/in-tsemgo/",
+            "title": "A Microsoft est\u00e1 reescrevendo o compilador do Typescript para GO, mas voc\u00ea j\u00e1 parou para pensar no motivo por tr\u00e1s dessa decis\u00e3o?",
+            "content_html": "<h1>A Microsoft est\u00e1 reescrevendo o compilador do Typescript para GO, mas voc\u00ea j\u00e1 parou para pensar no motivo por tr\u00e1s dessa decis\u00e3o?</h1>\n<p>Sou um grande entusiasta de GO e sei que a cria\u00e7\u00e3o de um port nessa linguagem trar\u00e1 diversos benef\u00edcios do ponto de vista t\u00e9cnico, mas gostaria de analisar esse cen\u00e1rio sob uma perspectiva diferente: a de neg\u00f3cios.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Leonardo Henrique",
+                "News"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/md-go-internet/",
+            "url": "https://pangaio.com.br/blog/md-go-internet/",
+            "title": "Como subir sua aplica\u00e7\u00e3o Golang gratuitamente para a internet",
+            "content_html": "<h1>Como subir sua aplica\u00e7\u00e3o Golang gratuitamente para a internet</h1>\n<p><img alt=\"Gophers, os macostes do Go\" src=\"../../../images/blog/leonardo-henrique/md-go-internet-art.png\"><br>\n<em>Gophers, os macostes do Go</em></p>\n<p>Nesse texto vou descrever o passo a passo que voc\u00ea vai seguir para poder colocar seu projeto pessoal \u2014 e quem sabe at\u00e9 um projeto pelo qual voc\u00ea tenha sido contratado \u2014 em um servidor 100% gratuito. Para isso, vamos utilizar o Heroku, uma plataforma robusta voltada para deploy de servidores.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Desenvolvimento",
+                "How-to",
+                "Leonardo Henrique"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/md-sqs-p1/",
+            "url": "https://pangaio.com.br/blog/md-sqs-p1/",
+            "title": "Construindo aplica\u00e7\u00f5es confi\u00e1veis e resilientes com filas SQS \u2014 Parte 1",
+            "content_html": "<h1>Construindo aplica\u00e7\u00f5es confi\u00e1veis e resilientes com filas SQS \u2014 Parte 1</h1>\n<p><img alt=\"Pessoas em uma fila (paralelo com filas SQS)\" src=\"../../../images/blog/leonardo-henrique/md-sqs-p1-pessoas.png\"></p>\n<p>Quando estamos desenvolvendo software, existem aspectos com os quais devemos ter aten\u00e7\u00e3o para garantir o sucesso de nossas aplica\u00e7\u00f5es. Dentre estes aspectos, podemos citar a <strong>resili\u00eancia</strong>.</p>\n<p>Em linhas gerais a <strong>resili\u00eancia \u00e9 o poder de recupera\u00e7\u00e3o de uma aplica\u00e7\u00e3o ap\u00f3s situa\u00e7\u00f5es adversas</strong>.</p>\n<p>Neste artigo gostaria de abordar um pouco sobre o uso do SQS para dar algumas ideias de como voc\u00ea pode utilizar esse servi\u00e7o para desenvolver aplica\u00e7\u00f5es mais confi\u00e1veis e resilientes.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "AWS",
+                "Guia R\u00e1pido",
+                "Leonardo Henrique"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/md-sqs-p2/",
+            "url": "https://pangaio.com.br/blog/md-sqs-p2/",
+            "title": "Construindo aplica\u00e7\u00f5es confi\u00e1veis e resilientes com filas SQS \u2014 Parte 2",
+            "content_html": "<h1>Construindo aplica\u00e7\u00f5es confi\u00e1veis e resilientes com filas SQS \u2014 Parte 2</h1>\n<p>Em nossa \u00faltima publica\u00e7\u00e3o, falamos sobre os conceitos b\u00e1sicos de SQS para que voc\u00ea consiga desacoplar seus fluxos, e assim, aumentar a confiabilidade de seus sistemas. Se voc\u00ea n\u00e3o acompanhou a Parte 1, basta clicar aqui.</p>\n<p>Hoje trataremos sobre alguns t\u00f3picos mais avan\u00e7ados e que s\u00e3o essenciais na hora de voc\u00ea montar uma infraestrutura que esteja 100% alinhada com as suas necessidades (tanto t\u00e9cnicas quanto de neg\u00f3cio).</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "AWS",
+                "Guia R\u00e1pido",
+                "Leonardo Henrique"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/como-criei-meu-site/",
+            "url": "https://pangaio.com.br/blog/como-criei-meu-site/",
+            "title": "Como criei meu site",
+            "content_html": "<h1>Como criei meu site</h1>\n<p>Resolvi escrever este post depois de ver o que acabei aprendendo durante o processo de cria\u00e7\u00e3o do meu site. N\u00e3o que eu tenha virado um dev, ou devops ou um webmaster (denunciei a idade), nesse caminho, que come\u00e7ou ali em outubro de 2024.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Pangaio"
+                }
+            ],
+            "tags": [
+                "Hist\u00f3ria",
+                "Inspira\u00e7\u00e3o",
+                "Leonardo Pangaio"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/como-estudo-em-2024/",
+            "url": "https://pangaio.com.br/blog/como-estudo-em-2024/",
+            "title": "Como estudo em 2024",
+            "content_html": "<h1>Como estudo em 2024</h1>\n<p>Em resumo, tenho escrito todas as minhas anota\u00e7\u00f5es em <a href=\"https://www.markdownguide.org/\">Markdown</a>. Fa\u00e7o isso pois al\u00e9m da escrita ser simples, n\u00e3o me preocupo muito pouco com a formata\u00e7\u00e3o do documento, e mais com o conte\u00fado. O Markdown \u00e9 vers\u00e1til, ent\u00e3o se for necess\u00e1rio converter para HTML \u00e9 simples, se eu for publicar usando o Github Pages tamb\u00e9m ser\u00e1 f\u00e1cil. E no documento eu consigo inserir imagens, links externos, diagramas, \"mermaid\", refer\u00eancias a outros documentos do mesmo reposit\u00f3rio e etc...</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Pangaio"
+                }
+            ],
+            "tags": [
+                "Documenta\u00e7\u00e3o",
+                "Hist\u00f3ria",
+                "How-to",
+                "Inspira\u00e7\u00e3o",
+                "Leonardo Pangaio"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/documentacao-como-codigo/",
+            "url": "https://pangaio.com.br/blog/documentacao-como-codigo/",
+            "title": "Documenta\u00e7\u00e3o como C\u00f3digo (DaC)",
+            "content_html": "<h1>Documenta\u00e7\u00e3o como C\u00f3digo (DaC)</h1>\n<p><em>Documentation as Code (DaC)</em> \u00e9 uma abordagem que trata a documenta\u00e7\u00e3o de software como parte integrante do desenvolvimento de c\u00f3digo, utilizando as mesmas pr\u00e1ticas e ferramentas aplicadas ao c\u00f3digo-fonte. Em vez de manter a documenta\u00e7\u00e3o separada em sistemas distintos, ela \u00e9 escrita em formatos de texto, como <a href=\"https://www.markdownguide.org/\">Markdown</a>, <a href=\"https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html\">reStructuredText</a> ou <a href=\"https://www.latex-project.org/\">LaTeX</a>, e armazenada em reposit\u00f3rios versionados. Essa pr\u00e1tica permite que a documenta\u00e7\u00e3o evolua junto com o software, garantindo que as informa\u00e7\u00f5es estejam sempre atualizadas e alinhadas com as mudan\u00e7as de implementa\u00e7\u00e3o.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Pangaio"
+                }
+            ],
+            "tags": [
+                "Apresenta\u00e7\u00e3o",
+                "Documenta\u00e7\u00e3o",
+                "Guia R\u00e1pido",
+                "Inspira\u00e7\u00e3o",
+                "Leonardo Pangaio"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/make-e-makefile/",
+            "url": "https://pangaio.com.br/blog/make-e-makefile/",
+            "title": "Utiliza\u00e7\u00e3o do Make/Makefile para simplificar tarefas repetitivas",
+            "content_html": "<h1>Utiliza\u00e7\u00e3o do Make/Makefile para simplificar tarefas repetitivas</h1>\n<p>Se voc\u00ea j\u00e1 precisou compilar um programa, docker build, organizar comandos repetitivos ou automatizar tarefas dentro de um projeto, talvez tenha se deparado com o termo Makefile. Mas afinal, o que \u00e9 isso e como ele pode facilitar a vida de quem trabalha com tecnologia?</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Pangaio"
+                }
+            ],
+            "tags": [
+                "Apresenta\u00e7\u00e3o",
+                "Automa\u00e7\u00e3o",
+                "Documenta\u00e7\u00e3o",
+                "Guia R\u00e1pido",
+                "Leonardo Pangaio",
+                "Make"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/utilizacao-de-diario-em-2025/",
+            "url": "https://pangaio.com.br/blog/utilizacao-de-diario-em-2025/",
+            "title": "Utiliza\u00e7\u00e3o de Di\u00e1rio em 2025",
+            "content_html": "<h1>Utiliza\u00e7\u00e3o de Di\u00e1rio em 2025</h1>\n<p>Continuando com o assunto estudos, organiza\u00e7\u00e3o, anota\u00e7\u00f5es e etc... Resolvi escrever sobre como tenho organizado a minha vida, meu dia a dia, tanto pessoal quanto profissional.</p>\n<p>Em um super resumo, eu diria que a ado\u00e7\u00e3o de um di\u00e1rio e utiliza\u00e7\u00e3o de uma agenda (seja ela qual for) \u00e9 o que tem me salvado bastante.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Pangaio"
+                }
+            ],
+            "tags": [
+                "Documenta\u00e7\u00e3o",
+                "Hist\u00f3ria",
+                "Inspira\u00e7\u00e3o",
+                "Leonardo Pangaio"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/acumuladores/",
+            "url": "https://pangaio.com.br/blog/acumuladores/",
+            "title": "Acumuladores no PySpark: O que s\u00e3o e como us\u00e1-los?",
+            "content_html": "<h1>Acumuladores no PySpark: O que s\u00e3o e como us\u00e1-los?</h1>\n<p>Imagine que voc\u00ea est\u00e1 cozinhando um prato incr\u00edvel, mas precisa contar quantas vezes adicionou tempero. Agora, multiplique isso por milhares de n\u00f3s trabalhando juntos! \ud83c\udf72\ud83d\udd25</p>\n<p>No mundo do PySpark, os acumuladores fazem exatamente isso: ajudam a contar e somar valores sem causar caos no cluster!</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Luciana Sampaio"
+                }
+            ],
+            "tags": [
+                "Engenharia de Dados",
+                "How-to",
+                "Luciana Sampaio",
+                "pySpark"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/aplicativos-pyspark-redimensionados/",
+            "url": "https://pangaio.com.br/blog/aplicativos-pyspark-redimensionados/",
+            "title": "Como os Aplicativos PySpark podem ser redimensionados.",
+            "content_html": "<h1>Como os Aplicativos PySpark podem ser redimensionados.</h1>\n<h3>Como Dimensionar Aplicativos PySpark de Forma Eficiente?</h3>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/redimens_1.png\"></p>\n<p>Lidar com o dimensionamento de aplicativos PySpark nem sempre \u00e9 uma tarefa f\u00e1cil, especialmente quando estamos falando de <strong>processamentos em larga escala</strong>.  </p>\n<hr>\n<h3><strong>Como fazer isso de modo mais eficiente?</strong></h3>\n<p>Antes de tudo, \u00e9 fundamental entender que o <strong>n\u00famero de n\u00f3s (executores)</strong> tem um impacto significativo na escalabilidade do seu projeto.  </p>\n<p>No entanto, a escolha do tamanho ideal do cluster n\u00e3o depende apenas do tamanho dos dados. Outros fatores tamb\u00e9m precisam ser considerados, como o poder de processamento (CPU) e a mem\u00f3ria dispon\u00edvel.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Luciana Sampaio"
+                }
+            ],
+            "tags": [
+                "Engenharia de Dados",
+                "How-to",
+                "Luciana Sampaio",
+                "pySpark"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/except-function/",
+            "url": "https://pangaio.com.br/blog/except-function/",
+            "title": "Otimizar consultas com EXCEPT",
+            "content_html": "<h1>Otimizar consultas com EXCEPT</h1>\n<p>A fun\u00e7\u00e3o EXCEPT \u00e9 tipo aquele amigo que ajuda voc\u00ea a se livrar do que n\u00e3o precisa! \ud83d\ude06\u2728</p>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/image-2copy.png\"></p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Luciana Sampaio"
+                }
+            ],
+            "tags": [
+                "Database",
+                "Luciana Sampaio",
+                "SQL"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/pyspark/",
+            "url": "https://pangaio.com.br/blog/pyspark/",
+            "title": "FuncoesPySpark",
+            "content_html": "<h2>PySpark</h2>\n<h3>Afinal o que s\u00e3o fun\u00e7\u00f5es?</h3>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/func_1.png\"></p>\n<p>Afinal, o que s\u00e3o fun\u00e7\u00f5es? \ud83e\udd14\nSe a gente fizer um paralelo com a etimologia da palavra \"fun\u00e7\u00e3o\", d\u00e1 pra pensar em algo que expressa ou controla um comportamento \u2013 s\u00f3 que, no mundo da programa\u00e7\u00e3o, isso rola por meio de c\u00f3digo. Legal, n\u00e9? Ou talvez at\u00e9 meio nerd, rs.</p>\n<p>Eu gosto de pensar que fun\u00e7\u00f5es s\u00e3o as ferramentas m\u00e1gicas do desenvolvedor. Tipo aquela \u201ccaixa de ferramentas\u201d onde voc\u00ea encontra tudo que precisa pra fazer magia com os dados. Quer somar colunas? Beleza. Transformar texto pra min\u00fasculas? F\u00e1cil. Ordenar, calcular m\u00e9dia, e at\u00e9 umas coisas mais avan\u00e7adas? T\u00e1 tudo l\u00e1, prontinho pra usar. \ud83d\ude80</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:45+00:00",
+            "authors": [
+                {
+                    "name": "Luciana Sampaio"
+                }
+            ],
+            "tags": [
+                "Engenharia de Dados",
+                "Luciana Sampaio",
+                "pySpark"
+            ]
+        }
+    ]
+}
