@@ -8,7 +8,7 @@ categories:
 comments: true
 slug: solid
 tags:
-  - Desenvolvimento de Software
+  - Desenvolvimento
   - Boas Práticas
   - Engenharia de Software
   - Clean Code

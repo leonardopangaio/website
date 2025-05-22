@@ -13,8 +13,8 @@
     <language>pt</language>
 
     
-    <pubDate>Fri, 18 Apr 2025 06:11:59 -0000</pubDate>
-    <lastBuildDate>Fri, 18 Apr 2025 06:11:59 -0000</lastBuildDate>
+    <pubDate>Thu, 22 May 2025 21:11:15 -0000</pubDate>
+    <lastBuildDate>Thu, 22 May 2025 21:11:15 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -30,6 +30,277 @@
     
 
     
+    
+    <item>
+      <title>Construindo aplicações confiáveis e resilientes com filas SQS — Parte 2</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>AWS</category>
+        
+      <category>Guia Rápido</category>
+        
+      <category>Leonardo Henrique</category>
+        
+      
+      <description>&lt;h1&gt;Construindo aplicações confiáveis e resilientes com filas SQS — Parte 2&lt;/h1&gt;
+&lt;p&gt;Em nossa última publicação, falamos sobre os conceitos básicos de SQS para que você consiga desacoplar seus fluxos, e assim, aumentar a confiabilidade de seus sistemas. Se você não acompanhou a Parte 1, basta clicar aqui.&lt;/p&gt;
+&lt;p&gt;Hoje trataremos sobre alguns tópicos mais avançados e que são essenciais na hora de você montar uma infraestrutura que esteja 100% alinhada com as suas necessidades (tanto técnicas quanto de negócio).&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/md-sqs-p2/</link>
+      <pubDate>Thu, 22 May 2025 21:11:20 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/md-sqs-p2/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Construindo aplicações confiáveis e resilientes com filas SQS — Parte 1</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>AWS</category>
+        
+      <category>Guia Rápido</category>
+        
+      <category>Leonardo Henrique</category>
+        
+      
+      <description>&lt;h1&gt;Construindo aplicações confiáveis e resilientes com filas SQS — Parte 1&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;Pessoas em uma fila (paralelo com filas SQS)&#34; src=&#34;../../../images/blog/leonardo-henrique/md-sqs-p1-pessoas.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Quando estamos desenvolvendo software, existem aspectos com os quais devemos ter atenção para garantir o sucesso de nossas aplicações. Dentre estes aspectos, podemos citar a &lt;strong&gt;resiliência&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Em linhas gerais a &lt;strong&gt;resiliência é o poder de recuperação de uma aplicação após situações adversas&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Neste artigo gostaria de abordar um pouco sobre o uso do SQS para dar algumas ideias de como você pode utilizar esse serviço para desenvolver aplicações mais confiáveis e resilientes.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/md-sqs-p1/</link>
+      <pubDate>Thu, 22 May 2025 21:11:20 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/md-sqs-p1/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Como subir sua aplicação Golang gratuitamente para a internet</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>Desenvolvimento</category>
+        
+      <category>How-to</category>
+        
+      <category>Leonardo Henrique</category>
+        
+      
+      <description>&lt;h1&gt;Como subir sua aplicação Golang gratuitamente para a internet&lt;/h1&gt;
+&lt;p&gt;&lt;img alt=&#34;Gophers, os macostes do Go&#34; src=&#34;../../../images/blog/leonardo-henrique/md-go-internet-art.png&#34;&gt;&lt;br&gt;
+&lt;em&gt;Gophers, os macostes do Go&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Nesse texto vou descrever o passo a passo que você vai seguir para poder colocar seu projeto pessoal — e quem sabe até um projeto pelo qual você tenha sido contratado — em um servidor 100% gratuito. Para isso, vamos utilizar o Heroku, uma plataforma robusta voltada para deploy de servidores.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/md-go-internet/</link>
+      <pubDate>Thu, 22 May 2025 21:11:20 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/md-go-internet/</guid>
+      
+    </item>
+    
+    <item>
+      <title>A Microsoft está reescrevendo o compilador do Typescript para GO, mas você já parou para pensar no motivo por trás dessa decisão?</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>Leonardo Henrique</category>
+        
+      <category>News</category>
+        
+      
+      <description>&lt;h1&gt;A Microsoft está reescrevendo o compilador do Typescript para GO, mas você já parou para pensar no motivo por trás dessa decisão?&lt;/h1&gt;
+&lt;p&gt;Sou um grande entusiasta de GO e sei que a criação de um port nessa linguagem trará diversos benefícios do ponto de vista técnico, mas gostaria de analisar esse cenário sob uma perspectiva diferente: a de negócios.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/in-tsemgo/</link>
+      <pubDate>Thu, 22 May 2025 21:11:20 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/in-tsemgo/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Você conhece o RFC 3339? Saiba como ele pode facilitar sua vida (e da sua equipe) quando estiverem lidando com datas!</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>Boas Práticas</category>
+        
+      <category>Leonardo Henrique</category>
+        
+      <category>SRE</category>
+        
+      
+      <description>&lt;h1&gt;Você conhece o RFC 3339? Saiba como ele pode facilitar sua vida (e da sua equipe) quando estiverem lidando com datas!&lt;/h1&gt;
+&lt;p&gt;Se existe algo que toda a equipe enfrenta, sem exceção, são problemas ou dificuldades na hora de se padronizar datas. &lt;/p&gt;
+&lt;p&gt;Essa definição é importantíssima para evitar inconsistências, principalmente, em ambientes distribuídos e de microsserviços. &lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/in-rfc/</link>
+      <pubDate>Thu, 22 May 2025 21:11:20 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/in-rfc/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Como o Makefile pode te salvar?</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>Command Line</category>
+        
+      <category>How-to</category>
+        
+      <category>Leonardo Henrique</category>
+        
+      <category>Make</category>
+        
+      <category>SRE</category>
+        
+      
+      <description>&lt;h1&gt;Como o Makefile pode te salvar?&lt;/h1&gt;
+&lt;p&gt;Cansado/a de ficar repetindo os mesmos comandos enquanto desenvolve? Makefile pode te salvar!&lt;/p&gt;
+&lt;p&gt;Originalmente, ele foi criado para facilitar o processo de build de aplicações, evitando que você tenha que ficar repetindo comandos gigantes à exaustão.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/in-make/</link>
+      <pubDate>Thu, 22 May 2025 21:11:20 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/in-make/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Dica rápida: como encontrar e matar processos ocupando portas de seu servidor</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>Command Line</category>
+        
+      <category>How-to</category>
+        
+      <category>Leonardo Henrique</category>
+        
+      <category>SRE</category>
+        
+      
+      <description>&lt;h1&gt;Dica rápida: como encontrar e matar processos ocupando portas de seu servidor&lt;/h1&gt;
+&lt;p&gt;Já tentou rodar uma aplicação localmente e recebeu um erro de “port already in use”? Isso aconteceu comigo ao rodar uma aplicação Next.js em meu computador pessoal e percebi que o processo anterior ainda estava ativo, segurando a porta. &lt;/p&gt;
+&lt;p&gt;Resolver essa situação é bem simples, basta localizar o processo que está ouvindo na porta específica e matá-lo.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/in-kill/</link>
+      <pubDate>Thu, 22 May 2025 21:11:20 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/in-kill/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Helm - Gerenciador de pacotes para Kibernetes (K8s)</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>Helm</category>
+        
+      <category>K8s</category>
+        
+      <category>Leonardo Henrique</category>
+        
+      <category>SRE</category>
+        
+      <category>Tools</category>
+        
+      
+      <description>&lt;h1&gt;Helm - Gerenciador de pacotes para Kibernetes (K8s)&lt;/h1&gt;
+&lt;p&gt;O Helm é o gerenciador de pacotes para Kubernetes. Assim como o NPM/YARN/PNPM estão para o Javascript, o Helm está para o k8s.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/in-helm/</link>
+      <pubDate>Thu, 22 May 2025 21:11:20 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/in-helm/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Você conhece a maneira fantástica com que Go gerencia concorrência?</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>Desenvolvimento</category>
+        
+      <category>GO</category>
+        
+      <category>Leonardo Henrique</category>
+        
+      <category>SRE</category>
+        
+      
+      <description>&lt;h1&gt;Você conhece a maneira fantástica com que Go gerencia concorrência?&lt;/h1&gt;
+&lt;p&gt;Para vagas pleno/senior de Dev Go é importante que saiba como funciona a gestão de Go routines por baixo dos panos. &lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/in-go/</link>
+      <pubDate>Thu, 22 May 2025 21:11:20 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/in-go/</guid>
+      
+    </item>
     
     <item>
       <title>Criando mesa de desenho em tempo real com F#, SignalR e Javascript</title>
@@ -82,7 +353,7 @@
         
       <category>Clean Code</category>
         
-      <category>Desenvolvimento de Software</category>
+      <category>Desenvolvimento</category>
         
       <category>Engenharia de Software</category>
         
@@ -210,6 +481,8 @@
       <category>Guia Rápido</category>
         
       <category>Leonardo Pangaio</category>
+        
+      <category>Make</category>
         
       
       <description>&lt;h1&gt;Utilização do Make/Makefile para simplificar tarefas repetitivas&lt;/h1&gt;
@@ -378,154 +651,6 @@ Se a gente fizer um paralelo com a etimologia da palavra &#34;função&#34;, dá
       <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
       
       <guid isPermaLink="true">https://pangaio.com.br/blog/pyspark/</guid>
-      
-    </item>
-    
-    <item>
-      <title>O que é pyspark.sql.context? 🎩✨</title>
-      
-      
-        
-      <author>Luciana Sampaio</author>
-        
-      
-      
-      
-        
-      <category>Engenharia de Dados</category>
-        
-      <category>Luciana Sampaio</category>
-        
-      <category>pySpark</category>
-        
-      
-      <description>&lt;h1&gt;O que é &lt;code&gt;pyspark.sql.context&lt;/code&gt;? 🎩✨&lt;/h1&gt;
-&lt;p&gt;Quando comecei a trabalhar com &lt;strong&gt;Databricks&lt;/strong&gt;, confesso que me senti como um terráqueo vendo um disco voador pela primeira vez. Era outro mundo, meu povo! 🌌&lt;/p&gt;</description>
-      <link>https://pangaio.com.br/blog/pyspark-context/</link>
-      <pubDate>Fri, 04 Apr 2025 15:01:35 +0000</pubDate>
-      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
-      
-      <guid isPermaLink="true">https://pangaio.com.br/blog/pyspark-context/</guid>
-      
-    </item>
-    
-    <item>
-      <title>Ah, relacionamentos no SQL?</title>
-      
-      
-        
-      <author>Luciana Sampaio</author>
-        
-      
-      
-      
-        
-      <category>Database</category>
-        
-      <category>Luciana Sampaio</category>
-        
-      <category>SQL</category>
-        
-      
-      <description>&lt;h1&gt;Ah, relacionamentos no SQL?&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;../../../images/blog/luciana/divertidamente.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Pense nisso como dramas de relacionamento, mas entre tabelas de dados! 😂 Vamos lá:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Relacionamento de “Um pra Um” (1:1)
-Esse é aquele namoro exclusivo, onde cada item em uma tabela só pode estar com um único item em outra tabela. Nada de triangulo amoroso aqui!&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Exemplo: Uma tabela de pessoas e uma tabela de carteira de identidade. Cada pessoa tem uma carteira, e cada carteira pertence a uma única pessoa. Bem monogâmico.&lt;/p&gt;</description>
-      <link>https://pangaio.com.br/blog/pyspark-context/</link>
-      <pubDate>Fri, 04 Apr 2025 15:01:35 +0000</pubDate>
-      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
-      
-      <guid isPermaLink="true">https://pangaio.com.br/blog/pyspark-context/</guid>
-      
-    </item>
-    
-    <item>
-      <title>📢 Broadcast: O Wi-Fi da Engenharia de Dados!</title>
-      
-      
-        
-      <author>Luciana Sampaio</author>
-        
-      
-      
-      
-        
-      <category>Databricks</category>
-        
-      <category>Engenharia de Dados</category>
-        
-      <category>Luciana Sampaio</category>
-        
-      
-      <description>&lt;h1&gt;📢 &lt;strong&gt;Broadcast: O Wi-Fi da Engenharia de Dados!&lt;/strong&gt;&lt;/h1&gt;
-&lt;p&gt;Fala, pessoal! Hoje vou falar sobre &lt;strong&gt;variável de transmissão (Broadcast)&lt;/strong&gt;, mas antes... bora filosofar um pouco sobre o que faz um &lt;strong&gt;Engenheiro de Dados&lt;/strong&gt;?  &lt;/p&gt;
-&lt;p&gt;🤔 Já parou para pensar? Qual é uma das grandes missões desse ser místico que habita planilhas, bancos de dados e clusters Spark?  &lt;/p&gt;</description>
-      <link>https://pangaio.com.br/blog/broadcast-variavel/</link>
-      <pubDate>Fri, 04 Apr 2025 15:01:35 +0000</pubDate>
-      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
-      
-      <guid isPermaLink="true">https://pangaio.com.br/blog/broadcast-variavel/</guid>
-      
-    </item>
-    
-    <item>
-      <title>O que é uma função lambda? 🤔</title>
-      
-      
-        
-      <author>Luciana Sampaio</author>
-        
-      
-      
-      
-        
-      <category>Desenvolvimento de Software</category>
-        
-      <category>Luciana Sampaio</category>
-        
-      
-      <description>&lt;h1&gt;O que é uma função lambda? 🤔&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;../../../images/blog/luciana/lamb.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Ah, funções lambda... O que seriam elas? Nada mais, nada menos que &lt;strong&gt;funções sem nome&lt;/strong&gt;! Isso mesmo, é tipo aquele colega que você conhece de vista, mas nunca sabe o nome. 🤷‍♀️&lt;/p&gt;
-&lt;p&gt;A ideia aqui é simples: elas são feitas para serem pequenas, rápidas e diretas ao ponto. Ou seja, são as &#34;funções ninja&#34; do Python. 🥷🐍&lt;/p&gt;
-&lt;p&gt;Enquanto em uma função regular você precisa de toda uma cerimônia — &lt;em&gt;&#34;declara, define, passa parâmetros, dá nome, e blá-blá-blá&#34;&lt;/em&gt; — a lambda chega, resolve o que precisa e sai sem nem pedir crédito. &lt;strong&gt;Elegância pura.&lt;/strong&gt;&lt;/p&gt;</description>
-      <link>https://pangaio.com.br/blog/lambda-function/</link>
-      <pubDate>Fri, 04 Apr 2025 15:01:35 +0000</pubDate>
-      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
-      
-      <guid isPermaLink="true">https://pangaio.com.br/blog/lambda-function/</guid>
-      
-    </item>
-    
-    <item>
-      <title>O que é unpersist() em PySpark?</title>
-      
-      
-        
-      <author>Luciana Sampaio</author>
-        
-      
-      
-      
-        
-      <category>Engenharia de Dados</category>
-        
-      <category>Luciana Sampaio</category>
-        
-      <category>pySpark</category>
-        
-      
-      <description>&lt;h1&gt;O que é unpersist() em PySpark?&lt;/h1&gt;
-&lt;p&gt;O método &lt;code&gt;unpersist()&lt;/code&gt; é eficaz para liberar recursos em processos de batch, onde você pode controlar quando o cache não é mais necessário. Em streaming, no entanto, o uso de &lt;code&gt;unpersist()&lt;/code&gt; não é recomendado, pois os dados são processados continuamente e o checkpoint já cuida da consistência e do armazenamento de estado. A utilização do checkpoint garante que o processo de streaming seja resiliente e possa ser retomado a partir de um ponto de falha, tornando a liberação de memória mais controlada e menos disruptiva.&lt;/p&gt;</description>
-      <link>https://pangaio.com.br/blog/unpersist-pyspark/</link>
-      <pubDate>Fri, 04 Apr 2025 15:01:35 +0000</pubDate>
-      <source url="https://pangaio.com.br/feed_rss_updated.xml">O Site do Pangaio</source>
-      
-      <guid isPermaLink="true">https://pangaio.com.br/blog/unpersist-pyspark/</guid>
       
     </item>
     

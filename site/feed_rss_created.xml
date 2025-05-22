@@ -13,8 +13,8 @@
     <language>pt</language>
 
     
-    <pubDate>Fri, 18 Apr 2025 06:11:59 -0000</pubDate>
-    <lastBuildDate>Fri, 18 Apr 2025 06:11:59 -0000</lastBuildDate>
+    <pubDate>Thu, 22 May 2025 21:11:15 -0000</pubDate>
+    <lastBuildDate>Thu, 22 May 2025 21:11:15 -0000</lastBuildDate>
     <ttl>1440</ttl>
 
     
@@ -30,6 +30,187 @@
     
 
     
+    
+    <item>
+      <title>Você conhece a maneira fantástica com que Go gerencia concorrência?</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>Desenvolvimento</category>
+        
+      <category>GO</category>
+        
+      <category>Leonardo Henrique</category>
+        
+      <category>SRE</category>
+        
+      
+      <description>&lt;h1&gt;Você conhece a maneira fantástica com que Go gerencia concorrência?&lt;/h1&gt;
+&lt;p&gt;Para vagas pleno/senior de Dev Go é importante que saiba como funciona a gestão de Go routines por baixo dos panos. &lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/in-go/</link>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/in-go/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Helm - Gerenciador de pacotes para Kibernetes (K8s)</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>Helm</category>
+        
+      <category>K8s</category>
+        
+      <category>Leonardo Henrique</category>
+        
+      <category>SRE</category>
+        
+      <category>Tools</category>
+        
+      
+      <description>&lt;h1&gt;Helm - Gerenciador de pacotes para Kibernetes (K8s)&lt;/h1&gt;
+&lt;p&gt;O Helm é o gerenciador de pacotes para Kubernetes. Assim como o NPM/YARN/PNPM estão para o Javascript, o Helm está para o k8s.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/in-helm/</link>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/in-helm/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Dica rápida: como encontrar e matar processos ocupando portas de seu servidor</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>Command Line</category>
+        
+      <category>How-to</category>
+        
+      <category>Leonardo Henrique</category>
+        
+      <category>SRE</category>
+        
+      
+      <description>&lt;h1&gt;Dica rápida: como encontrar e matar processos ocupando portas de seu servidor&lt;/h1&gt;
+&lt;p&gt;Já tentou rodar uma aplicação localmente e recebeu um erro de “port already in use”? Isso aconteceu comigo ao rodar uma aplicação Next.js em meu computador pessoal e percebi que o processo anterior ainda estava ativo, segurando a porta. &lt;/p&gt;
+&lt;p&gt;Resolver essa situação é bem simples, basta localizar o processo que está ouvindo na porta específica e matá-lo.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/in-kill/</link>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/in-kill/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Como o Makefile pode te salvar?</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>Command Line</category>
+        
+      <category>How-to</category>
+        
+      <category>Leonardo Henrique</category>
+        
+      <category>Make</category>
+        
+      <category>SRE</category>
+        
+      
+      <description>&lt;h1&gt;Como o Makefile pode te salvar?&lt;/h1&gt;
+&lt;p&gt;Cansado/a de ficar repetindo os mesmos comandos enquanto desenvolve? Makefile pode te salvar!&lt;/p&gt;
+&lt;p&gt;Originalmente, ele foi criado para facilitar o processo de build de aplicações, evitando que você tenha que ficar repetindo comandos gigantes à exaustão.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/in-make/</link>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/in-make/</guid>
+      
+    </item>
+    
+    <item>
+      <title>Você conhece o RFC 3339? Saiba como ele pode facilitar sua vida (e da sua equipe) quando estiverem lidando com datas!</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>Boas Práticas</category>
+        
+      <category>Leonardo Henrique</category>
+        
+      <category>SRE</category>
+        
+      
+      <description>&lt;h1&gt;Você conhece o RFC 3339? Saiba como ele pode facilitar sua vida (e da sua equipe) quando estiverem lidando com datas!&lt;/h1&gt;
+&lt;p&gt;Se existe algo que toda a equipe enfrenta, sem exceção, são problemas ou dificuldades na hora de se padronizar datas. &lt;/p&gt;
+&lt;p&gt;Essa definição é importantíssima para evitar inconsistências, principalmente, em ambientes distribuídos e de microsserviços. &lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/in-rfc/</link>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/in-rfc/</guid>
+      
+    </item>
+    
+    <item>
+      <title>A Microsoft está reescrevendo o compilador do Typescript para GO, mas você já parou para pensar no motivo por trás dessa decisão?</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>Leonardo Henrique</category>
+        
+      <category>News</category>
+        
+      
+      <description>&lt;h1&gt;A Microsoft está reescrevendo o compilador do Typescript para GO, mas você já parou para pensar no motivo por trás dessa decisão?&lt;/h1&gt;
+&lt;p&gt;Sou um grande entusiasta de GO e sei que a criação de um port nessa linguagem trará diversos benefícios do ponto de vista técnico, mas gostaria de analisar esse cenário sob uma perspectiva diferente: a de negócios.&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/in-tsemgo/</link>
+      <pubDate>Wed, 21 May 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/in-tsemgo/</guid>
+      
+    </item>
     
     <item>
       <title>Acumuladores no PySpark: O que são e como usá-los?</title>
@@ -124,6 +305,35 @@
     </item>
     
     <item>
+      <title>Construindo aplicações confiáveis e resilientes com filas SQS — Parte 2</title>
+      
+      
+        
+      <author>Leonardo Henrique</author>
+        
+      
+      
+      
+        
+      <category>AWS</category>
+        
+      <category>Guia Rápido</category>
+        
+      <category>Leonardo Henrique</category>
+        
+      
+      <description>&lt;h1&gt;Construindo aplicações confiáveis e resilientes com filas SQS — Parte 2&lt;/h1&gt;
+&lt;p&gt;Em nossa última publicação, falamos sobre os conceitos básicos de SQS para que você consiga desacoplar seus fluxos, e assim, aumentar a confiabilidade de seus sistemas. Se você não acompanhou a Parte 1, basta clicar aqui.&lt;/p&gt;
+&lt;p&gt;Hoje trataremos sobre alguns tópicos mais avançados e que são essenciais na hora de você montar uma infraestrutura que esteja 100% alinhada com as suas necessidades (tanto técnicas quanto de negócio).&lt;/p&gt;</description>
+      <link>https://pangaio.com.br/blog/md-sqs-p2/</link>
+      <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
+      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
+      
+      <guid isPermaLink="true">https://pangaio.com.br/blog/md-sqs-p2/</guid>
+      
+    </item>
+    
+    <item>
       <title>Utilização do Make/Makefile para simplificar tarefas repetitivas</title>
       
       
@@ -143,6 +353,8 @@
       <category>Guia Rápido</category>
         
       <category>Leonardo Pangaio</category>
+        
+      <category>Make</category>
         
       
       <description>&lt;h1&gt;Utilização do Make/Makefile para simplificar tarefas repetitivas&lt;/h1&gt;
@@ -203,7 +415,7 @@
         
       <category>Clean Code</category>
         
-      <category>Desenvolvimento de Software</category>
+      <category>Desenvolvimento</category>
         
       <category>Engenharia de Software</category>
         
@@ -429,103 +641,6 @@ Se a gente fizer um paralelo com a etimologia da palavra &#34;função&#34;, dá
       <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
       
       <guid isPermaLink="true">https://pangaio.com.br/blog/pyspark/</guid>
-      
-    </item>
-    
-    <item>
-      <title>Como os Aplicativos PySpark podem ser redimensionados.</title>
-      
-      
-        
-      <author>Luciana Sampaio</author>
-        
-      
-      
-      
-        
-      <category>Engenharia de Dados</category>
-        
-      <category>How-to</category>
-        
-      <category>Luciana Sampaio</category>
-        
-      <category>pySpark</category>
-        
-      
-      <description>&lt;h1&gt;Como os Aplicativos PySpark podem ser redimensionados.&lt;/h1&gt;
-&lt;h3&gt;Como Dimensionar Aplicativos PySpark de Forma Eficiente?&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;../../../images/blog/luciana/redimens_1.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Lidar com o dimensionamento de aplicativos PySpark nem sempre é uma tarefa fácil, especialmente quando estamos falando de &lt;strong&gt;processamentos em larga escala&lt;/strong&gt;.  &lt;/p&gt;
-&lt;hr&gt;
-&lt;h3&gt;&lt;strong&gt;Como fazer isso de modo mais eficiente?&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;Antes de tudo, é fundamental entender que o &lt;strong&gt;número de nós (executores)&lt;/strong&gt; tem um impacto significativo na escalabilidade do seu projeto.  &lt;/p&gt;
-&lt;p&gt;No entanto, a escolha do tamanho ideal do cluster não depende apenas do tamanho dos dados. Outros fatores também precisam ser considerados, como o poder de processamento (CPU) e a memória disponível.&lt;/p&gt;</description>
-      <link>https://pangaio.com.br/blog/aplicativos-pyspark-redimensionados/</link>
-      <pubDate>Tue, 02 Jul 2024 00:00:00 +0000</pubDate>
-      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
-      
-      <guid isPermaLink="true">https://pangaio.com.br/blog/aplicativos-pyspark-redimensionados/</guid>
-      
-    </item>
-    
-    <item>
-      <title>O que é uma função lambda? 🤔</title>
-      
-      
-        
-      <author>Luciana Sampaio</author>
-        
-      
-      
-      
-        
-      <category>Desenvolvimento de Software</category>
-        
-      <category>Luciana Sampaio</category>
-        
-      
-      <description>&lt;h1&gt;O que é uma função lambda? 🤔&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;alt text&#34; src=&#34;../../../images/blog/luciana/lamb.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;Ah, funções lambda... O que seriam elas? Nada mais, nada menos que &lt;strong&gt;funções sem nome&lt;/strong&gt;! Isso mesmo, é tipo aquele colega que você conhece de vista, mas nunca sabe o nome. 🤷‍♀️&lt;/p&gt;
-&lt;p&gt;A ideia aqui é simples: elas são feitas para serem pequenas, rápidas e diretas ao ponto. Ou seja, são as &#34;funções ninja&#34; do Python. 🥷🐍&lt;/p&gt;
-&lt;p&gt;Enquanto em uma função regular você precisa de toda uma cerimônia — &lt;em&gt;&#34;declara, define, passa parâmetros, dá nome, e blá-blá-blá&#34;&lt;/em&gt; — a lambda chega, resolve o que precisa e sai sem nem pedir crédito. &lt;strong&gt;Elegância pura.&lt;/strong&gt;&lt;/p&gt;</description>
-      <link>https://pangaio.com.br/blog/lambda-function/</link>
-      <pubDate>Wed, 03 Jan 2024 00:00:00 +0000</pubDate>
-      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
-      
-      <guid isPermaLink="true">https://pangaio.com.br/blog/lambda-function/</guid>
-      
-    </item>
-    
-    <item>
-      <title>Criando mesa de desenho em tempo real com F#, SignalR e Javascript</title>
-      
-      
-        
-      <author>Diego Costa</author>
-        
-      
-      
-      
-        
-      <category>Apresentação</category>
-        
-      <category>Desenvolvimento de Software</category>
-        
-      <category>Diego Costa</category>
-        
-      <category>Fsharp</category>
-        
-      <category>How-to</category>
-        
-      
-      <description>&lt;h1&gt;Criando mesa de desenho em tempo real com F#, SignalR e Javascript&lt;/h1&gt;
-&lt;p&gt;Esse é um pequeno tutorial de como usar F# e SignalR dentro da plataforma .NET Core 3 (preview 6), escolhi o F# para esse tutorial por ser uma linguagem com declarações mais simples que o C# e por trabalhar com tipo seguros. O F# tem crescido muito como referência em programação funcional e multi-paradigma, a intenção desse material não é se aprofundar nos conceitos envolvendo a linguagem F# mas demonstrar sua simplicidade em um programa .NET Core.&lt;/p&gt;</description>
-      <link>https://pangaio.com.br/blog/mesa-desenho-fsharp/</link>
-      <pubDate>Wed, 26 Jun 2019 00:00:00 +0000</pubDate>
-      <source url="https://pangaio.com.br/feed_rss_created.xml">O Site do Pangaio</source>
-      
-      <guid isPermaLink="true">https://pangaio.com.br/blog/mesa-desenho-fsharp/</guid>
       
     </item>
     

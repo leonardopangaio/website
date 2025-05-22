@@ -12,6 +12,7 @@ tags:
   - Guia Rápido
   - Automação
   - Documentação
+  - Make
 ---
 
 # Utilização do Make/Makefile para simplificar tarefas repetitivas

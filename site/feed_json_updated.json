@@ -13,6 +13,173 @@
     "language": "pt",
     "items": [
         {
+            "id": "https://pangaio.com.br/blog/md-sqs-p2/",
+            "url": "https://pangaio.com.br/blog/md-sqs-p2/",
+            "title": "Construindo aplica\u00e7\u00f5es confi\u00e1veis e resilientes com filas SQS \u2014 Parte 2",
+            "content_html": "<h1>Construindo aplica\u00e7\u00f5es confi\u00e1veis e resilientes com filas SQS \u2014 Parte 2</h1>\n<p>Em nossa \u00faltima publica\u00e7\u00e3o, falamos sobre os conceitos b\u00e1sicos de SQS para que voc\u00ea consiga desacoplar seus fluxos, e assim, aumentar a confiabilidade de seus sistemas. Se voc\u00ea n\u00e3o acompanhou a Parte 1, basta clicar aqui.</p>\n<p>Hoje trataremos sobre alguns t\u00f3picos mais avan\u00e7ados e que s\u00e3o essenciais na hora de voc\u00ea montar uma infraestrutura que esteja 100% alinhada com as suas necessidades (tanto t\u00e9cnicas quanto de neg\u00f3cio).</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:20.588299+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "AWS",
+                "Guia R\u00e1pido",
+                "Leonardo Henrique"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/md-sqs-p1/",
+            "url": "https://pangaio.com.br/blog/md-sqs-p1/",
+            "title": "Construindo aplica\u00e7\u00f5es confi\u00e1veis e resilientes com filas SQS \u2014 Parte 1",
+            "content_html": "<h1>Construindo aplica\u00e7\u00f5es confi\u00e1veis e resilientes com filas SQS \u2014 Parte 1</h1>\n<p><img alt=\"Pessoas em uma fila (paralelo com filas SQS)\" src=\"../../../images/blog/leonardo-henrique/md-sqs-p1-pessoas.png\"></p>\n<p>Quando estamos desenvolvendo software, existem aspectos com os quais devemos ter aten\u00e7\u00e3o para garantir o sucesso de nossas aplica\u00e7\u00f5es. Dentre estes aspectos, podemos citar a <strong>resili\u00eancia</strong>.</p>\n<p>Em linhas gerais a <strong>resili\u00eancia \u00e9 o poder de recupera\u00e7\u00e3o de uma aplica\u00e7\u00e3o ap\u00f3s situa\u00e7\u00f5es adversas</strong>.</p>\n<p>Neste artigo gostaria de abordar um pouco sobre o uso do SQS para dar algumas ideias de como voc\u00ea pode utilizar esse servi\u00e7o para desenvolver aplica\u00e7\u00f5es mais confi\u00e1veis e resilientes.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:20.546608+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "AWS",
+                "Guia R\u00e1pido",
+                "Leonardo Henrique"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/md-go-internet/",
+            "url": "https://pangaio.com.br/blog/md-go-internet/",
+            "title": "Como subir sua aplica\u00e7\u00e3o Golang gratuitamente para a internet",
+            "content_html": "<h1>Como subir sua aplica\u00e7\u00e3o Golang gratuitamente para a internet</h1>\n<p><img alt=\"Gophers, os macostes do Go\" src=\"../../../images/blog/leonardo-henrique/md-go-internet-art.png\"><br>\n<em>Gophers, os macostes do Go</em></p>\n<p>Nesse texto vou descrever o passo a passo que voc\u00ea vai seguir para poder colocar seu projeto pessoal \u2014 e quem sabe at\u00e9 um projeto pelo qual voc\u00ea tenha sido contratado \u2014 em um servidor 100% gratuito. Para isso, vamos utilizar o Heroku, uma plataforma robusta voltada para deploy de servidores.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:20.504916+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Desenvolvimento",
+                "How-to",
+                "Leonardo Henrique"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-tsemgo/",
+            "url": "https://pangaio.com.br/blog/in-tsemgo/",
+            "title": "A Microsoft est\u00e1 reescrevendo o compilador do Typescript para GO, mas voc\u00ea j\u00e1 parou para pensar no motivo por tr\u00e1s dessa decis\u00e3o?",
+            "content_html": "<h1>A Microsoft est\u00e1 reescrevendo o compilador do Typescript para GO, mas voc\u00ea j\u00e1 parou para pensar no motivo por tr\u00e1s dessa decis\u00e3o?</h1>\n<p>Sou um grande entusiasta de GO e sei que a cria\u00e7\u00e3o de um port nessa linguagem trar\u00e1 diversos benef\u00edcios do ponto de vista t\u00e9cnico, mas gostaria de analisar esse cen\u00e1rio sob uma perspectiva diferente: a de neg\u00f3cios.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:20.464325+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Leonardo Henrique",
+                "News"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-rfc/",
+            "url": "https://pangaio.com.br/blog/in-rfc/",
+            "title": "Voc\u00ea conhece o RFC 3339? Saiba como ele pode facilitar sua vida (e da sua equipe) quando estiverem lidando com datas!",
+            "content_html": "<h1>Voc\u00ea conhece o RFC 3339? Saiba como ele pode facilitar sua vida (e da sua equipe) quando estiverem lidando com datas!</h1>\n<p>Se existe algo que toda a equipe enfrenta, sem exce\u00e7\u00e3o, s\u00e3o problemas ou dificuldades na hora de se padronizar datas. </p>\n<p>Essa defini\u00e7\u00e3o \u00e9 important\u00edssima para evitar inconsist\u00eancias, principalmente, em ambientes distribu\u00eddos e de microsservi\u00e7os. </p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:20.438269+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Boas Pr\u00e1ticas",
+                "Leonardo Henrique",
+                "SRE"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-make/",
+            "url": "https://pangaio.com.br/blog/in-make/",
+            "title": "Como o Makefile pode te salvar?",
+            "content_html": "<h1>Como o Makefile pode te salvar?</h1>\n<p>Cansado/a de ficar repetindo os mesmos comandos enquanto desenvolve? Makefile pode te salvar!</p>\n<p>Originalmente, ele foi criado para facilitar o processo de build de aplica\u00e7\u00f5es, evitando que voc\u00ea tenha que ficar repetindo comandos gigantes \u00e0 exaust\u00e3o.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:20.408116+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Command Line",
+                "How-to",
+                "Leonardo Henrique",
+                "Make",
+                "SRE"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-kill/",
+            "url": "https://pangaio.com.br/blog/in-kill/",
+            "title": "Dica r\u00e1pida: como encontrar e matar processos ocupando portas de seu servidor",
+            "content_html": "<h1>Dica r\u00e1pida: como encontrar e matar processos ocupando portas de seu servidor</h1>\n<p>J\u00e1 tentou rodar uma aplica\u00e7\u00e3o localmente e recebeu um erro de \u201cport already in use\u201d? Isso aconteceu comigo ao rodar uma aplica\u00e7\u00e3o Next.js em meu computador pessoal e percebi que o processo anterior ainda estava ativo, segurando a porta. </p>\n<p>Resolver essa situa\u00e7\u00e3o \u00e9 bem simples, basta localizar o processo que est\u00e1 ouvindo na porta espec\u00edfica e mat\u00e1-lo.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:20.379400+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Command Line",
+                "How-to",
+                "Leonardo Henrique",
+                "SRE"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-helm/",
+            "url": "https://pangaio.com.br/blog/in-helm/",
+            "title": "Helm - Gerenciador de pacotes para Kibernetes (K8s)",
+            "content_html": "<h1>Helm - Gerenciador de pacotes para Kibernetes (K8s)</h1>\n<p>O Helm \u00e9 o gerenciador de pacotes para Kubernetes. Assim como o NPM/YARN/PNPM est\u00e3o para o Javascript, o Helm est\u00e1 para o k8s.</p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:20.345227+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Helm",
+                "K8s",
+                "Leonardo Henrique",
+                "SRE",
+                "Tools"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-go/",
+            "url": "https://pangaio.com.br/blog/in-go/",
+            "title": "Voc\u00ea conhece a maneira fant\u00e1stica com que Go gerencia concorr\u00eancia?",
+            "content_html": "<h1>Voc\u00ea conhece a maneira fant\u00e1stica com que Go gerencia concorr\u00eancia?</h1>\n<p>Para vagas pleno/senior de Dev Go \u00e9 importante que saiba como funciona a gest\u00e3o de Go routines por baixo dos panos. </p>",
+            "image": null,
+            "date_modified": "2025-05-22T21:11:20.325032+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Desenvolvimento",
+                "GO",
+                "Leonardo Henrique",
+                "SRE"
+            ]
+        },
+        {
             "id": "https://pangaio.com.br/blog/mesa-desenho-fsharp/",
             "url": "https://pangaio.com.br/blog/mesa-desenho-fsharp/",
             "title": "Criando mesa de desenho em tempo real com F#, SignalR e Javascript",
@@ -49,7 +216,7 @@
                 "Alberto Sanches",
                 "Boas Pr\u00e1ticas",
                 "Clean Code",
-                "Desenvolvimento de Software",
+                "Desenvolvimento",
                 "Engenharia de Software"
             ]
         },
@@ -128,7 +295,8 @@
                 "Automa\u00e7\u00e3o",
                 "Documenta\u00e7\u00e3o",
                 "Guia R\u00e1pido",
-                "Leonardo Pangaio"
+                "Leonardo Pangaio",
+                "Make"
             ]
         },
         {
@@ -211,95 +379,6 @@
             "url": "https://pangaio.com.br/blog/pyspark/",
             "title": "FuncoesPySpark",
             "content_html": "<h2>PySpark</h2>\n<h3>Afinal o que s\u00e3o fun\u00e7\u00f5es?</h3>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/func_1.png\"></p>\n<p>Afinal, o que s\u00e3o fun\u00e7\u00f5es? \ud83e\udd14\nSe a gente fizer um paralelo com a etimologia da palavra \"fun\u00e7\u00e3o\", d\u00e1 pra pensar em algo que expressa ou controla um comportamento \u2013 s\u00f3 que, no mundo da programa\u00e7\u00e3o, isso rola por meio de c\u00f3digo. Legal, n\u00e9? Ou talvez at\u00e9 meio nerd, rs.</p>\n<p>Eu gosto de pensar que fun\u00e7\u00f5es s\u00e3o as ferramentas m\u00e1gicas do desenvolvedor. Tipo aquela \u201ccaixa de ferramentas\u201d onde voc\u00ea encontra tudo que precisa pra fazer magia com os dados. Quer somar colunas? Beleza. Transformar texto pra min\u00fasculas? F\u00e1cil. Ordenar, calcular m\u00e9dia, e at\u00e9 umas coisas mais avan\u00e7adas? T\u00e1 tudo l\u00e1, prontinho pra usar. \ud83d\ude80</p>",
-            "image": null,
-            "date_modified": "2025-04-04T15:01:35+00:00",
-            "authors": [
-                {
-                    "name": "Luciana Sampaio"
-                }
-            ],
-            "tags": [
-                "Engenharia de Dados",
-                "Luciana Sampaio",
-                "pySpark"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/pyspark-context/",
-            "url": "https://pangaio.com.br/blog/pyspark-context/",
-            "title": "O que \u00e9 pyspark.sql.context? \ud83c\udfa9\u2728",
-            "content_html": "<h1>O que \u00e9 <code>pyspark.sql.context</code>? \ud83c\udfa9\u2728</h1>\n<p>Quando comecei a trabalhar com <strong>Databricks</strong>, confesso que me senti como um terr\u00e1queo vendo um disco voador pela primeira vez. Era outro mundo, meu povo! \ud83c\udf0c</p>",
-            "image": null,
-            "date_modified": "2025-04-04T15:01:35+00:00",
-            "authors": [
-                {
-                    "name": "Luciana Sampaio"
-                }
-            ],
-            "tags": [
-                "Engenharia de Dados",
-                "Luciana Sampaio",
-                "pySpark"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/pyspark-context/",
-            "url": "https://pangaio.com.br/blog/pyspark-context/",
-            "title": "Ah, relacionamentos no SQL?",
-            "content_html": "<h1>Ah, relacionamentos no SQL?</h1>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/divertidamente.png\"></p>\n<p>Pense nisso como dramas de relacionamento, mas entre tabelas de dados! \ud83d\ude02 Vamos l\u00e1:</p>\n<ol>\n<li>Relacionamento de \u201cUm pra Um\u201d (1:1)\nEsse \u00e9 aquele namoro exclusivo, onde cada item em uma tabela s\u00f3 pode estar com um \u00fanico item em outra tabela. Nada de triangulo amoroso aqui!</li>\n</ol>\n<p>Exemplo: Uma tabela de pessoas e uma tabela de carteira de identidade. Cada pessoa tem uma carteira, e cada carteira pertence a uma \u00fanica pessoa. Bem monog\u00e2mico.</p>",
-            "image": null,
-            "date_modified": "2025-04-04T15:01:35+00:00",
-            "authors": [
-                {
-                    "name": "Luciana Sampaio"
-                }
-            ],
-            "tags": [
-                "Database",
-                "Luciana Sampaio",
-                "SQL"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/broadcast-variavel/",
-            "url": "https://pangaio.com.br/blog/broadcast-variavel/",
-            "title": "\ud83d\udce2 Broadcast: O Wi-Fi da Engenharia de Dados!",
-            "content_html": "<h1>\ud83d\udce2 <strong>Broadcast: O Wi-Fi da Engenharia de Dados!</strong></h1>\n<p>Fala, pessoal! Hoje vou falar sobre <strong>vari\u00e1vel de transmiss\u00e3o (Broadcast)</strong>, mas antes... bora filosofar um pouco sobre o que faz um <strong>Engenheiro de Dados</strong>?  </p>\n<p>\ud83e\udd14 J\u00e1 parou para pensar? Qual \u00e9 uma das grandes miss\u00f5es desse ser m\u00edstico que habita planilhas, bancos de dados e clusters Spark?  </p>",
-            "image": null,
-            "date_modified": "2025-04-04T15:01:35+00:00",
-            "authors": [
-                {
-                    "name": "Luciana Sampaio"
-                }
-            ],
-            "tags": [
-                "Databricks",
-                "Engenharia de Dados",
-                "Luciana Sampaio"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/lambda-function/",
-            "url": "https://pangaio.com.br/blog/lambda-function/",
-            "title": "O que \u00e9 uma fun\u00e7\u00e3o lambda? \ud83e\udd14",
-            "content_html": "<h1>O que \u00e9 uma fun\u00e7\u00e3o lambda? \ud83e\udd14</h1>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/lamb.png\"></p>\n<p>Ah, fun\u00e7\u00f5es lambda... O que seriam elas? Nada mais, nada menos que <strong>fun\u00e7\u00f5es sem nome</strong>! Isso mesmo, \u00e9 tipo aquele colega que voc\u00ea conhece de vista, mas nunca sabe o nome. \ud83e\udd37\u200d\u2640\ufe0f</p>\n<p>A ideia aqui \u00e9 simples: elas s\u00e3o feitas para serem pequenas, r\u00e1pidas e diretas ao ponto. Ou seja, s\u00e3o as \"fun\u00e7\u00f5es ninja\" do Python. \ud83e\udd77\ud83d\udc0d</p>\n<p>Enquanto em uma fun\u00e7\u00e3o regular voc\u00ea precisa de toda uma cerim\u00f4nia \u2014 <em>\"declara, define, passa par\u00e2metros, d\u00e1 nome, e bl\u00e1-bl\u00e1-bl\u00e1\"</em> \u2014 a lambda chega, resolve o que precisa e sai sem nem pedir cr\u00e9dito. <strong>Eleg\u00e2ncia pura.</strong></p>",
-            "image": null,
-            "date_modified": "2025-04-04T15:01:35+00:00",
-            "authors": [
-                {
-                    "name": "Luciana Sampaio"
-                }
-            ],
-            "tags": [
-                "Desenvolvimento de Software",
-                "Luciana Sampaio"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/unpersist-pyspark/",
-            "url": "https://pangaio.com.br/blog/unpersist-pyspark/",
-            "title": "O que \u00e9 unpersist() em PySpark?",
-            "content_html": "<h1>O que \u00e9 unpersist() em PySpark?</h1>\n<p>O m\u00e9todo <code>unpersist()</code> \u00e9 eficaz para liberar recursos em processos de batch, onde voc\u00ea pode controlar quando o cache n\u00e3o \u00e9 mais necess\u00e1rio. Em streaming, no entanto, o uso de <code>unpersist()</code> n\u00e3o \u00e9 recomendado, pois os dados s\u00e3o processados continuamente e o checkpoint j\u00e1 cuida da consist\u00eancia e do armazenamento de estado. A utiliza\u00e7\u00e3o do checkpoint garante que o processo de streaming seja resiliente e possa ser retomado a partir de um ponto de falha, tornando a libera\u00e7\u00e3o de mem\u00f3ria mais controlada e menos disruptiva.</p>",
             "image": null,
             "date_modified": "2025-04-04T15:01:35+00:00",
             "authors": [

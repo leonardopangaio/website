@@ -13,6 +13,119 @@
     "language": "pt",
     "items": [
         {
+            "id": "https://pangaio.com.br/blog/in-go/",
+            "url": "https://pangaio.com.br/blog/in-go/",
+            "title": "Voc\u00ea conhece a maneira fant\u00e1stica com que Go gerencia concorr\u00eancia?",
+            "content_html": "<h1>Voc\u00ea conhece a maneira fant\u00e1stica com que Go gerencia concorr\u00eancia?</h1>\n<p>Para vagas pleno/senior de Dev Go \u00e9 importante que saiba como funciona a gest\u00e3o de Go routines por baixo dos panos. </p>",
+            "image": null,
+            "date_published": "2025-05-21T00:00:00+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Desenvolvimento",
+                "GO",
+                "Leonardo Henrique",
+                "SRE"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-helm/",
+            "url": "https://pangaio.com.br/blog/in-helm/",
+            "title": "Helm - Gerenciador de pacotes para Kibernetes (K8s)",
+            "content_html": "<h1>Helm - Gerenciador de pacotes para Kibernetes (K8s)</h1>\n<p>O Helm \u00e9 o gerenciador de pacotes para Kubernetes. Assim como o NPM/YARN/PNPM est\u00e3o para o Javascript, o Helm est\u00e1 para o k8s.</p>",
+            "image": null,
+            "date_published": "2025-05-21T00:00:00+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Helm",
+                "K8s",
+                "Leonardo Henrique",
+                "SRE",
+                "Tools"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-kill/",
+            "url": "https://pangaio.com.br/blog/in-kill/",
+            "title": "Dica r\u00e1pida: como encontrar e matar processos ocupando portas de seu servidor",
+            "content_html": "<h1>Dica r\u00e1pida: como encontrar e matar processos ocupando portas de seu servidor</h1>\n<p>J\u00e1 tentou rodar uma aplica\u00e7\u00e3o localmente e recebeu um erro de \u201cport already in use\u201d? Isso aconteceu comigo ao rodar uma aplica\u00e7\u00e3o Next.js em meu computador pessoal e percebi que o processo anterior ainda estava ativo, segurando a porta. </p>\n<p>Resolver essa situa\u00e7\u00e3o \u00e9 bem simples, basta localizar o processo que est\u00e1 ouvindo na porta espec\u00edfica e mat\u00e1-lo.</p>",
+            "image": null,
+            "date_published": "2025-05-21T00:00:00+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Command Line",
+                "How-to",
+                "Leonardo Henrique",
+                "SRE"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-make/",
+            "url": "https://pangaio.com.br/blog/in-make/",
+            "title": "Como o Makefile pode te salvar?",
+            "content_html": "<h1>Como o Makefile pode te salvar?</h1>\n<p>Cansado/a de ficar repetindo os mesmos comandos enquanto desenvolve? Makefile pode te salvar!</p>\n<p>Originalmente, ele foi criado para facilitar o processo de build de aplica\u00e7\u00f5es, evitando que voc\u00ea tenha que ficar repetindo comandos gigantes \u00e0 exaust\u00e3o.</p>",
+            "image": null,
+            "date_published": "2025-05-21T00:00:00+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Command Line",
+                "How-to",
+                "Leonardo Henrique",
+                "Make",
+                "SRE"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-rfc/",
+            "url": "https://pangaio.com.br/blog/in-rfc/",
+            "title": "Voc\u00ea conhece o RFC 3339? Saiba como ele pode facilitar sua vida (e da sua equipe) quando estiverem lidando com datas!",
+            "content_html": "<h1>Voc\u00ea conhece o RFC 3339? Saiba como ele pode facilitar sua vida (e da sua equipe) quando estiverem lidando com datas!</h1>\n<p>Se existe algo que toda a equipe enfrenta, sem exce\u00e7\u00e3o, s\u00e3o problemas ou dificuldades na hora de se padronizar datas. </p>\n<p>Essa defini\u00e7\u00e3o \u00e9 important\u00edssima para evitar inconsist\u00eancias, principalmente, em ambientes distribu\u00eddos e de microsservi\u00e7os. </p>",
+            "image": null,
+            "date_published": "2025-05-21T00:00:00+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Boas Pr\u00e1ticas",
+                "Leonardo Henrique",
+                "SRE"
+            ]
+        },
+        {
+            "id": "https://pangaio.com.br/blog/in-tsemgo/",
+            "url": "https://pangaio.com.br/blog/in-tsemgo/",
+            "title": "A Microsoft est\u00e1 reescrevendo o compilador do Typescript para GO, mas voc\u00ea j\u00e1 parou para pensar no motivo por tr\u00e1s dessa decis\u00e3o?",
+            "content_html": "<h1>A Microsoft est\u00e1 reescrevendo o compilador do Typescript para GO, mas voc\u00ea j\u00e1 parou para pensar no motivo por tr\u00e1s dessa decis\u00e3o?</h1>\n<p>Sou um grande entusiasta de GO e sei que a cria\u00e7\u00e3o de um port nessa linguagem trar\u00e1 diversos benef\u00edcios do ponto de vista t\u00e9cnico, mas gostaria de analisar esse cen\u00e1rio sob uma perspectiva diferente: a de neg\u00f3cios.</p>",
+            "image": null,
+            "date_published": "2025-05-21T00:00:00+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "Leonardo Henrique",
+                "News"
+            ]
+        },
+        {
             "id": "https://pangaio.com.br/blog/acumuladores/",
             "url": "https://pangaio.com.br/blog/acumuladores/",
             "title": "Acumuladores no PySpark: O que s\u00e3o e como us\u00e1-los?",
@@ -70,6 +183,24 @@
             ]
         },
         {
+            "id": "https://pangaio.com.br/blog/md-sqs-p2/",
+            "url": "https://pangaio.com.br/blog/md-sqs-p2/",
+            "title": "Construindo aplica\u00e7\u00f5es confi\u00e1veis e resilientes com filas SQS \u2014 Parte 2",
+            "content_html": "<h1>Construindo aplica\u00e7\u00f5es confi\u00e1veis e resilientes com filas SQS \u2014 Parte 2</h1>\n<p>Em nossa \u00faltima publica\u00e7\u00e3o, falamos sobre os conceitos b\u00e1sicos de SQS para que voc\u00ea consiga desacoplar seus fluxos, e assim, aumentar a confiabilidade de seus sistemas. Se voc\u00ea n\u00e3o acompanhou a Parte 1, basta clicar aqui.</p>\n<p>Hoje trataremos sobre alguns t\u00f3picos mais avan\u00e7ados e que s\u00e3o essenciais na hora de voc\u00ea montar uma infraestrutura que esteja 100% alinhada com as suas necessidades (tanto t\u00e9cnicas quanto de neg\u00f3cio).</p>",
+            "image": null,
+            "date_published": "2025-03-05T00:00:00+00:00",
+            "authors": [
+                {
+                    "name": "Leonardo Henrique"
+                }
+            ],
+            "tags": [
+                "AWS",
+                "Guia R\u00e1pido",
+                "Leonardo Henrique"
+            ]
+        },
+        {
             "id": "https://pangaio.com.br/blog/make-e-makefile/",
             "url": "https://pangaio.com.br/blog/make-e-makefile/",
             "title": "Utiliza\u00e7\u00e3o do Make/Makefile para simplificar tarefas repetitivas",
@@ -86,7 +217,8 @@
                 "Automa\u00e7\u00e3o",
                 "Documenta\u00e7\u00e3o",
                 "Guia R\u00e1pido",
-                "Leonardo Pangaio"
+                "Leonardo Pangaio",
+                "Make"
             ]
         },
         {
@@ -124,7 +256,7 @@
                 "Alberto Sanches",
                 "Boas Pr\u00e1ticas",
                 "Clean Code",
-                "Desenvolvimento de Software",
+                "Desenvolvimento",
                 "Engenharia de Software"
             ]
         },
@@ -255,62 +387,6 @@
                 "Engenharia de Dados",
                 "Luciana Sampaio",
                 "pySpark"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/aplicativos-pyspark-redimensionados/",
-            "url": "https://pangaio.com.br/blog/aplicativos-pyspark-redimensionados/",
-            "title": "Como os Aplicativos PySpark podem ser redimensionados.",
-            "content_html": "<h1>Como os Aplicativos PySpark podem ser redimensionados.</h1>\n<h3>Como Dimensionar Aplicativos PySpark de Forma Eficiente?</h3>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/redimens_1.png\"></p>\n<p>Lidar com o dimensionamento de aplicativos PySpark nem sempre \u00e9 uma tarefa f\u00e1cil, especialmente quando estamos falando de <strong>processamentos em larga escala</strong>.  </p>\n<hr>\n<h3><strong>Como fazer isso de modo mais eficiente?</strong></h3>\n<p>Antes de tudo, \u00e9 fundamental entender que o <strong>n\u00famero de n\u00f3s (executores)</strong> tem um impacto significativo na escalabilidade do seu projeto.  </p>\n<p>No entanto, a escolha do tamanho ideal do cluster n\u00e3o depende apenas do tamanho dos dados. Outros fatores tamb\u00e9m precisam ser considerados, como o poder de processamento (CPU) e a mem\u00f3ria dispon\u00edvel.</p>",
-            "image": null,
-            "date_published": "2024-07-02T00:00:00+00:00",
-            "authors": [
-                {
-                    "name": "Luciana Sampaio"
-                }
-            ],
-            "tags": [
-                "Engenharia de Dados",
-                "How-to",
-                "Luciana Sampaio",
-                "pySpark"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/lambda-function/",
-            "url": "https://pangaio.com.br/blog/lambda-function/",
-            "title": "O que \u00e9 uma fun\u00e7\u00e3o lambda? \ud83e\udd14",
-            "content_html": "<h1>O que \u00e9 uma fun\u00e7\u00e3o lambda? \ud83e\udd14</h1>\n<p><img alt=\"alt text\" src=\"../../../images/blog/luciana/lamb.png\"></p>\n<p>Ah, fun\u00e7\u00f5es lambda... O que seriam elas? Nada mais, nada menos que <strong>fun\u00e7\u00f5es sem nome</strong>! Isso mesmo, \u00e9 tipo aquele colega que voc\u00ea conhece de vista, mas nunca sabe o nome. \ud83e\udd37\u200d\u2640\ufe0f</p>\n<p>A ideia aqui \u00e9 simples: elas s\u00e3o feitas para serem pequenas, r\u00e1pidas e diretas ao ponto. Ou seja, s\u00e3o as \"fun\u00e7\u00f5es ninja\" do Python. \ud83e\udd77\ud83d\udc0d</p>\n<p>Enquanto em uma fun\u00e7\u00e3o regular voc\u00ea precisa de toda uma cerim\u00f4nia \u2014 <em>\"declara, define, passa par\u00e2metros, d\u00e1 nome, e bl\u00e1-bl\u00e1-bl\u00e1\"</em> \u2014 a lambda chega, resolve o que precisa e sai sem nem pedir cr\u00e9dito. <strong>Eleg\u00e2ncia pura.</strong></p>",
-            "image": null,
-            "date_published": "2024-01-03T00:00:00+00:00",
-            "authors": [
-                {
-                    "name": "Luciana Sampaio"
-                }
-            ],
-            "tags": [
-                "Desenvolvimento de Software",
-                "Luciana Sampaio"
-            ]
-        },
-        {
-            "id": "https://pangaio.com.br/blog/mesa-desenho-fsharp/",
-            "url": "https://pangaio.com.br/blog/mesa-desenho-fsharp/",
-            "title": "Criando mesa de desenho em tempo real com F#, SignalR e Javascript",
-            "content_html": "<h1>Criando mesa de desenho em tempo real com F#, SignalR e Javascript</h1>\n<p>Esse \u00e9 um pequeno tutorial de como usar F# e SignalR dentro da plataforma .NET Core 3 (preview 6), escolhi o F# para esse tutorial por ser uma linguagem com declara\u00e7\u00f5es mais simples que o C# e por trabalhar com tipo seguros. O F# tem crescido muito como refer\u00eancia em programa\u00e7\u00e3o funcional e multi-paradigma, a inten\u00e7\u00e3o desse material n\u00e3o \u00e9 se aprofundar nos conceitos envolvendo a linguagem F# mas demonstrar sua simplicidade em um programa .NET Core.</p>",
-            "image": null,
-            "date_published": "2019-06-26T00:00:00+00:00",
-            "authors": [
-                {
-                    "name": "Diego Costa"
-                }
-            ],
-            "tags": [
-                "Apresenta\u00e7\u00e3o",
-                "Desenvolvimento de Software",
-                "Diego Costa",
-                "Fsharp",
-                "How-to"
             ]
         }
     ]
